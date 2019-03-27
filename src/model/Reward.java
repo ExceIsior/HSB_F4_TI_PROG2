@@ -1,5 +1,5 @@
 package model;
 
-public class Player {
+public class Reward {
     
 }

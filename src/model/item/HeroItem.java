@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package model.item;
 
 /**
  *
  * @author tonid
  */
-public class QuestItem extends Interactive {
+public class HeroItem extends Item{
     
 }

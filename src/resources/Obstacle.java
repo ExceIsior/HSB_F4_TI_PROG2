@@ -1,4 +1,4 @@
-package utilities;
+package resources;
 
 public interface Obstacle {
     

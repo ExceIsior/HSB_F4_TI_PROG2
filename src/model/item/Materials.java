@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package model.item;
+
+import model.item.Item;
 
 /**
  *
  * @author tonid
  */
-public class Tile {
+public class Materials extends Item{
     
 }
