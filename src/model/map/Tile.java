@@ -3,7 +3,6 @@ package model.map;
 public class Tile {
     
     private Field[][] tile = null;
-    private boolean visible = false;
     
     public Tile() {
         tile = new Field[4][4];
