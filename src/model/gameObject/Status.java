@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package model.gameObject;
 
 /**
  *
- * @author nikla
+ * @author reenawichmann
  */
-public class Effekt
-{
+public class Status {
     
 }

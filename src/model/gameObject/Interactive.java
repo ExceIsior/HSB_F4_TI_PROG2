@@ -5,9 +5,13 @@ import model.item.Item;
 
 public class Interactive extends GameObject {
 
+    public Interactive() {
+    }
+
     private int damage = 0;
     private int armor = 0;
     private Item loot = null;
+    
     
     public Interactive(int damage, int armor, Item loot) {
         this.damage = damage;

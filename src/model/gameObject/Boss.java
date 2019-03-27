@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model.gameObject;
 
-/**
- *
- * @author tonid
- */
+import java.util.ArrayList;
+import model.item.Item;
+
+
 public class Boss extends Villain {
+
+    public Boss(int damage, int armor, Item loot, String name, int HealthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
+        super(damage, armor, loot, name, HealthPoints, agility, status, skills);
+    }
     
 }
