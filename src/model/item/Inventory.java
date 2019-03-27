@@ -4,14 +4,10 @@ import java.util.HashMap;
 
 public class Inventory {
     
-    static HashMap<Item, Integer> inventory = new HashMap<>();
-    public static void main (String[] args)
+    private HashMap<Item, Integer> inventory = new HashMap<>();
+
+    public void addItem(Item newItem)
     {
-        addItem(new Item());
-    }
-    public static void addItem(Item i)
-    {
-        inventory.put(i, inventory.containsKey(i) ? inventory.get(i)+1 : 1);
-        System.out.println(inventory.get(i));
+        inventory.put(newItem, inventory.containsKey(newItem) ? inventory.get(newItem)+1 : 1);
     }
 }
