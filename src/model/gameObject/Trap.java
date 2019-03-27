@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model.gameObject;
 
-/**
- *
- * @author tonid
- */
+import model.item.Item;
+
 public class Trap extends Interactive {
+
+    public Trap(int damage) {
+        super(damage, 0, null);
+    }
     
 }
