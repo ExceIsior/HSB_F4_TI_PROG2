@@ -5,10 +5,6 @@
  */
 package model.gameObject;
 
-/**
- *
- * @author tonid
- */
 public class TreasureChest extends Interactive {
     
 }

@@ -2,7 +2,7 @@ package model.map;
 
 public class Dungeon {
     
-    Tile[][] board = null;
+    Tile[][] dungeon = null;
     
     public Dungeon()
     {
