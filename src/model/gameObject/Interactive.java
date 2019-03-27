@@ -9,9 +9,10 @@ public class Interactive extends GameObject {
     private int armor = 0;
     private Item loot = null;
     
-    public Interactive(int damage, int armor, int loot) {
+    public Interactive(int damage, int armor, Item loot) {
         this.damage = damage;
         this.armor = armor;
+        this.loot = loot;
     }
  
     public int getDamage() {
