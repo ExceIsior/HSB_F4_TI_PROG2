@@ -1,25 +1,5 @@
 package model.gameObject;
 
-import model.Position;
-
-public abstract class GameObject {
+public class GameObject {
     
-    private Position position = null;
-    private String graphicspath = "";
-    
-    
-    public Position getPosition()
-    {
-        return null;
-    }
-    
-    public void setPosition()
-    {
-        
-    }
-    
-    public String getGraphicsPath(GameObject g)
-    {
-        return this.graphicspath;
-    }
 }
