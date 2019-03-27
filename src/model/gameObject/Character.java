@@ -1,5 +1,6 @@
 package model.gameObject;
 
-public class Character extends Interactive {
+public abstract class Character extends Interactive {
     
+
 }
