@@ -1,11 +1,12 @@
 package model.gameObject;
 
+import control.Constants;
 import model.item.Item;
 
 public class TreasureChest extends Interactive {
 
-    public TreasureChest(String graphicsPath, int armor, Item loot) {
-        super(graphicsPath, 0, armor, loot);
+    public TreasureChest(int armor, Item loot) {
+        super(Constants.TREASURE_PATH , 0, armor, loot);
     }
     
 }

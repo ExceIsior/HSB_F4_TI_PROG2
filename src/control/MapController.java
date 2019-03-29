@@ -1,5 +1,6 @@
 package control;
 
+import model.gameObject.GameObject;
 import model.gameObject.Mountain;
 import model.gameObject.Tree;
 import model.map.Field;
@@ -18,6 +19,7 @@ public class MapController {
     }
 
     private Tile generateTile() {
+        GameObject[] objects = {new }
         Field[][] tile = new Field[Constants.TILE_SIZE_X][Constants.TILE_SIZE_Y];
         for (int i = 0; i < Constants.TILE_SIZE_X; i++) {
             for (int j = 0; j < Constants.TILE_SIZE_Y; j++) {
