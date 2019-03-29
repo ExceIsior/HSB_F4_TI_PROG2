@@ -1,3 +1,6 @@
 
 *.xml
 /build/
+.idea/HSB_F4_TI_PROG2.iml
+HSB_F4_TI_PROG2.iml
+nbproject/private/private.properties
