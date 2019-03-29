@@ -6,11 +6,16 @@ public abstract class GameObject {
     
     private Position position = null;
     private String graphicspath = "";
+
+    public GameObject(String graphicsPath) {
+        this.graphicspath = graphicsPath;
+    }
+    
     
     
     public Position getPosition()
     {
-        return null;
+        return this.position;
     }
     
     public void setPosition(Position newPosition)
@@ -18,7 +23,7 @@ public abstract class GameObject {
         this.position = newPosition;
     }
     
-    public String getGraphicsPath(GameObject g)
+    public String getGraphicsPath()
     {
         return this.graphicspath;
     }

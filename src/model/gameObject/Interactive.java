@@ -5,7 +5,8 @@ import model.item.Item;
 
 public class Interactive extends GameObject {
 
-    public Interactive() {
+    public Interactive(String graphicsPath) {
+        super(graphicsPath);
     }
 
     private int damage = 0;
@@ -13,7 +14,8 @@ public class Interactive extends GameObject {
     private Item loot = null;
     
     
-    public Interactive(int damage, int armor, Item loot) {
+    public Interactive(String graphicsPath, int damage, int armor, Item loot) {
+        super(graphicsPath);
         this.damage = damage;
         this.armor = armor;
         this.loot = loot;
