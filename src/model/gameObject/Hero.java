@@ -10,7 +10,7 @@ public class Hero extends Character {
     private Skill skill = null;
     private Item equipment = null;
 
-    public Hero(int damage, int armor, Item loot, String name, int HealthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
-        super(damage, armor, loot, name, HealthPoints, agility, status, skills);
+    public Hero(String graphicsPath, int damage, int armor, Item loot, String name, int HealthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
+        super(graphicsPath, damage, armor, loot, name, HealthPoints, agility, status, skills);
     }
 }
