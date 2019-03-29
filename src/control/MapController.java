@@ -11,20 +11,20 @@ public class MapController {
         Tile[][] map = new Tile[Constants.MAP_SIZE_X][Constants.MAP_SIZE_Y];
         for (int i = 0; i < Constants.MAP_SIZE_X; i++) {
             for (int j = 0; j < Constants.MAP_SIZE_Y; j++) {
-                this.generateTile();
+                map[i][j] = this.generateTile();
             }
         }
-        return null;
+        return map;
     }
 
-    private Field[][] generateTile() {
+    private Tile generateTile() {
         Field[][] tile = new Field[Constants.TILE_SIZE_X][Constants.TILE_SIZE_Y];
         for (int i = 0; i < Constants.TILE_SIZE_X; i++) {
             for (int j = 0; j < Constants.TILE_SIZE_Y; j++) {
                 tile[i][j] = new Field(new Mountain("M"));
             }
         }
-        return tile;
+        return new Tile(tile);
     }
 
 }
