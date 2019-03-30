@@ -1,21 +1,17 @@
 package model.gameObject;
 
+import model.Position;
 import model.gameObject.GameObject;
 import model.item.Item;
 
 public class Interactive extends GameObject {
 
-    public Interactive(String graphicsPath) {
-        super(graphicsPath);
-    }
-
     private int damage = 0;
     private int armor = 0;
     private Item loot = null;
-    
-    
-    public Interactive(String graphicsPath, int damage, int armor, Item loot) {
-        super(graphicsPath);
+
+    public Interactive(String graphicsPath, Position position, int damage, int armor, Item loot) {
+        super(graphicsPath, position);
         this.damage = damage;
         this.armor = armor;
         this.loot = loot;
