@@ -1,7 +1,19 @@
-
-*.xml
-/build/
-/out/
-nbproject/private/private.properties
 HSB_F4_TI_PROG2.iml
-/dist/
+
+# NetBeans specific #
+nbproject/private/
+build/
+nbbuild/
+out/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
