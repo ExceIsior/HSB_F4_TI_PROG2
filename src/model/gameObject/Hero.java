@@ -11,7 +11,8 @@ public class Hero extends Character {
     private Item equipment = null;
     private Inventory inventory = null;
 
-    public Hero(Position position, 
+    public Hero(String graphicsPath,
+            Position position,
             int damage,
             int armor, 
             Item loot,
@@ -21,7 +22,7 @@ public class Hero extends Character {
             ArrayList<Status> status, 
             ArrayList<Skill> skills, 
             Inventory inventory) {
-        super(Constants.HERO_PATH,position,  damage, armor, loot, name, HealthPoints, agility, status, skills);
+        super(graphicsPath,position,  damage, armor, loot, name, HealthPoints, agility, status, skills);
         this.inventory = inventory;
     }
 

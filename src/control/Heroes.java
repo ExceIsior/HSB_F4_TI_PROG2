@@ -5,7 +5,8 @@ import model.gameObject.Hero;
 import model.item.Inventory;
 
 public enum Heroes {
-    Paladin(new Hero(new Position(0, 0),
+    PALADIN(new Hero(Constants.PALADIN_RES_PATH,
+            new Position(0, 0),
             Constants.PALADIN_DEFAULT_DAMAGE,
             Constants.PALADIN_DEFAULT_ARMOR,
             null,
@@ -16,7 +17,8 @@ public enum Heroes {
             null,
             new Inventory())),
     
-    Mage(new Hero(new Position(0, 0),
+    MAGE(new Hero(Constants.MAGE_RES_PATH,
+            new Position(0, 0),
             Constants.MAGE_DEFAULT_DAMAGE,
             Constants.MAGE_DEFAULT_ARMOR,
             null,
@@ -27,7 +29,8 @@ public enum Heroes {
             null,
             new Inventory())),
     
-    Rogue(new Hero(new Position(0, 0),
+    ROGUE(new Hero(Constants.ROGUE_RES_PATH,
+            new Position(0, 0),
             Constants.ROGUE_DEFAULT_DAMAGE,
             Constants.ROGUE_DEFAULT_ARMOR,
             null,
@@ -38,7 +41,8 @@ public enum Heroes {
             null,
             new Inventory())),
     
-    Ranger(new Hero(new Position(0, 0),
+    RANGER(new Hero(Constants.RANGER_RES_PATH,
+            new Position(0, 0),
             Constants.RANGER_DEFAULT_DAMAGE,
             Constants.RANGER_DEFAULT_ARMOR,
             null,

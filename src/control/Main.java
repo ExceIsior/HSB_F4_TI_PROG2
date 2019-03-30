@@ -14,25 +14,25 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         System.out.println("Paladin Info:\n");
-        System.out.println(Heroes.Paladin.getHero().toString());
+        System.out.println(Heroes.PALADIN.getHero().toString());
         System.out.println("\nMage Info:\n");
-        System.out.println(Heroes.Mage.getHero().toString());
+        System.out.println(Heroes.MAGE.getHero().toString());
         System.out.println("\nRogue Info:\n");
-        System.out.println(Heroes.Rogue.getHero().toString());
+        System.out.println(Heroes.ROGUE.getHero().toString());
         System.out.println("\nRanger Info:\n");
-        System.out.println(Heroes.Ranger.getHero().toString());
+        System.out.println(Heroes.RANGER.getHero().toString());
         
         System.out.println("\nAdding Heal Potion to Paladin's inventory...");
-        Heroes.Paladin.getHero().getInventory().addItem(HeroItems.HealPotion.getHeroItem());            
+        Heroes.PALADIN.getHero().getInventory().addItem(HeroItems.HEAL_POTION.getHeroItem());            
         System.out.println("Adding Heal Potion to Paladin's inventory...");
-        Heroes.Paladin.getHero().getInventory().addItem(HeroItems.HealPotion.getHeroItem()); 
+        Heroes.PALADIN.getHero().getInventory().addItem(HeroItems.HEAL_POTION.getHeroItem()); 
         System.out.println("Adding Heal Potion to Paladin's inventory...");
-        Heroes.Paladin.getHero().getInventory().addItem(HeroItems.HealPotion.getHeroItem());
+        Heroes.PALADIN.getHero().getInventory().addItem(HeroItems.HEAL_POTION.getHeroItem());
         System.out.println("Adding Armor Potion to Paladin's inventory...");
-        Heroes.Paladin.getHero().getInventory().addItem(HeroItems.ArmorPotion.getHeroItem());
+        Heroes.PALADIN.getHero().getInventory().addItem(HeroItems.ARMOR_POTION.getHeroItem());
         
         System.out.println("\nPrinting Paladin's inventory");
-        Heroes.Paladin.getHero().getInventory().getInventory().forEach((key, value) -> System.out.printf("Item: %s\tAmount:%d\n", key.getName(), value));
+        Heroes.PALADIN.getHero().getInventory().getInventory().forEach((key, value) -> System.out.printf("Item: %s\tAmount:%d\n", key.getName(), value));
 //        MapController mapController = new MapController();
 //        Tile[][] map = mapController.generateMap();
 //
