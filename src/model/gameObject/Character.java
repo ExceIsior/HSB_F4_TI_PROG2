@@ -21,4 +21,46 @@ public class Character extends Interactive {
         this.skills = skills;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHealthPoints() {
+        return HealthPoints;
+    }
+
+    public void setHealthPoints(int HealthPoints) {
+        this.HealthPoints = HealthPoints;
+    }
+
+    public int getAgility() {
+        return agility;
+    }
+
+    public void setAgility(int agility) {
+        this.agility = agility;
+    }
+
+    public ArrayList<Status> getStatus() {
+        return status;
+    }
+
+    public void setStatus(ArrayList<Status> status) {
+        this.status = status;
+    }
+
+    public ArrayList<Skill> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(ArrayList<Skill> skills) {
+        this.skills = skills;
+    }
+
+    
+    
 }

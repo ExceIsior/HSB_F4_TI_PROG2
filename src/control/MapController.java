@@ -31,7 +31,7 @@ public class MapController
         {
             for (int j = 0; j < Constants.TILE_SIZE_Y; j++)
             {
-                tile[i][j] = new Field(new Mountain());
+                //tile[i][j] = new Field(new Mountain());
             }
         }
         return new Tile(tile);
