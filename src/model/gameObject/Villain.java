@@ -1,9 +1,9 @@
 package model.gameObject;
 
-import control.Constants;
 import java.util.ArrayList;
 import model.Position;
 import model.item.Item;
+import control.Constants.Const;
 
 public class Villain extends Character {
 

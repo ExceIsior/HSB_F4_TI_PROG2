@@ -1,4 +1,4 @@
-package control;
+package control.Enums;
 
 import model.item.HeroItem;
 

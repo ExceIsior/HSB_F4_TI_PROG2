@@ -17,6 +17,14 @@ public class Inventory {
         inventory.put(newItem, inventory.containsKey(newItem) ? inventory.get(newItem) + 1 : 1);
     }
 
+    public Item removeItem(Item item){
+        if(this.inventory.containsKey(item)){
+            this.inventory.put(item, this.inventory.get(item)-1);
+            this.inventory.remove(item, 0);
+        }
+        return item;
+    }
+    
     public Set<Item> getItemList() {
         return this.inventory.keySet();
     }
