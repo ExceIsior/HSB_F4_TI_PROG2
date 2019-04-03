@@ -7,6 +7,8 @@ public interface Const {
     public static final int TILE_SIZE_X = 4;
     public static final int TILE_SIZE_Y = 4;
 
+    public static final int NUMBER_CUBE_FACES = 20;
+
     public static final String MAPS_PATH = "./maps/";
     public static final String RESSOURCE_PATH = "./res/";
     public static final String CHARACTERS_PATH = RESSOURCE_PATH + "characters/";
