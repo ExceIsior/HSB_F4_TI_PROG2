@@ -1,12 +1,10 @@
 package control;
 
+import control.Constants.Const;
 import model.gameObject.Mountain;
 import model.map.Dungeon;
 import model.map.Field;
 import model.map.Tile;
-
-import java.util.Arrays;
-import control.Constants.Const;
 
 public class MapController
 {
@@ -32,7 +30,7 @@ public class MapController
         {
             for (int j = 0; j < Const.TILE_SIZE_Y; j++)
             {
-                //tile[i][j] = new Field(new Mountain());
+                tile[i][j] = new Field(new Mountain(null));
             }
         }
         return new Tile(tile);
@@ -40,27 +38,6 @@ public class MapController
 
     public void ausgeben(Dungeon dungeon)
     {
-        System.out.println(createStringRepresentationOfDungeon(dungeon));
-    }
-
-    public String createStringRepresentationOfDungeon(Dungeon dungeon)
-    {
-        Tile[][] map = dungeon.getMap();
-        StringBuilder stringBuilder = new StringBuilder();
-
-        for (Tile[] tiles : map)
-        {
-            for (int tileLooper = 0; tileLooper < Const.TILE_SIZE_Y; tileLooper++)
-            {
-                for (Tile tile : tiles)
-                {
-                    Field[][] fieldArray = tile.getTile();
-                    stringBuilder.append(Arrays.toString(fieldArray[tileLooper]));
-                }
-                stringBuilder.append("\n");
-            }
-            stringBuilder.append("\n");
-        }
-        return stringBuilder.toString();
+        System.out.println(dungeon);
     }
 }
