@@ -17,3 +17,10 @@ nb-configuration.xml
 *.jar
 *.war
 *.ear
+.idea/codeStyles/codeStyleConfig.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/libraries/gson_2_8_5_javadoc.xml
+.idea/workspace.xml
+.idea/modules.xml

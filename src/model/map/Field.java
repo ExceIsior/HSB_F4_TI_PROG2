@@ -29,6 +29,15 @@ public class Field
         return this.texture;
     }
 
+    public void setGameObject(GameObject gameObject)
+    {
+        this.gameObject = gameObject;
+    }
+
+    public void setTexture(char c){
+        this.texture = c;
+    }
+
     public GameObject getGameObject()
     {
         return this.gameObject;

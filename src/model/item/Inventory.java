@@ -1,9 +1,7 @@
 package model.item;
 
-import com.sun.tools.javac.tree.TreeMaker;
 import java.util.HashMap;
 import java.util.Set;
-import java.util.TreeMap;
 
 public class Inventory {
 
