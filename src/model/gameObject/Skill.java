@@ -1,15 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model.gameObject;
 
-/**
- *
- * @author nikla
- */
 class Skill
 {
+    String name = "";
+    int damage = 0;
+    int dieBonus = 0;
+    int range = 0;
+    
+    public Skill(String name, int damage, int dieBonus, int range){
+        this.name = name;
+        this.damage = damage;
+        this.dieBonus = dieBonus;
+        this.range = range;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public int getDieBonus() {
+        return dieBonus;
+    }
+    
+    public int getRange() {
+        return range;
+    }
+    
     
 }
