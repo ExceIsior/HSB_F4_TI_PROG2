@@ -1,20 +1,12 @@
 package control;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.awt.BorderLayout;
-import model.map.Tile;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import model.Menu;
 
-public class Main {
+import java.io.IOException;
 
-    public static void main(String[] args) throws IOException {
+public class Main {
+    public static void main(String[] args) throws IOException
+    {
         
         Menu menu = new Menu();
         menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));
