@@ -1,17 +1,29 @@
 package control;
 
-import model.Menu;
+import model.Position;
+import model.map.Dungeon;
 
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException
     {
-        
-        Menu menu = new Menu();
-        menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));
-        menu.printMenu();
-        menu.runFunction(0);
+
+        MapController mapController = new MapController();
+
+        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
+        mapController.ausgeben(dungeon);
+
+        MovementController.changePositionOfGameObject(new Position(0,0), new Position(6,0), dungeon);
+
+        System.out.println();
+        mapController.ausgeben(dungeon);
+
+
+//        Menu menu = new Menu();
+//        menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));
+//        menu.printMenu();
+//        menu.runFunction(0);
         
 //        System.out.println("Paladin Info:\n");
 //        System.out.println(Heroes.PALADIN.getHero().toString());

@@ -2,6 +2,7 @@ package control;
 
 import control.Constants.Const;
 import model.gameObject.Mountain;
+import model.gameObject.Tree;
 import model.map.Dungeon;
 import model.map.Field;
 import model.map.Tile;
@@ -30,7 +31,12 @@ public class MapController
         {
             for (int j = 0; j < Const.TILE_SIZE_Y; j++)
             {
-                tile[i][j] = new Field(new Mountain(null));
+                if(j % 2 == 0){
+                    tile[i][j] = new Field('M', new Mountain(null));
+                } else{
+                    tile[i][j] = new Field('T',new Tree(null));
+                }
+
             }
         }
         return new Tile(tile);

@@ -34,6 +34,10 @@ public class Field
         this.gameObject = gameObject;
     }
 
+    public void setTexture(char c){
+        this.texture = c;
+    }
+
     public GameObject getGameObject()
     {
         return this.gameObject;
