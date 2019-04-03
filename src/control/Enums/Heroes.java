@@ -8,7 +8,6 @@ import model.item.Inventory;
 public enum Heroes {
     PALADIN(new Hero(HeroConst.PALADIN_RES_PATH,
             new Position(0, 0),
-            HeroConst.PALADIN_DEFAULT_DAMAGE,
             HeroConst.PALADIN_DEFAULT_ARMOR,
             null,
             HeroConst.PALADIN_NAME,
@@ -20,7 +19,6 @@ public enum Heroes {
     
     MAGE(new Hero(HeroConst.MAGE_RES_PATH,
             new Position(0, 0),
-            HeroConst.MAGE_DEFAULT_DAMAGE,
             HeroConst.MAGE_DEFAULT_ARMOR,
             null,
             HeroConst.MAGE_NAME,
@@ -32,7 +30,6 @@ public enum Heroes {
     
     ROGUE(new Hero(HeroConst.ROGUE_RES_PATH,
             new Position(0, 0),
-            HeroConst.ROGUE_DEFAULT_DAMAGE,
             HeroConst.ROGUE_DEFAULT_ARMOR,
             null,
             HeroConst.ROGUE_NAME,
@@ -44,7 +41,6 @@ public enum Heroes {
     
     RANGER(new Hero(HeroConst.RANGER_RES_PATH,
             new Position(0, 0),
-            HeroConst.RANGER_DEFAULT_DAMAGE,
             HeroConst.RANGER_DEFAULT_ARMOR,
             null,
             HeroConst.RANGER_NAME,
