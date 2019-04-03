@@ -1,11 +1,9 @@
 package model.gameObject;
 
-import model.Position;
-import model.gameObject.GameObject;
-import resources.Obstacle;
 import control.Constants.Const;
+import model.Position;
 
-public class Mountain extends GameObject implements Obstacle{
+public class Mountain extends Obstacle{
     
     public Mountain(Position position) {
         super(Const.MOUNTAIN_PATH, position);
