@@ -7,7 +7,6 @@ import control.Constants.BossConst;
 public enum Bosses {
     BASILISK(new Boss(BossConst.BASILISK_RES_PATH,
             new Position(0, 0),
-            BossConst.BASILISK_DEFAULT_DAMAGE,
             BossConst.BASILISK_DEFAULT_ARMOR,
             null,
             BossConst.BASILISK_NAME,
@@ -17,7 +16,6 @@ public enum Bosses {
             null)),
     CYCLOPS(new Boss(BossConst.CYCLOPS_RES_PATH,
             new Position(0, 0),
-            BossConst.CYCLOPS_DEFAULT_DAMAGE,
             BossConst.CYCLOPS_DEFAULT_ARMOR,
             null,
             BossConst.CYCLOPS_NAME,

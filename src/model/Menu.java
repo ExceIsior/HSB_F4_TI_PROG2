@@ -21,14 +21,14 @@ public class Menu {
     }
 
     public void printMenu() {
-        String[] messages = this.menuEntries.keySet().toArray((size) -> new String[size]);
-        for (int i = 0; i < this.menuEntries.size(); i++) {
-            System.out.printf("%d.) %s\n", i, messages[i]);
-        }
+        //String[] messages = this.menuEntries.keySet().toArray((size) -> new String[size]);
+        //for (int i = 0; i < this.menuEntries.size(); i++) {
+        //    System.out.printf("%d.) %s\n", i, messages[i]);
+        //}
     }
 
     public void runFunction(int index) {
-        Runnable[] functions = this.menuEntries.values().toArray((size) -> new Runnable[size]);
-        functions[index].run();
+        //Runnable[] functions = this.menuEntries.values().toArray((size) -> new Runnable[size]);
+        //functions[index].run();
     }
 }
