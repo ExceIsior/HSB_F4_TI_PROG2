@@ -44,11 +44,11 @@ public class Character extends Interactive {
     }
 
     public int getHealthPoints() {
-        return HealthPoints;
+        return healthPoints;
     }
 
     public void setHealthPoints(int HealthPoints) {
-        this.HealthPoints = HealthPoints;
+        this.healthPoints = HealthPoints;
     }
 
     public int getAgility() {
