@@ -2,10 +2,10 @@ package model.gameObject;
 
 class Skill
 {
-    String name = "";
-    int damage = 0;
-    int dieBonus = 0;
-    int range = 0;
+    private String name = "";
+    private int damage = 0;
+    private int dieBonus = 0;
+    private int range = 0;
     
     public Skill(String name, int damage, int dieBonus, int range){
         this.name = name;

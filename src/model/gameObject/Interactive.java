@@ -11,6 +11,7 @@ public class Interactive extends GameObject {
     private Item loot = null;
     private int healthPoints = 0;
 
+
     public Interactive(String graphicsPath, Position position, int damage, int armor, Item loot, int healthPoints) {
         super(graphicsPath, position);
         this.damage = damage;
@@ -38,6 +39,13 @@ public class Interactive extends GameObject {
     public Item getLoot() {
         return loot;
     }
+    
+    public int getHealthPoints() {
+        return healthPoints;
+    }
 
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints = healthPoints;
+    }
     
 }
