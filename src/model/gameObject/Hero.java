@@ -14,7 +14,6 @@ public class Hero extends Character
 
     public Hero(String graphicsPath,
                 Position position,
-                int damage,
                 int armor,
                 Item loot,
                 String name,
@@ -24,7 +23,7 @@ public class Hero extends Character
                 ArrayList<Skill> skills,
                 Inventory inventory)
     {
-        super(graphicsPath, position, damage, armor, loot, name, HealthPoints, agility, status, skills);
+        super(graphicsPath, position, armor, loot, name, HealthPoints, agility, status, skills);
         this.inventory = inventory;
     }
 
@@ -50,7 +49,6 @@ public class Hero extends Character
                         + "Agility: %d",
                 this.getName(),
                 this.getPosition(),
-                this.getDamage(),
                 this.getArmor(),
                 this.getHealthPoints(),
                 this.getAgility());
