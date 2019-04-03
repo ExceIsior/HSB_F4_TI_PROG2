@@ -11,6 +11,15 @@ public class Character extends Interactive {
     private int agility = 0;
     private ArrayList<Status> status = null;
     private ArrayList<Skill> skills = null;
+    private int baseDamage = 0;
+
+    public int getBaseDamage() {
+        return baseDamage;
+    }
+
+    public void setBaseDamage(int baseDamage) {
+        this.baseDamage = baseDamage;
+    }
     
 
     public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
@@ -27,10 +36,10 @@ public class Character extends Interactive {
         int number = DiceController.castDie();
         int damage = 0;
         if (number == 20) {
-            damage = skill.getDamage() + 2;
+            damage = skill.getDamageBonus() + 2;
         }
         else if ( (skill.getDieBonus() + number) >= armorEnemy) {
-           damage = skill.getDamage();
+           damage = skill.getDamageBonus();
         }
         enemy.setHealthPoints(enemy.getHealthPoints() - damage);
     }
