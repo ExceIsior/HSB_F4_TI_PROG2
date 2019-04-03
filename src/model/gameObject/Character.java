@@ -7,7 +7,6 @@ import model.item.Item;
 
 public class Character extends Interactive {
     private String name = "";
-    private int healthPoints = 0;
     private int agility = 0;
     private ArrayList<Status> status = null;
     private ArrayList<Skill> skills = null;
@@ -25,7 +24,6 @@ public class Character extends Interactive {
     public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
         super(graphicsPath, position, armor, loot, healthPoints);
         this.name = name;
-        this.healthPoints = healthPoints;
         this.agility = agility;
         this.status = status;
         this.skills = skills;
@@ -50,14 +48,6 @@ public class Character extends Interactive {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getHealthPoints() {
-        return healthPoints;
-    }
-
-    public void setHealthPoints(int HealthPoints) {
-        this.healthPoints = HealthPoints;
     }
 
     public int getAgility() {
