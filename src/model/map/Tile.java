@@ -20,6 +20,6 @@ public class Tile
 
     public Field getField(Position position)
     {
-        return this.tile[position.getX()][position.getY()];
+        return this.tile[position.getY()][position.getX()];
     }
 }

@@ -26,8 +26,8 @@ public class MovementController
                 changePositionOfGameObjectWithinOneTile(currentPosition, newPosition, currentTile);
             } else
             {
-                newPosition = calculateRelativePositionForTile(newPosition);
                 Tile newTile = getTileWhichContainsGivenCoordinates(newPosition);
+                newPosition = calculateRelativePositionForTile(newPosition);
                 changePositionOfGameObjectOutsideOneTile(currentPosition, newPosition, currentTile, newTile);
             }
         }

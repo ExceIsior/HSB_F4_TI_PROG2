@@ -26,7 +26,7 @@ public class Dungeon
 
     public Tile getTile(Position position)
     {
-        return this.map[position.getX()][position.getY()];
+        return this.map[position.getY()][position.getX()];
     }
 
     @Override

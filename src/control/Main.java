@@ -14,7 +14,7 @@ public class Main {
         Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
         mapController.ausgeben(dungeon);
 
-        MovementController.changePositionOfGameObject(new Position(0,0), new Position(6,0), dungeon);
+        MovementController.changePositionOfGameObject(new Position(0,0), new Position(0,6), dungeon);
 
         System.out.println();
         mapController.ausgeben(dungeon);
