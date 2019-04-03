@@ -34,7 +34,7 @@ public class MapController
                 if(j % 2 == 0){
                     tile[i][j] = new Field('M', new Mountain(null));
                 } else{
-                    tile[i][j] = new Field('T',new Tree(null));
+                    tile[i][j] = new Field('T', new Tree(null));
                 }
 
             }
