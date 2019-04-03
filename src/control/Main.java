@@ -1,23 +1,29 @@
 package control;
 
+import control.Enums.Villains;
 import model.Position;
 import model.map.Dungeon;
 
 import java.io.IOException;
+import model.gameObject.Villain;
 
 public class Main {
     public static void main(String[] args) throws IOException
     {
-
-        MapController mapController = new MapController();
-
-        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
-        mapController.ausgeben(dungeon);
-
-        MovementController.changePositionOfGameObject(new Position(0,0), new Position(0,6), dungeon);
-
-        System.out.println();
-        mapController.ausgeben(dungeon);
+        Villain ork1 = Villains.ORK.getVillain();
+        Villain ork2 = Villains.ORK.getVillain();
+        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+        ork1.setArmor(99);
+        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+//        MapController mapController = new MapController();
+//
+//        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
+//        mapController.ausgeben(dungeon);
+//
+//        MovementController.changePositionOfGameObject(new Position(0,0), new Position(0,6), dungeon);
+//
+//        System.out.println();
+//        mapController.ausgeben(dungeon);
 
 
 //        Menu menu = new Menu();
