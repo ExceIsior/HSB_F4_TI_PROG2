@@ -7,7 +7,7 @@ import model.gameObject.Villain;
 
 public class VillainFactory {
 
-    public static Villain getVillain(String name) {
+    public Villain getVillain(String name) {
         switch (name) {
             case "ork":
                 return new Villain(VillainConst.ORK_RES_PATH, new Position(0, 0),
