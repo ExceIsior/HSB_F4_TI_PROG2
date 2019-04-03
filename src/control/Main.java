@@ -1,25 +1,29 @@
 package control;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.awt.BorderLayout;
-import model.map.Tile;
-import java.io.FileReader;
-import java.io.FileWriter;
+import model.Position;
+import model.map.Dungeon;
+
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import model.Menu;
 
 public class Main {
+    public static void main(String[] args) throws IOException
+    {
 
-    public static void main(String[] args) throws IOException {
-        
-        Menu menu = new Menu();
-        menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));
-        menu.printMenu();
-        menu.runFunction(0);
+        MapController mapController = new MapController();
+
+        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
+        mapController.ausgeben(dungeon);
+
+        MovementController.changePositionOfGameObject(new Position(0,0), new Position(0,6), dungeon);
+
+        System.out.println();
+        mapController.ausgeben(dungeon);
+
+
+//        Menu menu = new Menu();
+//        menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));
+//        menu.printMenu();
+//        menu.runFunction(0);
         
 //        System.out.println("Paladin Info:\n");
 //        System.out.println(Heroes.PALADIN.getHero().toString());

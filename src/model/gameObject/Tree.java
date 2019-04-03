@@ -1,13 +1,12 @@
 package model.gameObject;
 
-import model.Position;
-import model.gameObject.GameObject;
-import resources.Obstacle;
 import control.Constants.Const;
+import model.Position;
 
-public class Tree extends GameObject implements Obstacle{
+public class Tree extends Obstacle
+{
     
-    public Tree(String graphicsPath, Position position) {
+    public Tree(Position position) {
         super(Const.TREE_PATH, position);
     }
     
