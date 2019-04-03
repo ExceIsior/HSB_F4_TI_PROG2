@@ -1,6 +1,7 @@
 package model.map;
 
 import control.Constants.Const;
+import model.Position;
 import model.Quest;
 
 import java.util.Arrays;
@@ -21,6 +22,11 @@ public class Dungeon
     public Tile[][] getMap()
     {
         return this.map;
+    }
+
+    public Tile getTile(Position position)
+    {
+        return this.map[position.getX()][position.getY()];
     }
 
     @Override
