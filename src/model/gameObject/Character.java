@@ -13,8 +13,8 @@ public class Character extends Interactive {
     private ArrayList<Skill> skills = null;
     
 
-    public Character(String graphicsPath, Position position, int damage, int armor, Item loot, String name, int healthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
-        super(graphicsPath, position, damage, armor, loot, healthPoints);
+    public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
+        super(graphicsPath, position, armor, loot, healthPoints);
         this.name = name;
         this.healthPoints = healthPoints;
         this.agility = agility;
