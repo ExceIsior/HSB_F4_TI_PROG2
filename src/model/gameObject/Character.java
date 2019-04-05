@@ -8,38 +8,29 @@ import model.Status;
 import model.item.Item;
 
 public class Character extends Interactive {
+
     private String name = "";
     private int agility = 0;
     private ArrayList<Status> status = null;
     private ArrayList<Skill> skills = null;
     private int baseDamage = 0;
 
-    public int getBaseDamage() {
-        return baseDamage;
-    }
-
-    public void setBaseDamage(int baseDamage) {
-        this.baseDamage = baseDamage;
-    }
-    
-
-    public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
-        super(graphicsPath, position, armor, loot, healthPoints, Const.HEIGHT_CHARACTER);
+    public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int maxHealthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
+        super(graphicsPath, position, armor, loot, healthPoints, maxHealthPoints, Const.HEIGHT_CHARACTER);
         this.name = name;
         this.agility = agility;
         this.status = status;
         this.skills = skills;
     }
-    
+
     public void attack(Skill skill, Interactive enemy) {
         int armorEnemy = enemy.getArmor();
         int number = DiceController.castDie();
         int damage = 0;
         if (number == 20) {
             damage = skill.getDamageBonus() + 2;
-        }
-        else if ( (skill.getDieBonus() + number) >= armorEnemy) {
-           damage = skill.getDamageBonus();
+        } else if ((skill.getDieBonus() + number) >= armorEnemy) {
+            damage = skill.getDamageBonus();
         }
         enemy.setHealthPoints(enemy.getHealthPoints() - damage);
     }
@@ -52,12 +43,28 @@ public class Character extends Interactive {
         this.name = name;
     }
 
+    public int getBaseDamage() {
+        return baseDamage;
+    }
+
+    public void setBaseDamage(int baseDamage) {
+        if(baseDamage >= 0){
+        this.baseDamage = baseDamage;
+        }else{
+            this.baseDamage = 0;
+        }
+    }
+
     public int getAgility() {
         return agility;
     }
 
     public void setAgility(int agility) {
+                if(agility >= 0){
         this.agility = agility;
+        }else{
+            this.agility = 0;
+        }
     }
 
     public ArrayList<Status> getStatus() {
@@ -76,6 +83,4 @@ public class Character extends Interactive {
         this.skills = skills;
     }
 
-    
-    
 }

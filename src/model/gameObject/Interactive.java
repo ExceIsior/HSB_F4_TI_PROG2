@@ -10,13 +10,14 @@ public class Interactive extends GameObject {
     private int armor = 0;
     private Item loot = null;
     private int healthPoints = 0;
+    private int maxHealthPoints = 0;
 
-
-    public Interactive(String graphicsPath, Position position, int armor, Item loot, int healthPoints, int height) {
+    public Interactive(String graphicsPath, Position position, int armor, Item loot, int healthPoints, int maxHealthPoints, int height) {
         super(graphicsPath, position, height);
         this.armor = armor;
         this.loot = loot;
         this.healthPoints = healthPoints;
+        this.maxHealthPoints = maxHealthPoints;
     }
 
     public int getArmor() {
@@ -30,13 +31,32 @@ public class Interactive extends GameObject {
     public Item getLoot() {
         return loot;
     }
-    
+
     public int getHealthPoints() {
         return healthPoints;
     }
 
     public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
+        if (healthPoints < this.maxHealthPoints) {
+            this.healthPoints = healthPoints;
+        } else {
+            this.healthPoints = this.maxHealthPoints;
+        }
     }
-    
+
+    public int getMaxHealthPoints() {
+        return maxHealthPoints;
+    }
+
+    public void setMaxHealthPoints(int maxHealthPoints) {
+        if (maxHealthPoints >= 0) {
+            this.maxHealthPoints = maxHealthPoints;
+        } else {
+            this.maxHealthPoints = 0;
+        }
+        if (this.healthPoints > this.maxHealthPoints) {
+            this.healthPoints = this.maxHealthPoints;
+        }
+    }
+
 }

@@ -18,13 +18,14 @@ public class Hero extends Character
                 int armor,
                 Item loot,
                 String name,
-                int HealthPoints,
+                int healthPoints,
+                int maxHealthPoints,
                 int agility,
                 ArrayList<Status> status,
                 ArrayList<Skill> skills,
                 Inventory inventory)
     {
-        super(graphicsPath, position, armor, loot, name, HealthPoints, agility, status, skills);
+        super(graphicsPath, position, armor, loot, name, healthPoints, maxHealthPoints, agility, status, skills);
         this.inventory = inventory;
     }
 

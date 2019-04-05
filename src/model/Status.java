@@ -3,9 +3,9 @@ package model;
 public class Status
 {
     private int restlicheGueltigkeit = 0;
-    private Effekt effekt = null;
+    private Effect effekt = null;
 
-    public Status(int restlicheGueltigkeit, Effekt effekt)
+    public Status(int restlicheGueltigkeit, Effect effekt)
     {
         this.restlicheGueltigkeit = restlicheGueltigkeit;
         this.effekt = effekt;
