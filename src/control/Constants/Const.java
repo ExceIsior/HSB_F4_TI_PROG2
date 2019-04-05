@@ -6,9 +6,18 @@ public interface Const {
     public static final int MAP_SIZE_Y = 4;
     public static final int TILE_SIZE_X = 4;
     public static final int TILE_SIZE_Y = 4;
-
+    
     public static final int NUMBER_CUBE_FACES = 20;
 
+    public static final int HERO_AMOUNT = 4;
+    
+    public static final String DEFAULT_PLAYER_NAME = "Player1";
+    public static final int DEFAULT_PLAYER_GOLD = 0;
+    public static final int DEFAULT_PLAYER_EXPERIENCE_POINTS = 0;
+    public static final int DEFAULT_PLAYER_INVENTORY_CAPACITY = 99999;
+    
+    
+    
     public static final String MAPS_PATH = "./maps/";
     public static final String RESSOURCE_PATH = "./res/";
     public static final String CHARACTERS_PATH = RESSOURCE_PATH + "characters/";
