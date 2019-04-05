@@ -3,8 +3,8 @@ package model.gameObject;
 
 import java.util.ArrayList;
 import model.Position;
+import model.Status;
 import model.item.Item;
-import control.Constants.Const;
 
 
 public class Boss extends Villain {

@@ -1,12 +1,8 @@
 package control;
 
-import control.Enums.Villains;
-import model.Position;
-import model.map.Dungeon;
+import model.gameObject.Villain;
 
 import java.io.IOException;
-import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
-import model.gameObject.Villain;
 
 public class Main {
 
