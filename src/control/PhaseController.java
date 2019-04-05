@@ -19,7 +19,12 @@ public class PhaseController {
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
                 MovementController.changePositionOfGameObject(new Position(x, y));
-                MapController.ausgeben(MovementController.getDungeon());
+                MapController.ausgeben(GameController.getDungeon());
+                System.out.println("naechster Schritt");
+                x = positionListener.nextInt();
+                y = positionListener.nextInt();
+                MovementController.changePositionOfGameObject(new Position(x, y));
+                MapController.ausgeben(GameController.getDungeon());
                 gameController.setGamePhase(2);
                 break;
             case(2):

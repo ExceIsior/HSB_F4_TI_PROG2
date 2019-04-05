@@ -4,9 +4,6 @@ package control.Enums;
 import model.Objective;
 import model.Quest;
 import model.Reward;
-import model.gameObject.GameObject;
-import model.gameObject.Villain;
-import model.item.Material;
 
 public enum Quests {
     QUEST1(new Quest(new Reward(5, 5, Materials.BRONZE.getMaterial(), Materials.AMETHYST.getMaterial()), new Objective(Villains.ZOMBIE.getVillain() , 3))),

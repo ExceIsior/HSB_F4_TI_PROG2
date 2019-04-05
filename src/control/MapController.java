@@ -1,6 +1,7 @@
 package control;
 
 import control.Constants.Const;
+import model.Position;
 import model.gameObject.Mountain;
 import model.gameObject.Tree;
 import model.map.Dungeon;
@@ -21,6 +22,7 @@ public class MapController
                 map[i][j] = generateTile();
             }
         }
+        map[0][0].getField(new Position(0,1)).setGameObject(GameController.getHero1());
         dungeon = new Dungeon("",null,map);
         return map;
     }
