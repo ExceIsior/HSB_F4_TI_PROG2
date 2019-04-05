@@ -6,13 +6,13 @@ public abstract class GameObject {
     
     private Position position = null;
     private String graphicspath = "";
+    private int height = 0;
 
-    public GameObject(String graphicsPath, Position position) {
+    public GameObject(String graphicsPath, Position position, int height) {
         this.graphicspath = graphicsPath;
         this.position = position;
+        this.height = height;
     }
-    
-    
     
     public Position getPosition()
     {

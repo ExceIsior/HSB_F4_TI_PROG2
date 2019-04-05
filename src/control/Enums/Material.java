@@ -1,5 +1,5 @@
 package control.Enums;
 
-public enum Materials {
+public enum Material {
     
 }

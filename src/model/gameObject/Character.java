@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import control.Constants.Const;
 import control.DiceController;
 import java.util.ArrayList;
 import model.Position;
@@ -22,7 +23,7 @@ public class Character extends Interactive {
     
 
     public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
-        super(graphicsPath, position, armor, loot, healthPoints);
+        super(graphicsPath, position, armor, loot, healthPoints, Const.HEIGHT_CHARACTER);
         this.name = name;
         this.agility = agility;
         this.status = status;
