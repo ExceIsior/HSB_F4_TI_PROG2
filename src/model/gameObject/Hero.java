@@ -1,6 +1,7 @@
 package model.gameObject;
 
 import model.Position;
+import model.Status;
 import model.item.Inventory;
 import model.item.Item;
 

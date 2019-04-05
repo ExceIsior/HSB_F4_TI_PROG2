@@ -1,22 +1,18 @@
 package control;
 
-import control.Enums.Villains;
-import model.Position;
-import model.map.Dungeon;
-
-import java.io.IOException;
 import model.gameObject.Villain;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) throws IOException
-    {
-    
-        
-//        Villain ork1 = Villains.ORK.getVillain();
-//        Villain ork2 = Villains.ORK.getVillain();
-//        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
-//        ork1.setArmor(99);
-//        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+
+    public static void main(String[] args) throws IOException {
+
+        Villain ork1 = model.Factories.VillainFactory.getVillain("ork");
+        Villain ork2 = model.Factories.VillainFactory.getVillain("ork");
+        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+        ork1.setArmor(99);
+        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
 //        MapController mapController = new MapController();
 //
 //        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
@@ -27,12 +23,10 @@ public class Main {
 //        System.out.println();
 //        mapController.ausgeben(dungeon);
 
-
 //        Menu menu = new Menu();
 //        menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));
 //        menu.printMenu();
 //        menu.runFunction(0);
-        
 //        System.out.println("Paladin Info:\n");
 //        System.out.println(Heroes.PALADIN.getHero().toString());
 //        System.out.println("\nMage Info:\n");
