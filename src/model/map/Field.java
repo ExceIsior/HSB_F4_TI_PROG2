@@ -34,7 +34,8 @@ public class Field
         this.gameObject = gameObject;
     }
 
-    public void setTexture(char c){
+    public void setTexture(char c)
+    {
         this.texture = c;
     }
 
@@ -46,6 +47,7 @@ public class Field
     @Override
     public String toString()
     {
-        return Character.toString(this.texture);
+        //TODO: später darf man sich hier nicht nur auf die GameObjects beziehen, sondern muss auch die Texturen mit einbeziehen
+        return (this.gameObject == null ? null : this.gameObject.toString());
     }
 }

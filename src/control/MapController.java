@@ -25,7 +25,6 @@ public class MapController
 
     private Tile generateTile()
     {
-        // GameObject[] objects = {new}
         Field[][] tile = new Field[Const.TILE_SIZE_X][Const.TILE_SIZE_Y];
         for (int i = 0; i < Const.TILE_SIZE_X; i++)
         {

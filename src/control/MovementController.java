@@ -43,9 +43,7 @@ public class MovementController
     {
         GameObject gameObject = tile.getField(currentPosition).getGameObject();
         tile.getField(currentPosition).setGameObject(null);
-        tile.getField(currentPosition).setTexture(' ');
         tile.getField(newPosition).setGameObject(gameObject);
-        tile.getField(newPosition).setTexture('f');
     }
 
     private static void changePositionOfGameObjectOutsideOneTile(Position currentPosition, Position newPosition,
@@ -53,9 +51,7 @@ public class MovementController
     {
         GameObject gameObject = currentTile.getField(currentPosition).getGameObject();
         currentTile.getField(currentPosition).setGameObject(null);
-        currentTile.getField(currentPosition).setTexture(' ');
         newTile.getField(newPosition).setGameObject(gameObject);
-        newTile.getField(newPosition).setTexture('f');
     }
 
     private static Tile getTileWhichContainsGivenCoordinates(Position position)
