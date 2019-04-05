@@ -10,11 +10,13 @@ import model.gameObject.Villain;
 public class Main {
     public static void main(String[] args) throws IOException
     {
-        Villain ork1 = Villains.ORK.getVillain();
-        Villain ork2 = Villains.ORK.getVillain();
-        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
-        ork1.setArmor(99);
-        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+    
+        
+//        Villain ork1 = Villains.ORK.getVillain();
+//        Villain ork2 = Villains.ORK.getVillain();
+//        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+//        ork1.setArmor(99);
+//        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
 //        MapController mapController = new MapController();
 //
 //        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
