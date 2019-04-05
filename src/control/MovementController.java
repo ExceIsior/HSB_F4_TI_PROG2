@@ -35,6 +35,7 @@ public class MovementController
                 newPosition = calculateRelativePositionForTile(newPosition);
                 changePositionOfGameObjectOutsideOneTile(currentPositionOfTile, newPosition, currentTile, newTile);
             }
+            GameController.getHero1().setPosition(newPosition);
         }
     }
     
