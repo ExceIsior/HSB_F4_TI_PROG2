@@ -2,7 +2,7 @@ package model.gameObject;
 
 import java.util.HashMap;
 
-class Skill {
+public class Skill {
 
     private String name = "";
     private int damageBonus = 0;
