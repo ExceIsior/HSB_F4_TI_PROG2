@@ -9,18 +9,26 @@ import model.map.Tile;
 public class MovementController
 {
 
-    private static Dungeon dungeon = null;
+    private static Dungeon dungeon = MapController.getDungeon();
 
+    public static Dungeon getDungeon() 
+    {
+        return dungeon;
+    }
+    
+    //VORLAEUFIG
+    private static Position currentPosition = new Position(0,0);
+
+   
     public static void changePositionOfGameObject(Position currentPosition, Position newPosition, Dungeon dungeon)
     {
-        MovementController.dungeon = dungeon;
 
         if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition))
         {
             Tile currentTile = getTileWhichContainsGivenCoordinates(currentPosition);
 
             currentPosition = calculateRelativePositionForTile(currentPosition);
-
+            MovementController.currentPosition = currentPosition;
             if (!MovementVerifier.moveResultsInGameObjectLeavingTile(newPosition))
             {
                 changePositionOfGameObjectWithinOneTile(currentPosition, newPosition, currentTile);
@@ -31,6 +39,11 @@ public class MovementController
                 changePositionOfGameObjectOutsideOneTile(currentPosition, newPosition, currentTile, newTile);
             }
         }
+    }
+    
+    public static void changePositionOfGameObject(Position newPosition)
+    {
+         changePositionOfGameObject(currentPosition, newPosition, dungeon);
     }
 
     private static Position calculateRelativePositionForTile(Position position)
@@ -62,6 +75,6 @@ public class MovementController
     {
         int xCoordinate = (position.getX() / Const.TILE_SIZE_X);
         int yCoordinate = (position.getY() / Const.TILE_SIZE_Y);
-        return dungeon.getTile(new Position(xCoordinate, yCoordinate));
+        return MapController.getDungeon().getTile(new Position(xCoordinate, yCoordinate));
     }
 }
