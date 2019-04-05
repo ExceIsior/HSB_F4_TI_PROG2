@@ -2,6 +2,7 @@ package model;
 
 import java.util.List;
 import java.util.ArrayList;
+import model.item.Inventory;
 import model.item.Item;
 
 public class Player {
@@ -9,8 +10,14 @@ public class Player {
     private String name = "";
     private int experiencePoints = 0;
     private int gold = 0;
-    private ArrayList<Item> inventory = null;
-
+    private Inventory inventory = null;
+    
+    public Player(String name, int experiencePoints, int gold, Inventory inventory) {
+        this.name = name;
+        this.experiencePoints = experiencePoints;
+        this.gold = gold;
+        this.inventory = inventory;
+    }
     
     //GETTER & SETTER
     
@@ -34,11 +41,11 @@ public class Player {
         this.gold = gold;
     }
 
-    public ArrayList<Item> getInventory() {
-        return inventory;
+    public Inventory getInventory() {
+        return this.inventory;
     }
 
-    public void setInventory(ArrayList<Item> inventory) {
+    public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
     

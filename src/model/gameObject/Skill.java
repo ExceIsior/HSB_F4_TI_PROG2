@@ -1,6 +1,7 @@
 package model.gameObject;
 
 import java.util.HashMap;
+import model.Effect;
 
 public class Skill {
 
@@ -10,13 +11,15 @@ public class Skill {
     private int range = 0;
     private int radius = 0;
     private int availability = 0;
-
-    public Skill(String name, int damage, int dieBonus, int range, int damageRadius, int availability) {
+    private Effect statusEffect = null;
+    
+    public Skill(String name, int damageBonus, int dieBonus, int range, int damageRadius, int availability, Effect statusEffect) {
         this.name = name;
         this.damageBonus = damageBonus;
         this.dieBonus = dieBonus;
         this.range = range;
         this.availability = availability;
+        this.statusEffect = statusEffect;
     }
 
     public String getName() {
