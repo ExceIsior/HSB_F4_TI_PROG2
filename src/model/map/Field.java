@@ -46,6 +46,6 @@ public class Field
     @Override
     public String toString()
     {
-        return Character.toString(this.texture);
+        return (this.gameObject == null ? null : this.gameObject.toString());
     }
 }
