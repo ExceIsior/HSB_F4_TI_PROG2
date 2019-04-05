@@ -17,7 +17,7 @@ public class MovementController
     }
     
     //VORLAEUFIG
-    private static Position currentPosition = new Position(0,0);
+    private static Position currentPosition = new Position(1,0);
 
    
     public static void changePositionOfGameObject(Position currentPosition, Position newPosition, Dungeon dungeon)
