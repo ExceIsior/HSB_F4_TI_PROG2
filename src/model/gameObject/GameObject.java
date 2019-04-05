@@ -28,4 +28,10 @@ public abstract class GameObject {
     {
         return this.graphicspath;
     }
+    
+    @Override
+    public String toString()
+    {
+        return this.graphicspath.substring(this.graphicspath.length()-1);
+    }
 }
