@@ -7,6 +7,7 @@ public class Field
 
     private char texture;
     private GameObject gameObject = null;
+    private boolean visible = false;
 
     public Field(char c, GameObject gameObject)
     {
@@ -44,6 +45,16 @@ public class Field
         return this.gameObject;
     }
 
+    public boolean isVisibile() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
+
+    
+    
     @Override
     public String toString()
     {

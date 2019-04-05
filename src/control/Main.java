@@ -5,18 +5,25 @@ import model.Position;
 import model.map.Dungeon;
 
 import java.io.IOException;
+import java.util.Arrays;
 import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
 import model.gameObject.Villain;
+import model.map.Field;
+import model.map.Tile;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Villain ork1 = model.Factories.VillainFactory.getVillain("ork");
-        Villain ork2 = model.Factories.VillainFactory.getVillain("ork");
-        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
-        ork1.setArmor(99);
-        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+        Tile tile = new Tile(new Field[][]{{new Field(' ',null)},{new Field(' ', null)}});
+        tile.setVisible(true);
+        tile.setVisible(false);
+        tile.setVisible(true);
+//        Villain ork1 = model.Factories.VillainFactory.getVillain("ork");
+//        Villain ork2 = model.Factories.VillainFactory.getVillain("ork");
+//        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
+//        ork1.setArmor(99);
+//        System.out.printf("%d\n%d\n", ork1.getArmor(), ork2.getArmor());
 //        MapController mapController = new MapController();
 //
 //        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
