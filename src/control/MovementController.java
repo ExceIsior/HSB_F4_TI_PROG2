@@ -36,6 +36,7 @@ public class MovementController
                 changePositionOfGameObjectOutsideOneTile(currentPositionOfTile, newPosition, currentTile, newTile);
             }
             GameController.getHero1().setPosition(newPosition);
+            currentPosition = GameController.getHero1().getPosition();
         }
     }
     
