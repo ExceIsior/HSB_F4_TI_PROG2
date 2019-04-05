@@ -23,13 +23,15 @@ public class Tile
         return this.tile[position.getY()][position.getX()];
     }
 
-    public boolean isVisibility() {
+    public boolean isVisible() {
         return visible;
     }
 
-    public void setVisibility(boolean visibility) {
-        this.visible = visibility;
+    public void setVisible(boolean visible) {
+        this.visible = visible;
     }
+
+
 
 
     
