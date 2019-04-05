@@ -4,6 +4,7 @@ import control.Constants.Const;
 import control.DiceController;
 import java.util.ArrayList;
 import model.Position;
+import model.Status;
 import model.item.Item;
 
 public class Character extends Interactive {

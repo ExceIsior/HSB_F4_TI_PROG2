@@ -11,5 +11,13 @@ package model;
  */
 public class Effekt
 {
+    private int healthpoints = 0;
+    private int agility = 0;
+    private int armor = 0;
     
+    
+    public void changeCurrentHealthPoints(int hp)
+    {
+        
+    }
 }

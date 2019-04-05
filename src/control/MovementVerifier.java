@@ -15,7 +15,7 @@ public class MovementVerifier
     }
 
     public static boolean moveResultsInGameObjectLeavingTile(Position newPosition){
-        return newPosition.getX() < 0 || newPosition.getX() > Const.TILE_SIZE_X ||
-                newPosition.getY() < 0 || newPosition.getY() > Const.TILE_SIZE_Y;
+        return newPosition.getX() < 0 || newPosition.getX() >= Const.TILE_SIZE_X ||
+                newPosition.getY() < 0 || newPosition.getY() >= Const.TILE_SIZE_Y;
     }
 }

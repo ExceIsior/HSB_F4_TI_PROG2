@@ -1,6 +1,7 @@
 package model.gameObject;
 
 import model.Position;
+import model.Status;
 import model.item.Inventory;
 import model.item.Item;
 
@@ -41,17 +42,7 @@ public class Hero extends Character
     @Override
     public String toString()
     {
-        return String.format("Name: %s\n"
-                        + "Position: %s\n"
-                        + "Damage: %d\n"
-                        + "Armor: %d\n"
-                        + "HealthPoints: %d\n"
-                        + "Agility: %d",
-                this.getName(),
-                this.getPosition(),
-                this.getArmor(),
-                this.getHealthPoints(),
-                this.getAgility());
+        return this.getGraphicsPath();
     }
 
 

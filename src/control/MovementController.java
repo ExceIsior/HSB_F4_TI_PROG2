@@ -3,35 +3,43 @@ package control;
 import control.Constants.Const;
 import model.Position;
 import model.gameObject.GameObject;
+import model.gameObject.Hero;
 import model.map.Dungeon;
 import model.map.Tile;
 
 public class MovementController
 {
 
-    private static Dungeon dungeon = null;
+    private static Dungeon dungeon = GameController.getDungeon();
 
-    public static void changePositionOfGameObject(Position currentPosition, Position newPosition, Dungeon dungeon)
+    //VORLAEUFIG
+    private static Position currentPosition = GameController.getHero1().getPosition();
+
+   
+    public static void changePositionOfGameObject(Position newPosition)
     {
-        MovementController.dungeon = dungeon;
 
         if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition))
         {
             Tile currentTile = getTileWhichContainsGivenCoordinates(currentPosition);
 
-            currentPosition = calculateRelativePositionForTile(currentPosition);
-
+            Position currentPositionOfTile = calculateRelativePositionForTile(currentPosition);
+            
             if (!MovementVerifier.moveResultsInGameObjectLeavingTile(newPosition))
             {
-                changePositionOfGameObjectWithinOneTile(currentPosition, newPosition, currentTile);
-            } else
+                changePositionOfGameObjectWithinOneTile(currentPositionOfTile, newPosition, currentTile);
+            } 
+            else
             {
                 Tile newTile = getTileWhichContainsGivenCoordinates(newPosition);
                 newPosition = calculateRelativePositionForTile(newPosition);
-                changePositionOfGameObjectOutsideOneTile(currentPosition, newPosition, currentTile, newTile);
+                changePositionOfGameObjectOutsideOneTile(currentPositionOfTile, newPosition, currentTile, newTile);
             }
+            GameController.getHero1().setPosition(newPosition);
+            currentPosition = GameController.getHero1().getPosition();
         }
     }
+    
 
     private static Position calculateRelativePositionForTile(Position position)
     {
