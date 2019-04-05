@@ -7,6 +7,7 @@ public class Field
 
     private char texture;
     private GameObject gameObject = null;
+    private boolean visible = false;
 
     public Field(char c, GameObject gameObject)
     {
@@ -34,7 +35,8 @@ public class Field
         this.gameObject = gameObject;
     }
 
-    public void setTexture(char c){
+    public void setTexture(char c)
+    {
         this.texture = c;
     }
 
@@ -43,9 +45,20 @@ public class Field
         return this.gameObject;
     }
 
+    public boolean isVisibile() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
+
+    
+    
     @Override
     public String toString()
     {
-        return Character.toString(this.texture);
+        //TODO: später darf man sich hier nicht nur auf die GameObjects beziehen, sondern muss auch die Texturen mit einbeziehen
+        return (this.gameObject == null ? null : this.gameObject.toString());
     }
 }
