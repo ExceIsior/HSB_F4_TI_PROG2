@@ -4,7 +4,7 @@ import model.Position;
 
 public class Tile
 {
-    private boolean isVisible = false;
+    private boolean visible = false;
 
     private Field[][] tile = null;
 
@@ -22,4 +22,16 @@ public class Tile
     {
         return this.tile[position.getY()][position.getX()];
     }
+
+    public boolean isVisibility() {
+        return visible;
+    }
+
+    public void setVisibility(boolean visibility) {
+        this.visible = visibility;
+    }
+
+
+    
+    
 }
