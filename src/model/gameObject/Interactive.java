@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import control.Constants.Const;
 import model.Position;
 import model.gameObject.GameObject;
 import model.item.Item;
@@ -11,8 +12,8 @@ public class Interactive extends GameObject {
     private int healthPoints = 0;
 
 
-    public Interactive(String graphicsPath, Position position, int armor, Item loot, int healthPoints) {
-        super(graphicsPath, position);
+    public Interactive(String graphicsPath, Position position, int armor, Item loot, int healthPoints, int height) {
+        super(graphicsPath, position, height);
         this.armor = armor;
         this.loot = loot;
         this.healthPoints = healthPoints;
