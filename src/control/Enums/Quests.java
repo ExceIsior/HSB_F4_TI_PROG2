@@ -9,9 +9,9 @@ import model.gameObject.Villain;
 import model.item.Material;
 
 public enum Quests {
-    QUEST1(new Quest(new Reward(5, 5, new Material(5, "hallo")), new Objective(Villains.ZOMBIE.getVillain() , 3))),
-    QUEST2(new Quest(new Reward(10, 10, new Material(5, "hi")), new Objective(Villains.SUCCUBUS.getVillain(), 4))),
-    QUEST3(new Quest(new Reward(10, 10, new Material(5, "hi")), new Objective(Villains.ORK.getVillain(), 5)));
+    QUEST1(new Quest(new Reward(5, 5, Materials.BRONZE.getMaterial(), Materials.AMETHYST.getMaterial()), new Objective(Villains.ZOMBIE.getVillain() , 3))),
+    QUEST2(new Quest(new Reward(10, 10, Materials.CLOTH.getMaterial(), Materials.LEATHER.getMaterial()), new Objective(Villains.SUCCUBUS.getVillain(), 4))),
+    QUEST3(new Quest(new Reward(10, 10, Materials.GOLD.getMaterial(), Materials.BRONZE.getMaterial()), new Objective(Villains.ORK.getVillain(), 5)));
    
     private final Quest quest;
     private Quests(Quest quest){
