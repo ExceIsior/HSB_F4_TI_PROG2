@@ -1,5 +1,6 @@
 package model;
 
+import control.Enums.Materials;
 import model.item.Material;
 
 public class Reward {

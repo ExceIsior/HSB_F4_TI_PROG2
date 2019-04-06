@@ -6,9 +6,9 @@ import model.gameObject.Villain;
 
 public class VillainFactory {
 
-    public static Villain getVillain(String name) {
-        switch (name) {
-            case "ork":
+    public static Villain getVillain(int villainId) {
+        switch (villainId) {
+            case  VillainConst.ORK_ID:
                 return new Villain(VillainConst.ORK_RES_PATH, new Position(0, 0),
                         VillainConst.ORK_DEFAULT_ARMOR,
                         null,
@@ -19,7 +19,7 @@ public class VillainFactory {
                         null,
                         null);
 
-            case "zombie":
+            case VillainConst.GHUL_ID:
                 return new Villain(VillainConst.GHUL_RES_PATH, new Position(0, 0),
                         VillainConst.GHUL_DEFAULT_ARMOR,
                         null,
@@ -30,7 +30,7 @@ public class VillainFactory {
                         null,
                         null);
 
-            case "Werewolf":
+            case VillainConst.WEREWOLF_ID:
                 return new Villain(VillainConst.WEREWOLF_RES_PATH,
                         new Position(0, 0),
                         VillainConst.WEREWOLF_DEFAULT_ARMOR,
@@ -42,7 +42,7 @@ public class VillainFactory {
                         null,
                         null);
 
-            case "Vampire":
+            case VillainConst.VAMPIRE_ID:
                 return new Villain(VillainConst.VAMPIRE_RES_PATH,
                         new Position(0, 0),
                         VillainConst.VAMPIRE_DEFAULT_ARMOR,
@@ -54,7 +54,7 @@ public class VillainFactory {
                         null,
                         null);
 
-            case "Succubus":
+            case VillainConst.SUCCUBUS_ID:
                 return new Villain(VillainConst.SUCCUBUS_RES_PATH,
                         new Position(0, 0),
                         VillainConst.SUCCUBUS_DEFAULT_ARMOR,
@@ -66,7 +66,7 @@ public class VillainFactory {
                         null,
                         null);
 
-            case "Zombie":
+            case VillainConst.ZOMBIE_ID:
                 return new Villain(VillainConst.ZOMBIE_RES_PATH,
                         new Position(0, 0),
                         VillainConst.ZOMBIE_DEFAULT_ARMOR,
