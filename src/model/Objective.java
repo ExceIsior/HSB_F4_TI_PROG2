@@ -4,7 +4,6 @@ import java.util.HashMap;
 import model.gameObject.GameObject;
 
 public class Objective  {
-    private HashMap<GameObject, Integer> objectives;
     private GameObject gameObject = null;
     private int count = 0;
 
@@ -27,15 +26,6 @@ public class Objective  {
 
     public void setCount(int count) {
         this.count = count;
-    }
-
-    
-    public HashMap<GameObject, Integer> getObjectives() {
-        return objectives;
-    }
-
-    public void setObjectives(HashMap<GameObject, Integer> objectives) {
-        this.objectives = objectives;
     }
 
     public boolean objectiveComplete(){
