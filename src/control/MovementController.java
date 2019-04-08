@@ -1,16 +1,12 @@
 package control;
 
-import com.sun.tools.javac.util.ArrayUtils;
 import control.Constants.Const;
-import java.util.ArrayList;
 import model.Position;
 import model.gameObject.GameObject;
-import model.gameObject.Hero;
-import model.gameObject.Character;
 import model.map.Dungeon;
-import control.MapController;
-import model.map.Field;
 import model.map.Tile;
+
+import java.util.ArrayList;
 
 public class MovementController
 {
@@ -30,7 +26,7 @@ public class MovementController
 
             Position currentPositionOfTile = calculateRelativePositionForTile(currentPosition);
             
-            if (!MovementVerifier.moveResultsInGameObjectLeavingTile(newPosition))
+            if (!MovementVerifier.moveResultsInGameObjectLeavingTile(currentPosition, newPosition))
             {
                 changePositionOfGameObjectWithinOneTile(currentPositionOfTile, newPosition, currentTile);
             } 
@@ -67,7 +63,7 @@ public class MovementController
         newTile.getField(newPosition).setGameObject(gameObject);
     }
 
-    private static Tile getTileWhichContainsGivenCoordinates(Position position)
+    public static Tile getTileWhichContainsGivenCoordinates(Position position)
     {
         int xCoordinate = (position.getX() / Const.TILE_SIZE_X);
         int yCoordinate = (position.getY() / Const.TILE_SIZE_Y);
