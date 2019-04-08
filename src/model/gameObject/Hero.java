@@ -26,7 +26,17 @@ public class Hero extends Character
                 Inventory inventory,
                 int initiative)
     {
-        super(graphicsPath, position, armor, loot, name, healthPoints, maxHealthPoints, agility, status, skills, initiative);
+        super(graphicsPath,
+                position, 
+                armor, 
+                loot,
+                name, 
+                healthPoints,
+                maxHealthPoints,
+                agility, 
+                status, 
+                skills, 
+                initiative);
         this.inventory = inventory;
     }
 

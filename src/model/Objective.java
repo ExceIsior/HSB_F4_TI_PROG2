@@ -1,6 +1,5 @@
 package model;
 
-import java.util.HashMap;
 import model.gameObject.GameObject;
 
 public class Objective  {
