@@ -14,12 +14,16 @@ public class MovementController
     private static Dungeon dungeon = GameController.getDungeon();
 
     //VORLAEUFIG
-    private static Position currentPosition = GameController.getHero1().getPosition();
+    private static Position currentPosition = null;
+
+    public static Position getCurrentPosition() {
+        return currentPosition;
+    }
 
    
-    public static void changePositionOfGameObject(Position newPosition)
+    public static void changePositionOfGameObject(GameObject gameObject, Position newPosition)
     {
-
+        currentPosition = gameObject.getPosition();
         if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition))
         {
             Tile currentTile = getTileWhichContainsGivenCoordinates(currentPosition);
@@ -36,8 +40,8 @@ public class MovementController
                 newPosition = calculateRelativePositionForTile(newPosition);
                 changePositionOfGameObjectOutsideOneTile(currentPositionOfTile, newPosition, currentTile, newTile);
             }
-            GameController.getHero1().setPosition(newPosition);
-            currentPosition = GameController.getHero1().getPosition();
+            gameObject.setPosition(newPosition);
+            currentPosition = gameObject.getPosition();
         }
     }
     

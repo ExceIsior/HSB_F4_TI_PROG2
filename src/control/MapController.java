@@ -22,8 +22,9 @@ public class MapController
                 map[i][j] = generateTile();
             }
         }
-        map[0][0].getField(new Position(0,1)).setGameObject(GameController.getHero1());
-        dungeon = new Dungeon("",null,map);
+        map[0][0].getField(new Position(0,1)).setGameObject(PhaseController.getHero1());
+        map[0][0].getField(new Position(PhaseController.getHero2().getPosition().getX(), PhaseController.getHero2().getPosition().getY())).setGameObject(PhaseController.getHero2());
+        dungeon = new Dungeon(null, map);
         return map;
     }
 

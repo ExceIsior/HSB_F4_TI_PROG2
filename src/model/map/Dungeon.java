@@ -8,13 +8,11 @@ import java.util.Arrays;
 
 public class Dungeon
 {
-    private String name = "";
     private Tile[][] map = null;
     private Quest quest = null;
 
-    public Dungeon(String name, Quest quest, Tile[][] board)
+    public Dungeon(Quest quest, Tile[][] board)
     {
-        this.name = name;
         this.quest = quest;
         this.map = board;
     }

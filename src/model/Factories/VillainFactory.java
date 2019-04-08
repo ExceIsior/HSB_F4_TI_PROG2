@@ -17,7 +17,8 @@ public class VillainFactory {
                         VillainConst.ORK_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.ORK_DEFAULT_AGILITY,
                         null,
-                        null);
+                        null,
+                        1);
 
             case VillainConst.GHUL_ID:
                 return new Villain(VillainConst.GHUL_RES_PATH, new Position(0, 0),
@@ -28,7 +29,8 @@ public class VillainFactory {
                         VillainConst.GHUL_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.GHUL_DEFAULT_AGILITY,
                         null,
-                        null);
+                        null,
+                        2);
 
             case VillainConst.WEREWOLF_ID:
                 return new Villain(VillainConst.WEREWOLF_RES_PATH,
@@ -40,7 +42,8 @@ public class VillainFactory {
                         VillainConst.WEREWOLF_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.WEREWOLF_DEFAULT_AGILITY,
                         null,
-                        null);
+                        null,
+                        3);
 
             case VillainConst.VAMPIRE_ID:
                 return new Villain(VillainConst.VAMPIRE_RES_PATH,
@@ -52,7 +55,8 @@ public class VillainFactory {
                         VillainConst.VAMPIRE_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.VAMPIRE_DEFAULT_AGILITY,
                         null,
-                        null);
+                        null,
+                        4);
 
             case VillainConst.SUCCUBUS_ID:
                 return new Villain(VillainConst.SUCCUBUS_RES_PATH,
@@ -64,7 +68,8 @@ public class VillainFactory {
                         VillainConst.SUCCUBUS_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.SUCCUBUS_DEFAULT_AGILITY,
                         null,
-                        null);
+                        null,
+                        5);
 
             case VillainConst.ZOMBIE_ID:
                 return new Villain(VillainConst.ZOMBIE_RES_PATH,
@@ -76,7 +81,8 @@ public class VillainFactory {
                         VillainConst.ZOMBIE_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.ZOMBIE_DEFAULT_AGILITY,
                         null,
-                        null);
+                        null,
+                        6);
 
         }
         return null;
