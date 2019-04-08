@@ -23,9 +23,10 @@ public class Hero extends Character
                 int agility,
                 ArrayList<Status> status,
                 ArrayList<Skill> skills,
-                Inventory inventory)
+                Inventory inventory,
+                int initiative)
     {
-        super(graphicsPath, position, armor, loot, name, healthPoints, maxHealthPoints, agility, status, skills);
+        super(graphicsPath, position, armor, loot, name, healthPoints, maxHealthPoints, agility, status, skills, initiative);
         this.inventory = inventory;
     }
 

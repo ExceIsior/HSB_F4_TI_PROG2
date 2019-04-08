@@ -15,7 +15,7 @@ public class Character extends Interactive {
     private ArrayList<Skill> skills = null;
     private int baseDamage = 0;
 
-    public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int maxHealthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills) {
+    public Character(String graphicsPath, Position position, int armor, Item loot, String name, int healthPoints, int maxHealthPoints, int agility, ArrayList<Status> status, ArrayList<Skill> skills, int initiative) {
         super(graphicsPath, position, armor, loot, healthPoints, maxHealthPoints, Const.HEIGHT_CHARACTER);
         this.name = name;
         this.agility = agility;
