@@ -14,8 +14,8 @@ public class MovementVerifier
                 newPosition.getY() < 0 || newPosition.getY() > yDimension;
     }
 
-    public static boolean moveResultsInGameObjectLeavingTile(Position newPosition){
-        return newPosition.getX() < 0 || newPosition.getX() >= Const.TILE_SIZE_X ||
-                newPosition.getY() < 0 || newPosition.getY() >= Const.TILE_SIZE_Y;
+    public static boolean moveResultsInGameObjectLeavingTile(Position currentPosition, Position newPosition){
+        return MovementController.getTileWhichContainsGivenCoordinates(currentPosition)
+                == MovementController.getTileWhichContainsGivenCoordinates(newPosition);
     }
 }
