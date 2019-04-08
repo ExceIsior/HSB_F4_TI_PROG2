@@ -91,17 +91,17 @@ public class MovementController
                 for (int x=1; x <=i; x++)
                 {
                     hP.setX(hP.getX()+x);
-                    if (MapController.getDungeon().getTile(calculateRelativePositionForTile(hP))
-                        .getField(hP).getGameObject().getHeight() < 20)
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
                     {
                         rangeFelder.add(hP);  
-                    }                    
+                    }                   
                 }
                 for (int y=1; y <=i; y++)
                 {
                     hP.setY(hP.getY()+y);
-                    if (MapController.getDungeon().getTile(calculateRelativePositionForTile(hP))
-                        .getField(hP).getGameObject().getHeight() < 20)
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
                     {
                         rangeFelder.add(hP);  
                     }     
@@ -111,8 +111,8 @@ public class MovementController
                 for (int x=1; x <=i; x++)
                 {
                     hP.setX(hP.getX()-x);
-                    if (MapController.getDungeon().getTile(calculateRelativePositionForTile(hP))
-                        .getField(hP).getGameObject().getHeight() < 20)
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
                     {
                         rangeFelder.add(hP);  
                     }                
@@ -120,11 +120,11 @@ public class MovementController
                 for (int y=1; y <=i; y++)
                 {
                     hP.setY(hP.getY()-y);
-                    if (MapController.getDungeon().getTile(calculateRelativePositionForTile(hP))
-                        .getField(hP).getGameObject().getHeight() < 20)
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
                     {
                         rangeFelder.add(hP);  
-                    }
+                    }  
                 }
             }
         }
