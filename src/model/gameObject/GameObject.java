@@ -8,11 +8,13 @@ public abstract class GameObject {
     private String graphicspath = "";
     private int height = 0;
 
+
     public GameObject(String graphicsPath, Position position, int height) {
         this.graphicspath = graphicsPath;
         this.position = position;
         this.height = height;
     }
+    
     
     public Position getPosition()
     {
@@ -27,6 +29,12 @@ public abstract class GameObject {
     public String getGraphicsPath()
     {
         return this.graphicspath;
+    }
+   
+     
+    public int getHeight() 
+    {
+        return height;
     }
     
     @Override
