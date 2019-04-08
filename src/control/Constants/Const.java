@@ -30,6 +30,7 @@ public interface Const {
     public static final String TREASURE_PATH = OBJECTS_PATH + "C";
     public static final String QUESTITEM_PATH = OBJECTS_PATH + "Q";
     
+    
     public static final int HEIGHT_OBSTACLE= 20;
     public static final int HEIGHT_CHARACTER = 5;
     public static final int HEIGHT_INTERACTIVE = 2;

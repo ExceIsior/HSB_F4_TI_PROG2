@@ -1,7 +1,6 @@
 package model.gameObject;
 
-import control.Constants.Const;
-import control.DiceController;
+import control.Constants.*;
 import java.util.ArrayList;
 import model.Position;
 import model.Status;
@@ -23,17 +22,17 @@ public class Character extends Interactive {
         this.skills = skills;
     }
 
-    public void attack(Skill skill, Interactive enemy) {
-        int armorEnemy = enemy.getArmor();
-        int number = DiceController.castDie();
-        int damage = 0;
-        if (number == 20) {
-            damage = skill.getDamageBonus() + 2;
-        } else if ((skill.getDieBonus() + number) >= armorEnemy) {
-            damage = skill.getDamageBonus();
-        }
-        enemy.setHealthPoints(enemy.getHealthPoints() - damage);
-    }
+//    public void attack(Skill skill, Interactive enemy) {
+//        int armorEnemy = enemy.getArmor();
+//        int number = DiceController.castDie();
+//        int damage = 0;
+//        if (number == 20) {
+//            damage = skill.getDamageBonus() + 2;
+//        } else if ((skill.getDieBonus() + number) >= armorEnemy) {
+//            damage = skill.getDamageBonus();
+//        }
+//        enemy.setHealthPoints(enemy.getHealthPoints() - damage);
+//    }
 
     public String getName() {
         return name;
