@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import control.Constants.Const;
 import model.Position;
 import model.Status;
 import model.item.Inventory;
@@ -23,8 +24,7 @@ public class Hero extends Character
                 int agility,
                 ArrayList<Status> status,
                 ArrayList<Skill> skills,
-                Inventory inventory,
-                int initiative)
+                Inventory inventory)
     {
         super(graphicsPath,
                 position, 
@@ -35,8 +35,7 @@ public class Hero extends Character
                 maxHealthPoints,
                 agility, 
                 status, 
-                skills, 
-                initiative);
+                skills);
         this.inventory = inventory;
     }
 

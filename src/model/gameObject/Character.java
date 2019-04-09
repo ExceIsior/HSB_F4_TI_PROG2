@@ -13,7 +13,6 @@ public class Character extends Interactive {
     private ArrayList<Status> status = null;
     private ArrayList<Skill> skills = null;
     private int baseDamage = 0;
-    private int initiative = 0;
 
     public Character(String graphicsPath,
             Position position,
@@ -24,14 +23,12 @@ public class Character extends Interactive {
             int maxHealthPoints,
             int agility,
             ArrayList<Status> status,
-            ArrayList<Skill> skills,
-            int initiative) {
+            ArrayList<Skill> skills) {
         super(graphicsPath, position, armor, loot, healthPoints, maxHealthPoints, Const.HEIGHT_CHARACTER);
         this.name = name;
         this.agility = agility;
         this.status = status;
         this.skills = skills;
-        this.initiative = initiative;
     }
 
 //    public void attack(Skill skill, Interactive enemy) {
@@ -92,14 +89,6 @@ public class Character extends Interactive {
 
     public void setSkills(ArrayList<Skill> skills) {
         this.skills = skills;
-    }
-
-    public int getInitiative() {
-        return initiative;
-    }
-
-    public void setInitiative(int initiative) {
-        this.initiative = initiative;
     }
 
     

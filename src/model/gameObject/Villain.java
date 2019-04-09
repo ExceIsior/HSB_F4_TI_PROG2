@@ -17,8 +17,7 @@ public class Villain extends Character {
             int maxHealthPoints,
             int agility, 
             ArrayList<Status> status, 
-            ArrayList<Skill> skills, 
-            int initiative) {
+            ArrayList<Skill> skills) {
         super(graphicsPath, 
                 position, 
                 armor, 
@@ -28,8 +27,7 @@ public class Villain extends Character {
                 maxHealthPoints, 
                 agility, 
                 status, 
-                skills, 
-                initiative);
+                skills);
     }
     
 }

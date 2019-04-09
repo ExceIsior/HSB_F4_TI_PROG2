@@ -9,24 +9,25 @@ import model.item.Inventory;
 
 public class PlayerManager {
 
-    Hero[] heroes = null;
-    Player player = null;
+    private Hero[] heroes = null;
+    private Player player = null;
 
-    public PlayerManager() {
-        this.player = new Player(Const.DEFAULT_PLAYER_NAME, 
+    private PlayerManager() {
+        this.player = initPlayer();
+        this.heroes = initHeroes();
+    }
+
+    private static Player initPlayer() {
+        Player player = new Player(Const.DEFAULT_PLAYER_NAME,
                 Const.DEFAULT_PLAYER_EXPERIENCE_POINTS,
                 Const.DEFAULT_PLAYER_GOLD,
                 new Inventory(Const.DEFAULT_PLAYER_INVENTORY_CAPACITY));
-        this.initHeroes();
+
+        return player;
     }
 
-    public PlayerManager(Player player, Hero[] heroes) {
-        this.player = player;
-        this.heroes = heroes;
-    }
-
-    private void initHeroes() {
-        this.heroes = new Hero[Const.HERO_AMOUNT];
+    private Hero[] initHeroes() {
+        Hero[] heroes = new Hero[Const.HERO_AMOUNT];
 
         heroes[0] = new Hero(HeroConst.PALADIN_RES_PATH,
                 new Position(0, 0),
@@ -75,6 +76,34 @@ public class PlayerManager {
                 null,
                 null,
                 new Inventory(HeroConst.RANGER_DEFAULT_INVENTORY_CAPACITY));
+
+        return heroes;
     }
 
+    public Hero[] getHeroes() {
+        return heroes;
+    }
+
+    public void setHeroes(Hero[] heroes) {
+        this.heroes = heroes;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    
+    
+    public static PlayerManager getInstance() {
+        return PlayerManager_Holder.INSTANCE;
+    }
+
+    private static class PlayerManager_Holder {
+
+        private static final PlayerManager INSTANCE = new PlayerManager();
+    }
 }

@@ -31,4 +31,5 @@ public interface Const {
     public static final int HEIGHT_OBSTACLE = 20;
     public static final int HEIGHT_CHARACTER = 5;
     public static final int HEIGHT_INTERACTIVE = 2;
+    public static final int HEIGHT_HERO = 1;
 }
