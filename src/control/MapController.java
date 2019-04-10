@@ -10,10 +10,11 @@ import model.map.Tile;
 
 public class MapController
 {
+    private static Tile[][] map;
     
     public static Tile[][] generateMap()
     {
-        Tile[][] map = new Tile[Const.MAP_SIZE_X][Const.MAP_SIZE_Y];
+        map = new Tile[Const.MAP_SIZE_X][Const.MAP_SIZE_Y];
         for (int i = 0; i < Const.MAP_SIZE_X; i++)
         {
             for (int j = 0; j < Const.MAP_SIZE_Y; j++)
@@ -44,7 +45,16 @@ public class MapController
         }
         return new Tile(tile);
     }
-
+    public static void update() {
+        for (int i = 0; i < Const.MAP_SIZE_X; i++)
+        {
+            for (int j = 0; j < Const.MAP_SIZE_Y; j++)
+            {
+                //if (GameController.positions.getInteractive(new Position(i, j)) != null) { 
+                //}
+            }
+        }
+    }
     public static void ausgeben(Dungeon dungeon)
     {
         System.out.println(dungeon);

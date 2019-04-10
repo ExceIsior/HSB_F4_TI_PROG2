@@ -28,18 +28,19 @@ public class PhaseController {
         switch(this.phaseID)
         {
             case(1):
-                System.out.println("Hallo");
+                positions.putInteractive(hero1, new Position(10,10));
+                System.out.println("current position: " + positions.getPosition(hero1));
                 MapController.ausgeben(dungeon);
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
                 //durch Collection durchgehen um kleinste Initiative rauszufinden
                 this.moveController.changePositionOfInteractive(new InteractiveContainer(hero1), new Position(x, y));
-                MapController.ausgeben(dungeon);
+                //MapController.ausgeben(dungeon);
+                System.out.println("new position: " + positions.getPosition(hero1));
                 
                 this.phaseID = 2;
                 break;
                 
-                //Problem ist, dass currentPosition vom letzten verwendeten Gameobjekt ist
             case(2):
                 
                 this.phaseID = 3;
