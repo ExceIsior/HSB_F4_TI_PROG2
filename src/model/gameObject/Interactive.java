@@ -13,13 +13,12 @@ public class Interactive extends GameObject {
     private int maxHealthPoints = 0;
 
     public Interactive(String graphicsPath, 
-            Position position,
             int armor, 
             Item loot,
             int healthPoints, 
             int maxHealthPoints, 
             int height) {
-        super(graphicsPath, position, height);
+        super(graphicsPath, height);
         this.armor = armor;
         this.loot = loot;
         this.healthPoints = healthPoints;

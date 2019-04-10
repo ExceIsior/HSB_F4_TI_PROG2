@@ -9,7 +9,7 @@ public class VillainFactory {
     public static Villain getVillain(int villainId) {
         switch (villainId) {
             case  VillainConst.ORK_ID:
-                return new Villain(VillainConst.ORK_RES_PATH, new Position(0, 0),
+                return new Villain(VillainConst.ORK_RES_PATH,
                         VillainConst.ORK_DEFAULT_ARMOR,
                         null,
                         VillainConst.ORK_NAME,
@@ -20,7 +20,7 @@ public class VillainFactory {
                         null);
 
             case VillainConst.GHUL_ID:
-                return new Villain(VillainConst.GHUL_RES_PATH, new Position(0, 0),
+                return new Villain(VillainConst.GHUL_RES_PATH,
                         VillainConst.GHUL_DEFAULT_ARMOR,
                         null,
                         VillainConst.GHUL_NAME,
@@ -32,7 +32,6 @@ public class VillainFactory {
 
             case VillainConst.WEREWOLF_ID:
                 return new Villain(VillainConst.WEREWOLF_RES_PATH,
-                        new Position(0, 0),
                         VillainConst.WEREWOLF_DEFAULT_ARMOR,
                         null,
                         VillainConst.WEREWOLF_NAME,
@@ -44,7 +43,6 @@ public class VillainFactory {
 
             case VillainConst.VAMPIRE_ID:
                 return new Villain(VillainConst.VAMPIRE_RES_PATH,
-                        new Position(0, 0),
                         VillainConst.VAMPIRE_DEFAULT_ARMOR,
                         null,
                         VillainConst.VAMPIRE_NAME,
@@ -56,7 +54,6 @@ public class VillainFactory {
 
             case VillainConst.SUCCUBUS_ID:
                 return new Villain(VillainConst.SUCCUBUS_RES_PATH,
-                        new Position(0, 0),
                         VillainConst.SUCCUBUS_DEFAULT_ARMOR,
                         null,
                         VillainConst.SUCCUBUS_NAME,
@@ -68,7 +65,6 @@ public class VillainFactory {
 
             case VillainConst.ZOMBIE_ID:
                 return new Villain(VillainConst.ZOMBIE_RES_PATH,
-                        new Position(0, 0),
                         VillainConst.ZOMBIE_DEFAULT_ARMOR,
                         null,
                         VillainConst.ZOMBIE_NAME,

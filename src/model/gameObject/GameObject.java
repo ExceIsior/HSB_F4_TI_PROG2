@@ -9,7 +9,7 @@ public abstract class GameObject {
     private int height = 0;
 
 
-    public GameObject(String graphicsPath, Position position, int height) {
+    public GameObject(String graphicsPath, int height) {
         this.graphicspath = graphicsPath;
         this.position = position;
         this.height = height;

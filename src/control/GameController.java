@@ -1,16 +1,23 @@
 package control;
 
+import control.Constants.Const;
+import control.Constants.HeroConst;
 import model.Position;
 import model.gameObject.Hero;
 import model.map.Dungeon;
 
 public class GameController {
-    
+
     public final boolean isRunning = true;
     private int gamePhase = 1;
     
+    private static Dungeon dungeon = null;
     
-    private static Dungeon dungeon = new Dungeon(null, MapController.generateMap());
+    public GameController() {
+    
+    }
+    
+            
     
     
     //PHASEN

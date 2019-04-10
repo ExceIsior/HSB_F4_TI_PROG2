@@ -7,7 +7,7 @@ public class Tree extends Obstacle
 {
     
     public Tree(Position position) {
-        super(Const.TREE_PATH, position);
+        super(Const.TREE_PATH);
     }
     
 }

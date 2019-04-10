@@ -18,7 +18,6 @@ public class HeroManager {
         Hero[] heroes = new Hero[Const.HERO_AMOUNT];
 
         heroes[0] = new Hero(HeroConst.PALADIN_RES_PATH,
-                new Position(0, 0),
                 HeroConst.PALADIN_DEFAULT_ARMOR,
                 null,
                 HeroConst.PALADIN_NAME,
@@ -30,7 +29,6 @@ public class HeroManager {
                 new Inventory(HeroConst.PALADIN_DEFAULT_INVENTORY_CAPACITY));
 
         heroes[1] = new Hero(HeroConst.MAGE_RES_PATH,
-                new Position(0, 0),
                 HeroConst.MAGE_DEFAULT_ARMOR,
                 null,
                 HeroConst.MAGE_NAME,
@@ -42,7 +40,6 @@ public class HeroManager {
                 new Inventory(HeroConst.MAGE_DEFAULT_INVENTORY_CAPACITY));
 
         heroes[2] = new Hero(HeroConst.ROGUE_RES_PATH,
-                new Position(0, 0),
                 HeroConst.ROGUE_DEFAULT_ARMOR,
                 null,
                 HeroConst.ROGUE_NAME,
@@ -54,7 +51,6 @@ public class HeroManager {
                 new Inventory(HeroConst.ROGUE_DEFAULT_INVENTORY_CAPACITY));
 
         heroes[3] = new Hero(HeroConst.RANGER_RES_PATH,
-                new Position(0, 0),
                 HeroConst.RANGER_DEFAULT_ARMOR,
                 null,
                 HeroConst.RANGER_NAME,

@@ -13,6 +13,7 @@ public class PhaseController {
     private static int count = 0;
 //    private static Hero hero1 = new Hero("Hero1", new Position(0,1), 0, null, "", 0, 0,0, null, null, null, 1);
 //    private static Hero hero2 = new Hero("Hero2", new Position(0,3), 0, null, "", 0, 0,0, null, null, null, 2);
+    
     private static ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
     public static void main(String[]args){
         System.out.println(heroQueue.poll());
