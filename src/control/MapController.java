@@ -10,7 +10,6 @@ import model.map.Tile;
 
 public class MapController
 {
-    private static Dungeon dungeon = null;
     
     public static Tile[][] generateMap()
     {
@@ -24,12 +23,8 @@ public class MapController
         }
         //map[0][0].getField(new Position(0,1)).setGameObject();
         //map[0][0].getField(new Position(PhaseController.getHero2().getPosition().getX(), PhaseController.getHero2().getPosition().getY())).setGameObject(PhaseController.getHero2());
-        dungeon = new Dungeon(null, map);
+ 
         return map;
-    }
-
-    public static Dungeon getDungeon() {
-        return dungeon;
     }
 
     private static Tile generateTile()

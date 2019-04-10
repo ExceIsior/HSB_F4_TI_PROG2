@@ -28,7 +28,9 @@ public class InteractiveMap {
         this.InteractivePositions = new HashMap<>();
     }
        
-    
+    public void putInteractive(InteractiveContainer interactiveContainer, Position position) {
+        this.InteractivePositions.put(interactiveContainer, position);
+    }
     public void putInteractive(Hero hero, Position position) {
         this.InteractivePositions.put(new InteractiveContainer<>(hero), position);
     }
@@ -48,6 +50,9 @@ public class InteractiveMap {
         this.InteractivePositions.put(new InteractiveContainer<>(questItem), position);
     }
     
+    public Position getPosition(InteractiveContainer interactiveContainer) {
+        return this.InteractivePositions.get(interactiveContainer);
+    }
     public Position getPosition(Hero hero) {
         return this.InteractivePositions.get(new InteractiveContainer<>(hero));
     }

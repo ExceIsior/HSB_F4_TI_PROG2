@@ -14,11 +14,13 @@ public class GameController {
     
     private Dungeon dungeon = null;
     private InteractiveMap positions = null;
+    private PhaseController phaseController = null;
     
     
     public GameController() {
-        //this.dungeon = new Dungeon(Quests.QUEST_1.getQuest(), null)
+        this.dungeon = new Dungeon(Quests.QUEST_1.getQuest(), MapController.generateMap());
         this.positions = new InteractiveMap();
+        this.phaseController = new PhaseController(this.dungeon, this.positions);
     }
 
     public InteractiveMap getPositions() {
@@ -45,6 +47,11 @@ public class GameController {
 
     public void setGamePhase(int gamePhase) {
         this.gamePhase = gamePhase;
+    }
+
+    public void start() {
+        phaseController.startGame();
+        System.out.println("start");
     }
     
     

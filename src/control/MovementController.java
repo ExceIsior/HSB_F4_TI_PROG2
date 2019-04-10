@@ -3,32 +3,37 @@ package control;
 import control.Constants.Const;
 import model.Position;
 import model.gameObject.GameObject;
-import model.map.Dungeon;
 import model.map.Tile;
 
 import java.util.ArrayList;
+import model.InteractiveContainer;
+import model.gameObject.Hero;
+import model.gameObject.Interactive;
+import model.gameObject.Villain;
+import model.map.Dungeon;
 
 public class MovementController
 {
-
-    private static Dungeon dungeon = GameController.getDungeon();
-
-    //VORLAEUFIG
-    private static Position currentPosition = null;
-
-    public static Position getCurrentPosition() {
-        return currentPosition;
+    private static InteractiveMap positions = null;
+    private static Dungeon dungeon = null;
+    
+    public MovementController(InteractiveMap positions, Dungeon dungeon) {
+        this.positions = positions;
+        this.dungeon = dungeon;
     }
 
-   
-    public static void changePositionOfGameObject(GameObject gameObject, Position newPosition)
-    {
-        currentPosition = gameObject.getPosition();
+    public static void changePositionOfInteractive(InteractiveContainer interactiveContainer, Position newPosition) {
+        
+        Position currentPosition = positions.getPosition(interactiveContainer);
+        System.out.println(interactiveContainer.getContent().toString());
+        System.out.println("currentPosition: " + currentPosition.getX() + " " + currentPosition.getY());
         if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition))
         {
             Tile currentTile = getTileWhichContainsGivenCoordinates(currentPosition);
+            System.out.println("currentTile: " +  currentTile);
 
             Position currentPositionOfTile = calculateRelativePositionForTile(currentPosition);
+            System.out.println("currentPositionOfTile: " + currentPositionOfTile);
             
             if (!MovementVerifier.moveResultsInGameObjectLeavingTile(currentPosition, newPosition))
             {
@@ -40,10 +45,33 @@ public class MovementController
                 newPosition = calculateRelativePositionForTile(newPosition);
                 changePositionOfGameObjectOutsideOneTile(currentPositionOfTile, newPosition, currentTile, newTile);
             }
-            gameObject.setPosition(newPosition);
-            currentPosition = gameObject.getPosition();
         }
     }
+   
+//    public static void changePositionOfInteractive(GameObject gameObject, Position newPosition)
+//    {
+//        
+//        currentPosition = gameObject.getPosition();
+//        if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition))
+//        {
+//            Tile currentTile = getTileWhichContainsGivenCoordinates(currentPosition);
+//
+//            Position currentPositionOfTile = calculateRelativePositionForTile(currentPosition);
+//            
+//            if (!MovementVerifier.moveResultsInGameObjectLeavingTile(currentPosition, newPosition))
+//            {
+//                changePositionOfGameObjectWithinOneTile(currentPositionOfTile, newPosition, currentTile);
+//            } 
+//            else
+//            {
+//                Tile newTile = getTileWhichContainsGivenCoordinates(newPosition);
+//                newPosition = calculateRelativePositionForTile(newPosition);
+//                changePositionOfGameObjectOutsideOneTile(currentPositionOfTile, newPosition, currentTile, newTile);
+//            }
+//            gameObject.setPosition(newPosition);
+//            currentPosition = gameObject.getPosition();
+//        }
+//    }
     
 
     private static Position calculateRelativePositionForTile(Position position)
@@ -54,17 +82,19 @@ public class MovementController
 
     private static void changePositionOfGameObjectWithinOneTile(Position currentPosition, Position newPosition, Tile tile)
     {
-        GameObject gameObject = tile.getField(currentPosition).getGameObject();
-        tile.getField(currentPosition).setGameObject(null);
-        tile.getField(newPosition).setGameObject(gameObject);
+//        GameObject gameObject = tile.getField(currentPosition).getGameObject();
+//        tile.getField(currentPosition).setGameObject(null);
+//        tile.getField(newPosition).setGameObject(gameObject);
+          positions.putInteractive(positions.getInteractive(currentPosition), newPosition);
     }
 
     private static void changePositionOfGameObjectOutsideOneTile(Position currentPosition, Position newPosition,
                                                                  Tile currentTile, Tile newTile)
     {
-        GameObject gameObject = currentTile.getField(currentPosition).getGameObject();
-        currentTile.getField(currentPosition).setGameObject(null);
-        newTile.getField(newPosition).setGameObject(gameObject);
+//        GameObject gameObject = currentTile.getField(currentPosition).getGameObject();
+//        currentTile.getField(currentPosition).setGameObject(null);
+//        newTile.getField(newPosition).setGameObject(gameObject);
+          positions.putInteractive(positions.getInteractive(currentPosition), newPosition);
     }
 
     public static Tile getTileWhichContainsGivenCoordinates(Position position)

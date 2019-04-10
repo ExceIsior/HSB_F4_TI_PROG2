@@ -4,72 +4,56 @@ import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import model.Position;
 import model.gameObject.Hero;
-import control.PlayerManager;
 import java.util.Arrays;
+import model.InteractiveContainer;
+import model.map.Dungeon;
 
 public class PhaseController {
     
-    static Scanner positionListener = new Scanner(System.in);
-    private static int count = 0;
-//    private static Hero hero1 = new Hero("Hero1", new Position(0,1), 0, null, "", 0, 0,0, null, null, null, 1);
-//    private static Hero hero2 = new Hero("Hero2", new Position(0,3), 0, null, "", 0, 0,0, null, null, null, 2);
+    private Scanner positionListener = new Scanner(System.in);
+    private int phaseID = 1;
+    private ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
+    private Dungeon dungeon = null;
+    private InteractiveMap positions = null;
+    private MovementController moveController = null;
+    private Hero hero1 = HeroManager.getInstance().getHeroes()[0];
     
-    private static ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
-    public static void main(String[]args){
-        System.out.println(heroQueue.poll());
-        System.out.println(heroQueue.poll());
-        System.out.println(heroQueue.poll());
-        System.out.println(heroQueue.poll());
+    public PhaseController(Dungeon dungeon, InteractiveMap positions) {
+        this.dungeon = dungeon;
+        this.positions = positions;
+        moveController = new MovementController(this.positions, this.dungeon);
     }
-//    
-//    public static Hero getHero1() {
-//        return hero1;
-//    }
-//    
-//    public static Hero getHero2() {
-//        return hero2;
-//    }
-//    
-//    public static void main(String args[])
-//    {
-//        MapController.generateMap();
-//        GameController gameController = new GameController();
-//        switch(gameController.getGamePhase())
-//        {
-//            case(1):
-//                System.out.println("hallo");
-//                MapController.ausgeben(MapController.getDungeon());
-//                int x = positionListener.nextInt();
-//                int y = positionListener.nextInt();
-//                //durch Collection durchgehen um kleinste Initiative rauszufinden
-//                MovementController.changePositionOfGameObject(hero1, new Position(x, y));
-//                MapController.ausgeben(GameController.getDungeon());
-//                
-//                System.out.println("naechster Schritt");
-//                x = positionListener.nextInt();
-//                y = positionListener.nextInt();
-//                MovementController.changePositionOfGameObject(hero1, new Position(x, y));
-//                MapController.ausgeben(GameController.getDungeon());
-//                gameController.setGamePhase(2);
-//                break;
-//                
-//                //Problem ist, dass currentPosition vom letzten verwendeten Gameobjekt ist
-//            case(2):
-//                
-//                gameController.setGamePhase(3);
-//                break;
-//            case(3):
-//                
-//                gameController.setGamePhase(4);
-//                break;
-//            case(4):
-//                
-//                gameController.setGamePhase(1);
-//                break;
-//            default: ;
-//        }
-//    }
-//    private static void getPositionWithinOneTile(){
-//        
-//    }
+    
+    public void startGame() {
+        switch(this.phaseID)
+        {
+            case(1):
+                System.out.println("Hallo");
+                MapController.ausgeben(dungeon);
+                int x = positionListener.nextInt();
+                int y = positionListener.nextInt();
+                //durch Collection durchgehen um kleinste Initiative rauszufinden
+                this.moveController.changePositionOfInteractive(new InteractiveContainer(hero1), new Position(x, y));
+                MapController.ausgeben(dungeon);
+                
+                this.phaseID = 2;
+                break;
+                
+                //Problem ist, dass currentPosition vom letzten verwendeten Gameobjekt ist
+            case(2):
+                
+                this.phaseID = 3;
+                break;
+            case(3):
+                
+                this.phaseID = 4;
+                break;
+            case(4):
+                
+                this.phaseID = 1;
+                break;
+            default: ;
+        
+    }
+    }
 }
