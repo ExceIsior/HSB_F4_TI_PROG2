@@ -3,12 +3,15 @@ package control;
 import model.gameObject.Villain;
 
 import java.io.IOException;
+import model.Position;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         GameController game = new GameController();
-        
+        game.getPositions().putInteractive(HeroManager.getInstance().getHeroes()[0], new Position(0, 0));
+        System.out.println(game.getPositions().getPosition(HeroManager.getInstance().getHeroes()[0]).toString());
+        System.out.println("");
 //        MapController mapController = new MapController();
 //
 //        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
