@@ -2,6 +2,7 @@
 package control;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import model.InteractiveContainer;
 import model.Position;
 import model.gameObject.Boss;
@@ -65,6 +66,9 @@ public class InteractiveMap {
         return this.InteractivePositions.get(new InteractiveContainer<>(questItem));
     }
     
+    public InteractiveContainer getInteractive(Position position) {
+        for(Iterator<InteractiveContainer,Position> iterator = this.InteractivePositions.entrySet().iterator(); ;)
+    }
     
     
 }
