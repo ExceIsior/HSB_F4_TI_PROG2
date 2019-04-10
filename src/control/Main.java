@@ -3,16 +3,20 @@ package control;
 import model.gameObject.Villain;
 
 import java.io.IOException;
+import model.Factories.VillainFactory;
 import model.Position;
+import model.gameObject.Hero;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         GameController game = new GameController();
         game.getPositions().putInteractive(HeroManager.getInstance().getHeroes()[0], new Position(0, 0));
+        game.getPositions().putInteractive(VillainFactory.getVillain(0), new Position(0, 0));
         Position p = game.getPositions().getPosition(HeroManager.getInstance().getHeroes()[0]);
         System.out.println(game.getPositions().getPosition(HeroManager.getInstance().getHeroes()[0]).toString());
-        System.out.println("");
+        Villain hero = (Villain)game.getPositions().getInteractive(new Position(0,0)).getContent();
+        System.out.println(hero.toString());
 //        MapController mapController = new MapController();
 //
 //        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());

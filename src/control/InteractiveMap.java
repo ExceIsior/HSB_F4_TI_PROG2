@@ -3,6 +3,7 @@ package control;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import model.InteractiveContainer;
 import model.Position;
 import model.gameObject.Boss;
@@ -21,7 +22,7 @@ public class InteractiveMap {
 //    HashMap<TreasureChest, Position> hashMapTreasureChest;
 //    HashMap<Trap, Position> hashMapTrap; 
 //    HashMap<QuestItem, Position> hashMapQuestItem; 
-    HashMap<InteractiveContainer, Position> InteractivePositions = null;
+    private HashMap<InteractiveContainer, Position> InteractivePositions = null;
 
     public InteractiveMap() {
         this.InteractivePositions = new HashMap<>();
@@ -67,7 +68,10 @@ public class InteractiveMap {
     }
     
     public InteractiveContainer getInteractive(Position position) {
-        for(Iterator<InteractiveContainer,Position> iterator = this.InteractivePositions.entrySet().iterator(); ;)
+        for(Map.Entry<InteractiveContainer,Position> entry: this.InteractivePositions.entrySet()){
+            if(entry.getValue().equals(position)) return entry.getKey();
+        }
+        return null;
     }
     
     
