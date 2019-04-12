@@ -1,16 +1,12 @@
 package control;
 
 import control.Constants.Const;
+import model.InteractiveContainer;
 import model.Position;
-import model.gameObject.GameObject;
+import model.map.Dungeon;
 import model.map.Tile;
 
 import java.util.ArrayList;
-import model.InteractiveContainer;
-import model.gameObject.Hero;
-import model.gameObject.Interactive;
-import model.gameObject.Villain;
-import model.map.Dungeon;
 
 public class MovementController
 {
@@ -37,7 +33,7 @@ public class MovementController
      * und speichert deren Positionen in einer ArrayListe.
      * Entfernt Positionen mit Hindernissen.
      */
-    public ArrayList<Position> getRangeFelder(int range, Position heroPosition)
+    public static ArrayList<Position> getRangeFelder(int range, Position heroPosition)
     {
         ArrayList<Position> rangeFelder = null;
         Position hP = heroPosition;
@@ -176,4 +172,7 @@ public class MovementController
 //        System.arraycopy(b, 0, result, a.length, b.length);
 //        System.arraycopy(c, 0, result, a.length + b.length, c.length);
 //        return result; }
+    public static InteractiveMap getPositions(){
+        return MovementController.positions;
+    }
 }
