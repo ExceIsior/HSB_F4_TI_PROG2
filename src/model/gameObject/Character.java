@@ -1,10 +1,10 @@
 package model.gameObject;
 
 import control.Constants.Const;
-import java.util.ArrayList;
-import model.Position;
 import model.Status;
 import model.item.Item;
+
+import java.util.ArrayList;
 
 public class Character extends Interactive {
 
