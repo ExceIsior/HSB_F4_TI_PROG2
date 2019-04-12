@@ -9,5 +9,4 @@ public class TreasureChest extends Interactive {
     public TreasureChest(int armor, Item loot) {
         super(Const.TREASURE_PATH, armor, loot, 0, 0, Const.HEIGHT_INTERACTIVE);
     }
-    
 }
