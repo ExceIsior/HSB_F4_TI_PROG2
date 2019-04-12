@@ -3,11 +3,16 @@ package control;
 import model.gameObject.Villain;
 
 import java.io.IOException;
+import model.Factories.VillainFactory;
+import model.Position;
+import model.gameObject.Hero;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        GameController game = new GameController();
 
+        game.start();
 //        MapController mapController = new MapController();
 //
 //        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());

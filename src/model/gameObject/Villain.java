@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class Villain extends Character {
 
     public Villain(String graphicsPath,
-            Position position, 
             int armor, 
             Item loot,
             String name, 
@@ -19,7 +18,6 @@ public class Villain extends Character {
             ArrayList<Status> status, 
             ArrayList<Skill> skills) {
         super(graphicsPath, 
-                position, 
                 armor, 
                 loot, 
                 name, 

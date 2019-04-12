@@ -15,7 +15,6 @@ public class Hero extends Character
     private Inventory inventory = null;
 
     public Hero(String graphicsPath,
-                Position position,
                 int armor,
                 Item loot,
                 String name,
@@ -27,7 +26,6 @@ public class Hero extends Character
                 Inventory inventory)
     {
         super(graphicsPath,
-                position, 
                 armor, 
                 loot,
                 name, 

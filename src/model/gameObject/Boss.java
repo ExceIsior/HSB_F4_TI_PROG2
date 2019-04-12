@@ -9,8 +9,7 @@ import model.item.Item;
 
 public class Boss extends Villain {
 
-    public Boss(String graphicsPath, 
-            Position position, 
+    public Boss(String graphicsPath,  
             int armor, 
             Item loot, 
             String name,
@@ -20,7 +19,6 @@ public class Boss extends Villain {
             ArrayList<Status> status,
             ArrayList<Skill> skills) {
         super(graphicsPath, 
-                position,
                 armor, 
                 loot, 
                 name, 
