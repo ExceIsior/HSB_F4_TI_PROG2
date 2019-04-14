@@ -13,6 +13,10 @@ import java.util.Scanner;
 import model.Player;
 import model.gameObject.Hero;
 
+/**
+ * This class provides various static methods for eased utilaisation of in- and output streams.
+ * @author Ismail
+ */
 public class IOHelper {
 
     private static Scanner scanner = new Scanner(System.in);
@@ -20,16 +24,27 @@ public class IOHelper {
     private static FileReader fileReader = null;
     private static File file = null;
 
+    /**
+     * Stores the current Hero and Player progression to the default save game location as separate JSON files.
+     */
     public static void saveGame() {
         JsonParser.toJsonFile(HeroManager.getInstance().getHeroes(), Const.SAVE_GAME_HERO_PATH);
         JsonParser.toJsonFile(PlayerManager.getInstance().getPlayer(), Const.SAVE_GAME_PLAYER_PATH);
     }
 
+    /**
+     * Loads the recent Hero and Player progression from their respective JSON files.
+     */
     public static void loadGame() {
         HeroManager.getInstance().setHeroes((Hero[])JsonParser.fromJsonFile(Hero[].class, Const.SAVE_GAME_HERO_PATH));
         PlayerManager.getInstance().setPlayer((Player)JsonParser.fromJsonFile(Player.class, Const.SAVE_GAME_PLAYER_PATH));
     }
 
+    /**
+     * Prompts user to enter a String after a specified message was shown and returns the input.
+     * @param message Message to print on console.
+     * @return Users STDIN input.
+     */
     public static String promptUserString(String message) {
         String input = "";
         boolean validInput = false;
@@ -46,6 +61,11 @@ public class IOHelper {
         return input;
     }
 
+    /**
+     * Prompts user to enter an Integer after a specified message was shown and returns the input.
+     * @param message Message to print on console.
+     * @return Users STDIN input as int.
+     */
     public static int promptUserInt(String message) {
         int input = 0;
         boolean validInput = false;
@@ -62,6 +82,11 @@ public class IOHelper {
         return input;
     }
 
+    /**
+     * Writes String content to a specified path. Directories and files will be created automatically if necessary.
+     * @param filePath Path of the target file.
+     * @param content Content that is to be written.
+     */
     public static void writeFile(String filePath, String content) {
         file = new File(filePath);
         file.getParentFile().mkdirs();
@@ -80,6 +105,10 @@ public class IOHelper {
         }
     }
 
+    /**
+     * Reads the whole content of a given file and returns them a String.
+     * @param filePath Path of the source file..
+     */
     public static String readFile(String filePath) {
         file = new File(filePath);
         StringBuilder content = new StringBuilder();
