@@ -2,31 +2,20 @@ package utilities;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import model.map.Dungeon;
-import model.map.Tile;
 
 public class JsonParser {
 
-    private static GsonBuilder gsonBuilder = new GsonBuilder();
+    private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     
-    public static String writeObject(Object object){
-        return gsonBuilder.create().toJson(object);
+    public static String toJsonString(Object object){
+        return gson.toJson(object);
     }
     
-    
-    
-    public Tile[][] readMap()
-    {
-        return null;
+    public static void toJsonFile(Object object, String filePath){
+        IOHelper.writeFile (filePath, toJsonString(object));
     }
-    
-    public void readSaveGame()
-    {
-        
-    }
-    
-    public void writeSaveGame()
-    {
-        
+
+    public static Object fromJsonFile(Class classType, String filePath){
+        return gson.fromJson(IOHelper.readFile(filePath), classType);
     }
 }

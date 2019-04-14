@@ -16,6 +16,10 @@ public interface Const {
     public static final int DEFAULT_PLAYER_EXPERIENCE_POINTS = 0;
     public static final int DEFAULT_PLAYER_INVENTORY_CAPACITY = 99999;
 
+    public static final String SAVE_GAME_PATH = "./savegame/";
+    public static final String SAVE_GAME_HERO_PATH = SAVE_GAME_PATH + "hero.json";
+    public static final String SAVE_GAME_PLAYER_PATH = SAVE_GAME_PATH + "player.json";
+    
     public static final String MAPS_PATH = "./maps/";
     public static final String RESSOURCE_PATH = "./res/";
     public static final String CHARACTERS_PATH = RESSOURCE_PATH + "characters/";

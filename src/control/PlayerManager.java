@@ -14,7 +14,7 @@ public class PlayerManager {
         this.player = initPlayer();
     }
 
-    private static Player initPlayer() {
+    private Player initPlayer() {
         Player player = new Player(Const.DEFAULT_PLAYER_NAME,
                 Const.DEFAULT_PLAYER_EXPERIENCE_POINTS,
                 Const.DEFAULT_PLAYER_GOLD,

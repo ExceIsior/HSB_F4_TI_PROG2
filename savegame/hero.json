@@ -1,0 +1,62 @@
+[
+  {
+    "surgeValue": 0,
+    "inventory": {
+      "inventory": {},
+      "maxCapacity": 1
+    },
+    "name": "Fake Paladin",
+    "agility": 3,
+    "baseDamage": 0,
+    "armor": 10,
+    "healthPoints": 20,
+    "maxHealthPoints": 999,
+    "graphicspath": "./res/characters/paladin.",
+    "height": 5
+  },
+  {
+    "surgeValue": 0,
+    "inventory": {
+      "inventory": {},
+      "maxCapacity": 1
+    },
+    "name": "Mage",
+    "agility": 5,
+    "baseDamage": 0,
+    "armor": 3,
+    "healthPoints": 5,
+    "maxHealthPoints": 5,
+    "graphicspath": "./res/characters/mage.",
+    "height": 5
+  },
+  {
+    "surgeValue": 0,
+    "inventory": {
+      "inventory": {},
+      "maxCapacity": 2
+    },
+    "name": "Rogue",
+    "agility": 8999,
+    "baseDamage": 0,
+    "armor": 10,
+    "healthPoints": 5,
+    "maxHealthPoints": 5,
+    "graphicspath": "./res/characters/rogue.",
+    "height": 5
+  },
+  {
+    "surgeValue": 0,
+    "inventory": {
+      "inventory": {},
+      "maxCapacity": 1
+    },
+    "name": "Ranger",
+    "agility": 5,
+    "baseDamage": 0,
+    "armor": 5,
+    "healthPoints": 5,
+    "maxHealthPoints": 5,
+    "graphicspath": "./res/characters/ranger.",
+    "height": 5
+  }
+]
