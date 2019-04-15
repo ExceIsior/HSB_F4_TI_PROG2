@@ -7,26 +7,36 @@ import model.map.Dungeon;
 import model.map.Tile;
 
 import java.util.ArrayList;
+import model.gameObject.GameObject;
 
 public class MovementController
 {
-    private static InteractiveMap positions = null;
     private static Dungeon dungeon = null;
     
-    public MovementController(InteractiveMap positions, Dungeon dungeon) {
-        this.positions = positions;
+    public MovementController(Dungeon dungeon) {
         this.dungeon = dungeon;
     }
 
-    public static void changePositionOfInteractive(InteractiveContainer interactiveContainer, Position newPosition) {
+  
+    public static void changePositionOfInteractive(GameObject gameObject, Position newPosition) {
         
-        Position currentPosition = positions.getPosition(interactiveContainer);
+        Position currentPosition = gameObject.getPosition();
+        HeroManager heroManager = HeroManager.getInstance();
         
-        if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition))
+        if ( (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition)) &&
+                !movePossibleWithoutStandingOnObstacle(newPosition))
         {
-            positions.putInteractive(interactiveContainer, newPosition);
+            gameObject.setPosition(newPosition);
+            Position tilePositionGameObject = Converter.convertMapCoordinatesInTileCoordinates(gameObject.getPosition());
+            Position fieldPositionGameObject = Converter.convertMapCoordinatesInFieldCoordinates(gameObject.getPosition());
+            dungeon.getTile(tilePositionGameObject).getField(fieldPositionGameObject).setGameObject(gameObject);
+            MapController.updateMap();
+        }
+        else {
+            System.out.println("on Obstacle");
         }
     }
+    
    
     /**
      * Iteriert durch alle Felder um den Helden herum durch (Im Umkeis "range")
@@ -84,6 +94,13 @@ public class MovementController
         return rangeFelder;
     }
     
+    private static boolean movePossibleWithoutStandingOnObstacle(Position position) {
+        boolean obstacle = false;
+        if (dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(position)).getField(Converter.convertMapCoordinatesInFieldCoordinates(position)).getHeight() > 10) {
+            obstacle = true;
+        }
+        return obstacle;
+    }
 //    public static void changePositionOfInteractive(GameObject gameObject, Position newPosition)
 //    {
 //        
@@ -116,20 +133,6 @@ public class MovementController
                 position.getY() % Const.TILE_SIZE_Y);
     }
 
-    private static void changePositionOfGameObjectWithinOneTile(Position currentPosition, Position newPosition, Tile tile)
-    {
-//        GameObject gameObject = tile.getField(currentPosition).getGameObject();
-//        tile.getField(currentPosition).setGameObject(null);
-//        tile.getField(newPosition).setGameObject(gameObject);
-    }
-
-    private static void changePositionOfGameObjectOutsideOneTile(Position currentPosition, Position newPosition,
-                                                                 Tile currentTile, Tile newTile)
-    {
-//        GameObject gameObject = currentTile.getField(currentPosition).getGameObject();
-//        currentTile.getField(currentPosition).setGameObject(null);
-//        newTile.getField(newPosition).setGameObject(gameObject);
-    }
 
     public static Tile getTileWhichContainsGivenCoordinates(Position position)
     {

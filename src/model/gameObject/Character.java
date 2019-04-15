@@ -22,8 +22,9 @@ public class Character extends Interactive {
             int maxHealthPoints,
             int agility,
             ArrayList<Status> status,
-            ArrayList<Skill> skills) {
-        super(graphicsPath, armor, loot, healthPoints, maxHealthPoints, Const.HEIGHT_CHARACTER);
+            ArrayList<Skill> skills) 
+    {
+        super(graphicsPath, armor, loot, healthPoints, maxHealthPoints);
         this.name = name;
         this.agility = agility;
         this.status = status;

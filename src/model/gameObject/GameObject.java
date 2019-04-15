@@ -5,26 +5,25 @@ import model.Position;
 public abstract class GameObject {
     
     private String graphicspath = "";
-    private int height = 0;
+    private Position position = null;
 
-
-    public GameObject(String graphicsPath, int height) {
+    public GameObject(String graphicsPath) {
         this.graphicspath = graphicsPath;
-        this.height = height;
     }
-    
+     
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }    
     
     public String getGraphicsPath()
     {
         return this.graphicspath;
     }
    
-     
-    public int getHeight() 
-    {
-        return height;
-    }
-    
     @Override
     public String toString()
     {

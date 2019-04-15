@@ -7,7 +7,7 @@ import control.Constants.Const;
 public class QuestItem extends Interactive {
     
     public QuestItem() {
-        super(Const.QUESTITEM_PATH, 0, null, 0, 0, Const.HEIGHT_INTERACTIVE);
+        super(Const.QUESTITEM_PATH, 0, null, 0, 0);
     }
     
 }

@@ -16,9 +16,9 @@ public class Interactive extends GameObject {
             int armor, 
             Item loot,
             int healthPoints, 
-            int maxHealthPoints, 
-            int height) {
-        super(graphicsPath, height);
+            int maxHealthPoints)
+    {
+        super(graphicsPath);
         this.armor = armor;
         this.loot = loot;
         this.healthPoints = healthPoints;

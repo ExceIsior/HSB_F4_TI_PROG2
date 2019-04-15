@@ -18,4 +18,5 @@ public class MovementVerifier
         return MovementController.getTileWhichContainsGivenCoordinates(currentPosition)
                 != MovementController.getTileWhichContainsGivenCoordinates(newPosition);
     }
+    
 }

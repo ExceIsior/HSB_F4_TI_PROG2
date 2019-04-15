@@ -7,7 +7,7 @@ import control.Constants.Const;
 public class Trap extends Interactive {
     
     public Trap(Position position, int damage) {
-        super(Const.TRAP_PATH, 0, null, 0, 0, Const.HEIGHT_INTERACTIVE);
+        super(Const.TRAP_PATH, 0, null, 0, 0);
     }
     
 }

@@ -14,29 +14,31 @@ public class PhaseController {
     private int phaseID = 1;
     private ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
     private Dungeon dungeon = null;
-    private InteractiveMap positions = null;
     private MovementController moveController = null;
-    private Hero hero1 = HeroManager.getInstance().getHeroes()[0];
     
-    public PhaseController(Dungeon dungeon, InteractiveMap positions) {
+    public PhaseController(Dungeon dungeon) {
         this.dungeon = dungeon;
-        this.positions = positions;
-        moveController = new MovementController(this.positions, this.dungeon);
+        moveController = new MovementController(this.dungeon);
     }
     
     public void startGame() {
         switch(this.phaseID)
         {
             case(1):
-                positions.putInteractive(hero1, new Position(10,10));
-                System.out.println("current position: " + positions.getPosition(hero1));
                 MapController.ausgeben(dungeon);
+                
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
                 //durch Collection durchgehen um kleinste Initiative rauszufinden
-                this.moveController.changePositionOfInteractive(new InteractiveContainer(hero1), new Position(x, y));
-                //MapController.ausgeben(dungeon);
-                System.out.println("new position: " + positions.getPosition(hero1));
+                //hero wird nachtraeglich geloescht -> aendern
+                this.moveController.changePositionOfInteractive(heroQueue.poll(), new Position(x, y));
+                MapController.ausgeben(dungeon);
+                
+                x = positionListener.nextInt();
+                y = positionListener.nextInt();
+                //durch Collection durchgehen um kleinste Initiative rauszufinden
+                this.moveController.changePositionOfInteractive(heroQueue.poll(), new Position(x, y));
+                MapController.ausgeben(dungeon);
                 
                 this.phaseID = 2;
                 break;
