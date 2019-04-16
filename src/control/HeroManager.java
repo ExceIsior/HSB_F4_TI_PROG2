@@ -39,16 +39,16 @@ public class HeroManager {
                 null,
                 new Inventory(HeroConst.MAGE_DEFAULT_INVENTORY_CAPACITY));
 
-        heroes[2] = new Hero(HeroConst.ROGUE_RES_PATH,
-                HeroConst.ROGUE_DEFAULT_ARMOR,
+        heroes[2] = new Hero(HeroConst.ASSASSIN_RES_PATH,
+                HeroConst.ASSASSIN_DEFAULT_ARMOR,
                 null,
-                HeroConst.ROGUE_NAME,
-                HeroConst.ROGUE_DEFAULT_HEALTH_POINTS,
-                HeroConst.ROGUE_DEFAULT_MAX_HEALTH_POINTS,
-                HeroConst.ROGUE_DEFAULT_AGILITY,
+                HeroConst.ASSASSIN_NAME,
+                HeroConst.ASSASSIN_DEFAULT_HEALTH_POINTS,
+                HeroConst.ASSASSIN_DEFAULT_MAX_HEALTH_POINTS,
+                HeroConst.ASSASSIN_DEFAULT_AGILITY,
                 null,
                 null,
-                new Inventory(HeroConst.ROGUE_DEFAULT_INVENTORY_CAPACITY));
+                new Inventory(HeroConst.ASSASSIN_DEFAULT_INVENTORY_CAPACITY));
 
         heroes[3] = new Hero(HeroConst.RANGER_RES_PATH,
                 HeroConst.RANGER_DEFAULT_ARMOR,

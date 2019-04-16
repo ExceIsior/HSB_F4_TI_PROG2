@@ -3,10 +3,10 @@ package control.Enums;
 import model.item.HeroItem;
 
 public enum HeroItems {
-    HEAL_POTION(new HeroItem(0, "Heal Potion")),
-    AGILITY_POTION(new HeroItem(0, "Agility Potion")),
-    DAMAGE_POTION(new HeroItem(0, "Damage Potion")),
-    ARMOR_POTION(new HeroItem(0, "Armor Potion"));
+    HEAL_POTION(new HeroItem(0, "Heal Potion", Effects.HEAL.getEffect())),
+    AGILITY_POTION(new HeroItem(0, "Agility Potion", Effects.AGILITY_BOOST.getEffect())),
+    DAMAGE_POTION(new HeroItem(0, "Damage Potion", Effects.DAMAGE_BOOST.getEffect())),
+    ARMOR_POTION(new HeroItem(0, "Armor Potion", Effects.ARMOR_BOOST.getEffect()));
     
     private final HeroItem heroItem;
     

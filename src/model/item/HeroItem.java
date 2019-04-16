@@ -1,9 +1,10 @@
 package model.item;
 
-public class HeroItem extends Item {
+import model.Effect;
 
-    public HeroItem(int rarity, String name) 
-    {       
-        super(rarity, name);
+public class HeroItem extends EffectItem {
+
+    public HeroItem(int rarity, String name, Effect effect) {
+        super(rarity, name, effect);
     }
 }

@@ -1,4 +1,8 @@
 package control;
+import java.io.IOException;
+import java.util.HashMap;
+import model.gameObject.Hero;
+import model.item.Item;
 
 import com.google.gson.Gson;
 import model.gameObject.Villain;
@@ -19,11 +23,24 @@ public class Main {
 //       String  pos = JsonParser.writeObject(DungeonCreator.generatePositions());
 //        System.out.println(pos);
 //       DungeonCreator.json_ToPositionManager(pos);
-        
+//        
+//        GameController game = new GameController();
+//        Hero hero = HeroManager.getInstance().getHeroes()[0];
+//        game.getPositions().putInteractive(new InteractiveContainer(hero), new Position(0, 0));
+//        Position p = game.getPositions().getPosition(new InteractiveContainer(hero));
+//        System.out.println(game.getPositions().getPosition(hero));
+//        game.start();
+//        MapController mapController = new MapController();
+//
+//        Dungeon dungeon = new Dungeon("", null, mapController.generateMap());
+//        mapController.ausgeben(dungeon);
+//
+//        MovementController.changePositionOfGameObject(new Position(0,0), new Position(0,6), dungeon);
+//
+//        System.out.println();
+//        mapController.ausgeben(dungeon);
          GameController game = new GameController();
          game.start();
-
-
 
 //        Menu menu = new Menu();
 //        menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));
