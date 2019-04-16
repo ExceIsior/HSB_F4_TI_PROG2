@@ -2,8 +2,8 @@ package control.Constants;
 
 public interface Const {
 
-    public static final int MAP_SIZE_X = 3;
-    public static final int MAP_SIZE_Y = 4;
+    public static final int MAP_SIZE_X = 5;
+    public static final int MAP_SIZE_Y = 5;
     public static final int TILE_SIZE_X = 4;
     public static final int TILE_SIZE_Y = 4;
 
@@ -35,4 +35,9 @@ public interface Const {
     public static final int HEIGHT_OBSTACLE = 20;
     public static final int HEIGHT_CHARACTER = 5;
     public static final int HEIGHT_TERRAIN= 0;
+    
+    public static final int TERRAIN_ID = 0;
+    public static final int MOUNTAIN_ID = 1;
+    public static final int TREE_ID= 2;
+    public static final int RIVER_ID= 3;
 }

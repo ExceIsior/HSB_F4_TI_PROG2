@@ -8,7 +8,7 @@ public class Field {
     private String texturePath = "";
     private boolean visible = false;
     private int height = 0;
-
+    
     private GameObject gameObject = null;
     
     public Field(String texturePath, boolean visible, int height) {
@@ -27,10 +27,6 @@ public class Field {
     
     public String getTextture() {
         return this.texturePath;
-    }
-
-    public void setTexture(String texturePath) {
-        this.texturePath = texturePath;
     }
 
     public boolean isVisibile() {
@@ -55,6 +51,12 @@ public class Field {
 
     @Override
     public String toString() {
-        return this.texturePath;
+        if (gameObject != null) {
+            return gameObject.getGraphicsPath();
+        }
+        else {
+            return this.texturePath;
+        }
+        
     }
 }

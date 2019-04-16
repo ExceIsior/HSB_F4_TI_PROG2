@@ -8,20 +8,15 @@ import model.item.Material;
 
 public class Equipment extends Item {
 
-    private int cost = 0;
-    private HashMap<Material, Integer> materials = null;
+    private CraftBluePrint craftBluePrint = null;
 
-    public Equipment(int rarity, String name, int cost, HashMap<Material, Integer> materials) {
+    public Equipment(int rarity, String name, CraftBluePrint craftBluePrint) {
         super(rarity, name);
-        this.cost = cost;
-        this.materials = materials;
+        this.craftBluePrint = craftBluePrint;
     }
 
-    public int getCost() {
-        return cost;
+    public CraftBluePrint getCraftBluePrint() {
+        return craftBluePrint;
     }
 
-    public HashMap<Material, Integer> getMaterials() {
-        return materials;
-    }
 }

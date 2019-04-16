@@ -5,9 +5,12 @@ import model.item.Material;
 
 public class Armor extends Equipment {
 
-    public Armor(int rarity, String name, int cost, HashMap<Material, Integer> materials) {
-        super(rarity, name, cost, materials);
+    public Armor(int rarity, String name, CraftBluePrint craftBluePrint) {
+        super(rarity, name, craftBluePrint);
     }
+
+
+    
 
 
 }

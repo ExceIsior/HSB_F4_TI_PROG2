@@ -23,7 +23,7 @@ public class IOHelper {
     private static FileWriter fileWriter = null;
     private static FileReader fileReader = null;
     private static File file = null;
-
+    
     /**
      * Stores the current Hero and Player progression to the default save game location as separate JSON files.
      */

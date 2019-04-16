@@ -1,0 +1,2337 @@
+[
+  [
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "H",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "H",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "H",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "H",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "X",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "X",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "X",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          }
+        ],
+        [
+          {
+            "texturePath": "M",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "T",
+            "visible": false,
+            "height": 0
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          },
+          {
+            "texturePath": "Tr",
+            "visible": false,
+            "height": 20
+          }
+        ]
+      ]
+    }
+  ]
+]
