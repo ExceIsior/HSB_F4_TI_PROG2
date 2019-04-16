@@ -51,6 +51,8 @@ public class MapController
     
     //deprecated
     public static Tile[][] generateNewMap() {
+        map = new Tile[Const.MAP_SIZE_X][Const.MAP_SIZE_Y];
+        
         for(int i = 0; i < Const.MAP_SIZE_X; i++) 
         {
             for(int j = 0; j < Const.MAP_SIZE_Y; j++) 
