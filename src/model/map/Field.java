@@ -5,30 +5,29 @@ import model.gameObject.GameObject;
 
 public class Field {
 
-    private String texturePath = "";
+    //private String texturePath = "";
     private boolean visible = false;
-    private int height = 0;
-    
+//    private int height = 0;
+    Terrain terrain = null;
     private GameObject gameObject = null;
     
-    public Field(String texturePath, boolean visible, int height) {
-        this.texturePath = texturePath;
+    public Field(Terrain terrain, boolean visible, GameObject gameObject) {
+        this.terrain = terrain;
         this.visible = visible;
-        this.height = height;
     }
 
-    public Field(String texturePath, int height) {
-        this(texturePath, false, height);
+    public Field(Terrain terrain) {
+        this(terrain, false, null);
     }
     
     public Field(GameObject gameObject) {
-        this(gameObject.getGraphicsPath(), Const.HEIGHT_CHARACTER);
-    }
-    
-    public String getTextture() {
-        return this.texturePath;
+        this(null, false, gameObject);
     }
 
+    public Terrain getTerrain() {
+        return terrain;
+    }
+    
     public boolean isVisibile() {
         return visible;
     }
@@ -44,10 +43,6 @@ public class Field {
     public void setGameObject(GameObject gameObject) {
         this.gameObject = gameObject;
     }
-    
-    public int getHeight() {
-        return height;
-    }
 
     @Override
     public String toString() {
@@ -55,7 +50,7 @@ public class Field {
             return gameObject.getGraphicsPath();
         }
         else {
-            return this.texturePath;
+            return this.terrain.getTexturePath();
         }
         
     }

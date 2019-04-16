@@ -36,7 +36,7 @@ public class MapController
         {
             for (int j = 0; j < Const.TILE_SIZE_Y; j++)
             { 
-                tile[i][j] = FieldFactory.getField(Const.TERRAIN_ID);
+                tile[i][j] = FieldFactory.getField(Const.GRASS_ID);
                 if (j % 3 == 0 && i != 0) {
                     tile[i][j] = FieldFactory.getField(Const.MOUNTAIN_ID);
                 }

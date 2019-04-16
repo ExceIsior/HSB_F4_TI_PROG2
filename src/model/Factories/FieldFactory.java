@@ -2,20 +2,23 @@
 package model.Factories;
 
 import control.Constants.Const;
+import control.Constants.TerrainConst;
+import control.Enums.Terrains;
 import model.map.Field;
+import model.map.Terrain;
 
 public class FieldFactory {
     
     public static Field getField(int fieldID) {
         switch(fieldID) {
-            case Const.TERRAIN_ID:
-                return new Field("T", Const.HEIGHT_TERRAIN);
-            case Const.MOUNTAIN_ID:
-                return new Field("M", Const.HEIGHT_OBSTACLE);
-            case Const.TREE_ID:
-                return new Field("Tr", Const.HEIGHT_OBSTACLE);
-            case Const.RIVER_ID:
-                return new Field("R", Const.HEIGHT_OBSTACLE);
+            case TerrainConst.GRASS_ID:
+                return new Field(Terrains.GRASS.getTerrain());
+            case TerrainConst.MOUNTAIN_ID:
+                return new Field(Terrains.MOUNTAIN.getTerrain());
+            case TerrainConst.FOREST_ID:
+                return new Field(Terrains.FOREST.getTerrain());
+            case TerrainConst.RIVER_ID:
+                return new Field(Terrains.RIVER.getTerrain());
         }
         return null;
     }

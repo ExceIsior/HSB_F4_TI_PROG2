@@ -35,9 +35,5 @@ public interface Const {
     public static final int HEIGHT_OBSTACLE = 20;
     public static final int HEIGHT_CHARACTER = 5;
     public static final int HEIGHT_TERRAIN= 0;
-    
-    public static final int TERRAIN_ID = 0;
-    public static final int MOUNTAIN_ID = 1;
-    public static final int TREE_ID= 2;
-    public static final int RIVER_ID= 3;
+   
 }
