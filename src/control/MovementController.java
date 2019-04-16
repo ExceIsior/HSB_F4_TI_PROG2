@@ -6,7 +6,6 @@ import model.map.Dungeon;
 import model.map.Tile;
 
 import java.util.ArrayList;
-import model.Factories.FieldFactory;
 import model.gameObject.GameObject;
 
 public class MovementController
@@ -17,13 +16,12 @@ public class MovementController
         this.dungeon = dungeon;
     }
 
-  
     public static void changePositionOfGameObject(GameObject gameObject, Position newPosition) {
         
         if ( (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition)) &&
                 movePossibleWithoutStandingOnObstacle(newPosition) &&
                 movePossibleWithoutStandingOnGameObject(newPosition) &&
-                movePossibleVisible(newPosition))
+                newPositionVisible(newPosition))
         {   
             Position currentPosition = gameObject.getPosition();
             Position tilePositionGameObject = Converter.convertMapCoordinatesInTileCoordinates(currentPosition);
@@ -116,7 +114,7 @@ public class MovementController
         }
         return gameObject;
     }
-    private static boolean movePossibleVisible(Position position) {
+    private static boolean newPositionVisible(Position position) {
         boolean visible = false;
         Position tilePosition = Converter.convertMapCoordinatesInTileCoordinates(position);
         if (dungeon.getTile(tilePosition).isVisible()) {

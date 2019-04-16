@@ -35,12 +35,6 @@ public class PhaseController {
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
                 heroQueue.add(heroQueue.peek());
-                this.moveController.changePositionOfGameObject(heroQueue.peek(), new Position(x, y));
-                MapController.ausgeben(dungeon);
-                
-                System.out.println("zweite Position");
-                x = positionListener.nextInt();
-                y = positionListener.nextInt();
                 this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
                 MapController.ausgeben(dungeon);
                 
@@ -58,11 +52,11 @@ public class PhaseController {
                 this.phaseID = 3;
                 //break;
             case(3):
-                System.out.println("phase 3");
+                System.out.println("ENCOUNTERPHASE");
                 this.phaseID = 4;
                 //break;
             case(4):
-                System.out.println("phase 4");
+                System.out.println("VILLAINPHASE");
                 this.phaseID = 1;
                 //break;
             default:

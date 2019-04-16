@@ -50,7 +50,7 @@ public class MapController
     }
     
     //deprecated
-    public static void updateMap() {
+    public static Tile[][] generateNewMap() {
         for(int i = 0; i < Const.MAP_SIZE_X; i++) 
         {
             for(int j = 0; j < Const.MAP_SIZE_Y; j++) 
@@ -59,11 +59,26 @@ public class MapController
                 {
                     for(int l = 0; l < Const.TILE_SIZE_Y; l++) 
                     {
-                       
+                       if (j == 0) {
+                           map[i][j].getTile()[k][l] = FieldFactory.getField(TerrainConst.RIVER_ID);
+                       } 
+                       if (i == 0) {
+                           map[i][j].getTile()[k][l] = FieldFactory.getField(TerrainConst.MOUNTAIN_ID);
+                       }
+                       if (j == (Const.MAP_SIZE_X * Const.TILE_SIZE_X)-1) {
+                           map[i][j].getTile()[k][l] = FieldFactory.getField(TerrainConst.FOREST_ID);
+                       }
+                       if (i == (Const.MAP_SIZE_X * Const.TILE_SIZE_X)-1) {
+                           map[i][j].getTile()[k][l] = FieldFactory.getField(TerrainConst.RIVER_ID);
+                       }
+                       else {
+                           map[i][j].getTile()[k][l] = FieldFactory.getField(TerrainConst.GRASS_ID);
+                       }
                     }
                 }
             }
         }
+        return map;
     }
     
     public static void ausgeben(Dungeon dungeon)
