@@ -15,14 +15,44 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "M"
+              "texturePath": "R"
             }
           },
           {
             "visible": false,
             "terrain": {
               "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
               "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
             }
           },
           {
@@ -38,7 +68,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -51,15 +81,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -68,7 +98,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -78,48 +108,18 @@
               "texturePath": "G"
             }
           },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
           {
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -133,426 +133,21 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "M"
+              "texturePath": "R"
             }
           },
           {
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "M"
+              "texturePath": "R"
             }
           },
           {
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ]
-      ]
-    },
-    {
-      "visible": false,
-      "tile": [
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ]
-      ]
-    },
-    {
-      "visible": false,
-      "tile": [
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ]
-      ]
-    },
-    {
-      "visible": false,
-      "tile": [
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "M"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "texturePath": "R"
             }
           },
           {
@@ -567,8 +162,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -583,6 +178,101 @@
             "terrain": {
               "height": 0,
               "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
             }
           },
           {
@@ -597,8 +287,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -619,7 +309,317 @@
             "visible": false,
             "terrain": {
               "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
               "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "visible": false,
+      "tile": [
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "R"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -641,26 +641,10 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
           {
             "visible": false,
             "terrain": {
@@ -671,22 +655,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           }
         ],
@@ -695,7 +665,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -715,8 +685,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -725,7 +695,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -738,8 +708,24 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -747,6 +733,20 @@
             "terrain": {
               "height": 0,
               "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -789,8 +789,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -810,8 +810,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -819,8 +819,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -833,15 +833,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -849,8 +849,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -863,15 +863,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -914,8 +914,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -935,8 +935,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -944,8 +944,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -958,15 +958,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -974,8 +974,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -988,15 +988,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1039,8 +1039,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1060,8 +1060,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1069,8 +1069,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1083,15 +1083,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1099,8 +1099,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1113,15 +1113,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1155,8 +1155,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 20,
-              "texturePath": "R"
+              "height": 0,
+              "texturePath": "G"
             }
           }
         ],
@@ -1164,8 +1164,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1186,7 +1186,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           }
         ],
@@ -1194,15 +1194,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1216,7 +1209,14 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1224,15 +1224,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1246,7 +1239,14 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1268,26 +1268,10 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
           {
             "visible": false,
             "terrain": {
@@ -1298,22 +1282,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           }
         ],
@@ -1322,7 +1292,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -1342,8 +1312,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1352,7 +1322,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -1365,8 +1335,24 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1374,6 +1360,20 @@
             "terrain": {
               "height": 0,
               "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1416,8 +1416,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1437,8 +1437,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1446,8 +1446,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1460,15 +1460,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1476,8 +1476,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1490,15 +1490,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1541,8 +1541,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1562,8 +1562,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1571,8 +1571,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1585,15 +1585,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1601,8 +1601,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1615,15 +1615,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1666,8 +1666,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1687,8 +1687,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1696,8 +1696,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1710,15 +1710,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1726,8 +1726,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1740,15 +1740,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1782,8 +1782,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 20,
-              "texturePath": "R"
+              "height": 0,
+              "texturePath": "G"
             }
           }
         ],
@@ -1791,8 +1791,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1813,7 +1813,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           }
         ],
@@ -1821,15 +1821,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1843,7 +1836,14 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1851,15 +1851,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -1873,7 +1866,14 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -1895,26 +1895,10 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
           {
             "visible": false,
             "terrain": {
@@ -1925,22 +1909,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           }
         ],
@@ -1949,7 +1919,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -1969,8 +1939,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -1979,7 +1949,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -1992,8 +1962,24 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2001,6 +1987,20 @@
             "terrain": {
               "height": 0,
               "texturePath": "G"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -2043,8 +2043,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2064,8 +2064,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2073,8 +2073,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2087,15 +2087,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2103,8 +2103,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2117,15 +2117,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -2168,8 +2168,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2189,8 +2189,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2198,8 +2198,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2212,15 +2212,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2228,8 +2228,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2242,15 +2242,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -2293,8 +2293,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2314,8 +2314,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2323,8 +2323,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2337,15 +2337,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2353,8 +2353,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2367,15 +2367,15 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -2409,8 +2409,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 20,
-              "texturePath": "R"
+              "height": 0,
+              "texturePath": "G"
             }
           }
         ],
@@ -2418,8 +2418,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2440,7 +2440,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           }
         ],
@@ -2448,15 +2448,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2470,7 +2463,14 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2478,15 +2478,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2500,7 +2493,14 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "F"
             }
           }
         ]
@@ -2522,22 +2522,22 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           },
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "R"
             }
           }
         ],
@@ -2566,8 +2566,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2576,7 +2576,7 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           },
           {
@@ -2584,29 +2584,6 @@
             "terrain": {
               "height": 0,
               "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 20,
-              "texturePath": "R"
             }
           },
           {
@@ -2614,6 +2591,29 @@
             "terrain": {
               "height": 20,
               "texturePath": "F"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
             }
           },
           {
@@ -2670,8 +2670,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2691,8 +2691,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2700,8 +2700,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2711,22 +2711,6 @@
               "texturePath": "G"
             }
           },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
           {
             "visible": false,
             "terrain": {
@@ -2738,7 +2722,23 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "F"
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
             }
           },
           {
@@ -2795,8 +2795,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2816,8 +2816,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2825,8 +2825,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2836,22 +2836,6 @@
               "texturePath": "G"
             }
           },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
           {
             "visible": false,
             "terrain": {
@@ -2863,7 +2847,23 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "F"
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
             }
           },
           {
@@ -2920,8 +2920,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2941,8 +2941,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           }
         ],
@@ -2950,8 +2950,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "height": 20,
+              "texturePath": "M"
             }
           },
           {
@@ -2961,22 +2961,6 @@
               "texturePath": "G"
             }
           },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          }
-        ],
-        [
           {
             "visible": false,
             "terrain": {
@@ -2988,7 +2972,23 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "F"
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
             }
           },
           {
@@ -3036,8 +3036,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 20,
-              "texturePath": "R"
+              "height": 0,
+              "texturePath": "G"
             }
           }
         ],
@@ -3045,38 +3045,8 @@
           {
             "visible": false,
             "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
-            }
-          },
-          {
-            "visible": false,
-            "terrain": {
               "height": 20,
-              "texturePath": "R"
-            }
-          }
-        ],
-        [
-          {
-            "visible": false,
-            "terrain": {
-              "height": 0,
-              "texturePath": "G"
+              "texturePath": "M"
             }
           },
           {
@@ -3097,11 +3067,25 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "R"
+              "texturePath": "M"
             }
           }
         ],
         [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
+            }
+          },
           {
             "visible": false,
             "terrain": {
@@ -3113,7 +3097,23 @@
             "visible": false,
             "terrain": {
               "height": 20,
-              "texturePath": "F"
+              "texturePath": "M"
+            }
+          }
+        ],
+        [
+          {
+            "visible": false,
+            "terrain": {
+              "height": 20,
+              "texturePath": "M"
+            }
+          },
+          {
+            "visible": false,
+            "terrain": {
+              "height": 0,
+              "texturePath": "G"
             }
           },
           {

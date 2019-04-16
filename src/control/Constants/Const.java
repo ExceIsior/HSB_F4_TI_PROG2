@@ -25,9 +25,6 @@ public interface Const {
     public static final String CHARACTERS_PATH = RESSOURCE_PATH + "characters/";
     public static final String OBJECTS_PATH = RESSOURCE_PATH + "objects/";
     public static final String ITEMS_PATH = RESSOURCE_PATH + "items/";
-
-    public static final String MOUNTAIN_PATH = OBJECTS_PATH + "M";
-    public static final String TREE_PATH = OBJECTS_PATH + "T";
     public static final String TRAP_PATH = OBJECTS_PATH + "t";
     public static final String TREASURE_PATH = OBJECTS_PATH + "C";
     public static final String QUESTITEM_PATH = OBJECTS_PATH + "Q";

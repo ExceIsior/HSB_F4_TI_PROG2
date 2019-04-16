@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class Menu {
 
+    private String information = "";
     private List<MenuEntry> menuEntries = null;
     private final String SELECT_OPTION = "Select Option: ";
 
@@ -18,7 +19,7 @@ public class Menu {
      *
      * @param menuEntries Array of menu entries
      */
-    public Menu(MenuEntry... menuEntries) {
+    public Menu(String information, MenuEntry... menuEntries) {
         this.menuEntries = Arrays.asList(menuEntries);
     }
 
@@ -35,6 +36,7 @@ public class Menu {
      * Prints the menu on the console.
      */
     public void printMenu() {
+        System.out.println("");
         for (int i = 0; i < this.menuEntries.size(); i++) {
             System.out.printf("%d.) %s\n", i, this.menuEntries.get(i).getMessage());
         }

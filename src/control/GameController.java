@@ -6,6 +6,8 @@ import control.Enums.Quests;
 import model.Position;
 import model.gameObject.Hero;
 import model.map.Dungeon;
+import model.map.Tile;
+import utilities.JsonParser;
 
 public class GameController {
 
@@ -17,7 +19,7 @@ public class GameController {
     private HeroManager heroManager = null;
     
     public GameController() {
-        this.dungeon = new Dungeon(Quests.QUEST_1.getQuest(), MapController.generateMap());
+        this.dungeon = new Dungeon(Quests.QUEST_1.getQuest(), (Tile[][])JsonParser.fromJsonFile(Tile[][].class, "./maps/map1/map.json"));
         this.phaseController = new PhaseController(this.dungeon);
         this.heroManager = HeroManager.getInstance();
         setHeroes();
