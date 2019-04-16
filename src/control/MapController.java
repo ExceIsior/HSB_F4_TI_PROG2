@@ -1,6 +1,7 @@
 package control;
 
 import control.Constants.Const;
+import control.Constants.TerrainConst;
 import model.Factories.FieldFactory;
 import model.Position;
 import model.gameObject.GameObject;
@@ -36,12 +37,12 @@ public class MapController
         {
             for (int j = 0; j < Const.TILE_SIZE_Y; j++)
             { 
-                tile[i][j] = FieldFactory.getField(Const.GRASS_ID);
+                tile[i][j] = FieldFactory.getField(TerrainConst.GRASS_ID);
                 if (j % 3 == 0 && i != 0) {
-                    tile[i][j] = FieldFactory.getField(Const.MOUNTAIN_ID);
+                    tile[i][j] = FieldFactory.getField(TerrainConst.MOUNTAIN_ID);
                 }
                 if (j == 2 && i ==2 || j == 3 && i == 3 || j == 2 && i == 3) {
-                    tile[i][j] = FieldFactory.getField(Const.TREE_ID);
+                    tile[i][j] = FieldFactory.getField(TerrainConst.FOREST_ID);
                 }
             }
         }

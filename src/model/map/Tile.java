@@ -32,11 +32,5 @@ public class Tile
             for (int row = 0; row < this.tile.length; row++) {
                 Arrays.stream(this.tile[row]).forEach((column) -> column.setVisible(visible));
         }
-    }
-
-
-
-
-    
-    
+    }  
 }

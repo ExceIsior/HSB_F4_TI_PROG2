@@ -5,7 +5,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import model.Position;
 import model.gameObject.Hero;
 import java.util.Arrays;
-import model.InteractiveContainer;
 import model.map.Dungeon;
 
 public class PhaseController {
@@ -16,10 +15,12 @@ public class PhaseController {
     private Dungeon dungeon = null;
     private MovementController moveController = null;
     private boolean gameOn = true;
+    private VisibilityController visibilityController = null;
     
     public PhaseController(Dungeon dungeon) {
         this.dungeon = dungeon;
         moveController = new MovementController(this.dungeon);
+        visibilityController = new VisibilityController(this.dungeon);
     }
     
     public void startGame() {
@@ -29,29 +30,30 @@ public class PhaseController {
         {
             case(1):
                 MapController.ausgeben(dungeon);
+                System.out.println("phase 1");
                 
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
-  
                 heroQueue.add(heroQueue.peek());
-                this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
+                this.moveController.changePositionOfGameObject(heroQueue.peek(), new Position(x, y));
                 MapController.ausgeben(dungeon);
                 
                 x = positionListener.nextInt();
                 y = positionListener.nextInt();
-
-                heroQueue.add(heroQueue.peek());
                 this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
                 MapController.ausgeben(dungeon);
+                
                 count++;
-                if (count == 3) {
+                if (count == 5) {
                     gameOn = false;
                 }
                 this.phaseID = 2;
                 //break;
                 
             case(2):
-                System.out.println("phase 2");
+                System.out.println("exploration phase");
+                visibilityController.explorateTile();
+                MapController.ausgeben(dungeon);
                 this.phaseID = 3;
                 //break;
             case(3):
