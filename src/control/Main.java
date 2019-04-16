@@ -4,9 +4,20 @@ import java.util.HashMap;
 import model.gameObject.Hero;
 import model.item.Item;
 
+import com.google.gson.Gson;
+import model.gameObject.Villain;
+import java.io.IOException;
+import model.Factories.VillainFactory;
+import model.Position;
+import model.gameObject.Hero;
+import model.map.Dungeon;
+import model.map.Field;
+import utilities.JsonParser;
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        
        // System.out.println(new Gson().toJson(new Field("PATHTOTEXTURE", true)));
         //System.out.println(JsonParser.writeObject(DungeonCreator.generateMap()));
 //       String  pos = JsonParser.writeObject(DungeonCreator.generatePositions());
@@ -28,6 +39,8 @@ public class Main {
 //
 //        System.out.println();
 //        mapController.ausgeben(dungeon);
+         GameController game = new GameController();
+         game.start();
 
 //        Menu menu = new Menu();
 //        menu.addMenuEntry("Say Hello", () -> System.out.println("HELLO!!!"));

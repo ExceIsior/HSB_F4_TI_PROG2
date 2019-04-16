@@ -7,36 +7,29 @@ package model.gameObject;
 public abstract class GameObject {
     
     private String graphicspath = "";
-    private int height = 0;
-
-    /**
-     * Initialises the game object.
-     * @param graphicsPath Path to the image file that is to be drawn on the screen for the instance.
-     * @param height Height of the game object to determine whether a hero can traverse over the object.
-     */
+    private Position position = null;
     public GameObject(String graphicsPath, int height) {
+    public GameObject(String graphicsPath) {
         this.graphicspath = graphicsPath;
-        this.height = height;
     }
+     
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }    
     
-    /**
-     * Retrieves the game objects image path.
-     * @return Relative path to game objects image file.
-     */
     public String getGraphicsPath()
     {
         return this.graphicspath;
     }
-   
-     /**
-      * Retrieves the game object's height
-      * @return Game object's height.
-      */
     public int getHeight() 
     {
         return height;
     }
-    
+
     @Override
     public String toString()
     {

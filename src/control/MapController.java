@@ -1,9 +1,9 @@
 package control;
 
 import control.Constants.Const;
+import control.Enums.Fields;
 import model.Position;
-import model.gameObject.Mountain;
-import model.gameObject.Tree;
+import model.gameObject.Hero;
 import model.map.Dungeon;
 import model.map.Field;
 import model.map.Tile;
@@ -34,29 +34,64 @@ public class MapController
         for (int i = 0; i < Const.TILE_SIZE_X; i++)
         {
             for (int j = 0; j < Const.TILE_SIZE_Y; j++)
-            {
-                if(j % 2 == 0){
-                    tile[i][j] = new Field('M', new Mountain(null));
-                } else{
-                    tile[i][j] = new Field('T', new Tree(null));
+            { 
+                tile[i][j] = Fields.TERRAIN.getField();
+                if (j % 3 == 0 && i != 0) {
+                    tile[i][j] = Fields.MOUNTAIN.getField();
                 }
-
+                if (j == 2 && i ==2 || j == 3 && i == 3 || j == 2 && i == 3) {
+                    tile[i][j] = Fields.TREE.getField();
+                }
             }
         }
         return new Tile(tile);
     }
-    public static void update() {
+    
+    public static void updateMap() {
+        HeroManager heroManager = HeroManager.getInstance();
+               
         for (int i = 0; i < Const.MAP_SIZE_X; i++)
         {
             for (int j = 0; j < Const.MAP_SIZE_Y; j++)
             {
-                //if (GameController.positions.getInteractive(new Position(i, j)) != null) { 
-                //}
+                for (int k = 0; k < 2; k++) {
+                    if (Converter.convertMapCoordinatesInTileCoordinates(heroManager.
+                            getHeroes()[k].getPosition()).getX() == i && 
+                            Converter.convertMapCoordinatesInTileCoordinates(heroManager.
+                                    getHeroes()[k].getPosition()).getY() == j) {
+                        updateTile(map[i][j].getTile(), heroManager.getHeroes()[k]);
+                    }
+                }
+                
             }
         }
     }
+    private static void updateTile(Field[][] tile, Hero hero) {
+        if (hero == null) {
+            System.out.println("Kein Hero");
+        }
+        else {
+        Position heroPositionField = Converter.convertMapCoordinatesInFieldCoordinates(hero.getPosition());
+        
+        for (int i = 0; i < Const.TILE_SIZE_X; i++)
+        {
+            for (int j = 0; j < Const.TILE_SIZE_Y; j++)
+            { 
+                if (heroPositionField.getX() == i && heroPositionField.getY() == j) {
+                    
+                    tile[i][j] = new Field(hero.getGraphicsPath(), Const.HEIGHT_CHARACTER);
+                }
+            }
+        }
+        }
+    }
+    
     public static void ausgeben(Dungeon dungeon)
     {
         System.out.println(dungeon);
+    }
+    
+    public static void setHeroes() {
+        
     }
 }
