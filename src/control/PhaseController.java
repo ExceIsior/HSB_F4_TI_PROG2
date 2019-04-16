@@ -32,18 +32,21 @@ public class PhaseController {
                 
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
-                //durch Collection durchgehen um kleinste Initiative rauszufinden
+  
                 heroQueue.add(heroQueue.peek());
                 this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
                 MapController.ausgeben(dungeon);
                 
                 x = positionListener.nextInt();
                 y = positionListener.nextInt();
-                //durch Collection durchgehen um kleinste Initiative rauszufinden
+
                 heroQueue.add(heroQueue.peek());
                 this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
                 MapController.ausgeben(dungeon);
                 count++;
+                if (count == 3) {
+                    gameOn = false;
+                }
                 this.phaseID = 2;
                 //break;
                 

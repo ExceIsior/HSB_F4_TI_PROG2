@@ -2,7 +2,6 @@ package control;
 
 import control.Constants.Const;
 import control.Constants.HeroConst;
-import model.Position;
 import model.gameObject.Hero;
 import model.item.Inventory;
 

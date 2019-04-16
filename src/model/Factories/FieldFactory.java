@@ -4,7 +4,6 @@ package model.Factories;
 import control.Constants.Const;
 import model.map.Field;
 
-
 public class FieldFactory {
     
     public static Field getField(int fieldID) {
