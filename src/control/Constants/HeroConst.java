@@ -24,15 +24,15 @@ public interface HeroConst {
     public static final int MAGE_DEFAULT_INVENTORY_CAPACITY = 1;
     public static final int MAGE_DEFAULT_INITIATIVE = 2;
 
-    public static final String ROGUE_NAME = "Rogue";
-    public static final String ROGUE_RES_PATH = CHARACTERS_PATH + "rogue.";
-    public static final int ROGUE_DEFAULT_DAMAGE = 3;
-    public static final int ROGUE_DEFAULT_ARMOR = 10;
-    public static final int ROGUE_DEFAULT_HEALTH_POINTS = 5;
-    public static final int ROGUE_DEFAULT_MAX_HEALTH_POINTS = 5;
-    public static final int ROGUE_DEFAULT_AGILITY = 8;
-    public static final int ROGUE_DEFAULT_INVENTORY_CAPACITY = 2;
-    public static final int ROGUE_DEFAULT_INITIATIVE = 3;
+    public static final String ASSASSIN_NAME = "Rogue";
+    public static final String ASSASSIN_RES_PATH = CHARACTERS_PATH + "rogue.";
+    public static final int ASSASSIN_DEFAULT_DAMAGE = 3;
+    public static final int ASSASSIN_DEFAULT_ARMOR = 10;
+    public static final int ASSASSIN_DEFAULT_HEALTH_POINTS = 5;
+    public static final int ASSASSIN_DEFAULT_MAX_HEALTH_POINTS = 5;
+    public static final int ASSASSIN_DEFAULT_AGILITY = 8;
+    public static final int ASSASSIN_DEFAULT_INVENTORY_CAPACITY = 2;
+    public static final int ASSASSIN_DEFAULT_INITIATIVE = 3;
 
     public static final String RANGER_NAME = "Ranger";
     public static final String RANGER_RES_PATH = CHARACTERS_PATH + "ranger.";

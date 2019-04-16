@@ -1,27 +1,58 @@
 package model;
 
+/**
+ * Represents two dimensional coordinates.
+ *
+ * @author Ismail
+ */
 public class Position {
+
     private int x = 0;
     private int y = 0;
 
+    /**
+     * Initialises a new position.
+     *
+     * @param x X-Coordinate
+     * @param y Y-Coordinate
+     */
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    
+    /**
+     * Retrieves the X-Coordinate
+     *
+     * @return X-Coordinate.
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * Sets a new X-Coordinate
+     *
+     * @param x New X-Coordinate.
+     */
     public void setX(int x) {
         this.x = x;
     }
 
+    /**
+     * Retrieves the Y-Coordinate
+     *
+     * @return Y-Coordinate.
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     * Sets a new Y-Coordinate
+     *
+     * @param Y New Y-Coordinate.
+     */
     public void setY(int y) {
         this.y = y;
     }
@@ -54,8 +85,5 @@ public class Position {
         }
         return true;
     }
-    
-    
-    
-    
+
 }

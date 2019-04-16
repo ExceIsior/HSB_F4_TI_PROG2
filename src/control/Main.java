@@ -1,26 +1,18 @@
 package control;
-
-import com.google.gson.Gson;
-import model.gameObject.Villain;
-
 import java.io.IOException;
-import model.Factories.VillainFactory;
-import model.GameObjectContainer;
-import model.Position;
+import java.util.HashMap;
 import model.gameObject.Hero;
-import model.map.Field;
-import utilities.JsonParser;
-import utilities.DungeonCreator;
+import model.item.Item;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
        // System.out.println(new Gson().toJson(new Field("PATHTOTEXTURE", true)));
         //System.out.println(JsonParser.writeObject(DungeonCreator.generateMap()));
-       String  pos = JsonParser.writeObject(DungeonCreator.generatePositions());
-        System.out.println(pos);
-       DungeonCreator.json_ToPositionManager(pos);
-        
+//       String  pos = JsonParser.writeObject(DungeonCreator.generatePositions());
+//        System.out.println(pos);
+//       DungeonCreator.json_ToPositionManager(pos);
+//        
 //        GameController game = new GameController();
 //        Hero hero = HeroManager.getInstance().getHeroes()[0];
 //        game.getPositions().putInteractive(new InteractiveContainer(hero), new Position(0, 0));
