@@ -20,7 +20,7 @@ public class GameController {
         this.dungeon = new Dungeon(Quests.QUEST_1.getQuest(), MapController.generateMap());
         this.phaseController = new PhaseController(this.dungeon);
         this.heroManager = HeroManager.getInstance();
-        MapController.setHeroes();
+        setHeroes();
     }
 
     //PHASEN
@@ -52,20 +52,19 @@ public class GameController {
     
     private void setHeroes () {
         heroManager.getHeroes()[0].setPosition(new Position(0,0));
+        
         Position tilePositionHero1 = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[0].getPosition());
         Position fieldPositionHero1 = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[0].getPosition());
         
-        System.out.println("position" + fieldPositionHero1.getX() + " " + fieldPositionHero1.getY());
         dungeon.getTile(tilePositionHero1).getField(fieldPositionHero1).setGameObject(heroManager.getHeroes()[0]);
-        //MapController.updateMap();
         
-        heroManager.getHeroes()[1].setPosition(new Position(1,0));
+        heroManager.getHeroes()[1].setPosition(new Position(1,1));
+        
         Position tilePositionHero2 = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[1].getPosition());
         Position fieldPositionHero2 = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[1].getPosition());
-        System.out.println("position" + fieldPositionHero2.getX() + " " + fieldPositionHero2.getY());
+        
         dungeon.getTile(tilePositionHero2).getField(fieldPositionHero2).setGameObject(heroManager.getHeroes()[1]);
-        MapController.updateMap();
-  
+          
     }
     
     

@@ -29,10 +29,6 @@ public class Field {
         return this.texturePath;
     }
 
-    public void setTexture(String texturePath) {
-        this.texturePath = texturePath;
-    }
-
     public boolean isVisibile() {
         return visible;
     }
@@ -55,6 +51,12 @@ public class Field {
 
     @Override
     public String toString() {
-        return this.texturePath;
+        if (gameObject != null) {
+            return gameObject.getGraphicsPath();
+        }
+        else {
+            return this.texturePath;
+        }
+        
     }
 }
