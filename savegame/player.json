@@ -1,0 +1,9 @@
+{
+  "name": "Player1",
+  "experiencePoints": 0,
+  "gold": 0,
+  "inventory": {
+    "inventory": {},
+    "maxCapacity": 99999
+  }
+}

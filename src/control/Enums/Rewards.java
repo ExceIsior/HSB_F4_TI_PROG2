@@ -6,7 +6,7 @@ import control.Constants.RewardConst;
 public enum Rewards {
     REWARD_1(new Reward(RewardConst.REWARD_1_GOLD,
             RewardConst.REWARD_1_EXPERIENCE_POINTS,
-            Materials.BRONZE.getMaterial(),
+            Materials.IRON.getMaterial(),
             Materials.AMETHYST.getMaterial())),
     REWARD_2(new Reward(RewardConst.REWARD_2_GOLD,
             RewardConst.REWARD_2_EXPERIENCE_POINTS,
@@ -15,7 +15,7 @@ public enum Rewards {
     REWARD_3(new Reward(RewardConst.REWARD_3_GOLD,
             RewardConst.REWARD_3_EXPERIENCE_POINTS,
             Materials.GOLD.getMaterial(),
-            Materials.BRONZE.getMaterial()));
+            Materials.IRON.getMaterial()));
 
     private final Reward reward;
 

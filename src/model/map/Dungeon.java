@@ -38,8 +38,10 @@ public class Dungeon
             {
                 for (Tile tile : tiles)
                 {
+                    if (tile.isVisible()) {
                     Field[][] fieldArray = tile.getTile();
                     stringBuilder.append(Arrays.toString(fieldArray[tileLooper]));
+                    }
                 }
                 stringBuilder.append("\n");
             }

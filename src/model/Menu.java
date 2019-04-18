@@ -1,34 +1,66 @@
 package model;
 
-import java.lang.Runnable;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.List;
 
+/**
+ * Represents a menu consisting of menu entries.
+ *
+ * @author Ismail
+ */
 public class Menu {
 
-    private HashMap<String, Runnable> menuEntries = null;
+    private String information = "";
+    private List<MenuEntry> menuEntries = null;
+    private final String SELECT_OPTION = "Select Option: ";
 
-    public Menu(HashMap<String, Runnable> menuEntries) {
-        this.menuEntries = menuEntries;
+    /**
+     * Initialises Menu
+     *
+     * @param menuEntries Array of menu entries
+     */
+    public Menu(String information, MenuEntry... menuEntries) {
+        this.menuEntries = Arrays.asList(menuEntries);
     }
 
-    public Menu() {
-        this.menuEntries = new HashMap<>();
+    /**
+     * Adds a new menu entry
+     *
+     * @param menuEntry New menu entry.
+     */
+    public void addMenuEntry(MenuEntry menuEntry) {
+        this.menuEntries.add(menuEntry);
     }
 
-    public void addMenuEntry(String message, Runnable function) {
-        this.menuEntries.put(message, function);
-    }
-
+    /**
+     * Prints the menu on the console.
+     */
     public void printMenu() {
-        //String[] messages = this.menuEntries.keySet().toArray((size) -> new String[size]);
-        //for (int i = 0; i < this.menuEntries.size(); i++) {
-        //    System.out.printf("%d.) %s\n", i, messages[i]);
-        //}
+        System.out.println("");
+        for (int i = 0; i < this.menuEntries.size(); i++) {
+            System.out.printf("%d.) %s\n", i, this.menuEntries.get(i).getMessage());
+        }
     }
 
+    /**
+     * Runs procedure with given index.
+     *
+     * @param index index of menu.
+     */
     public void runFunction(int index) {
-        //Runnable[] functions = this.menuEntries.values().toArray((size) -> new Runnable[size]);
-        //functions[index].run();
+        this.menuEntries.get(index).getFunction().run();
+    }
+
+    /**
+     * Prints menu and prompts user to select an entry then runs the procedure
+     * of selected entry.
+     */
+    public void promptMenu() {
+        int option = -1;
+        while (option < 0 || option >= this.menuEntries.size()) {
+            printMenu();
+            option = utilities.IOHelper.promptUserInt(SELECT_OPTION);
+        }
+        runFunction(option);
     }
 }

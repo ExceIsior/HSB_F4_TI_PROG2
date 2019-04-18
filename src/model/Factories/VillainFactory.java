@@ -1,11 +1,19 @@
 package model.Factories;
 
 import control.Constants.VillainConst;
-import model.Position;
 import model.gameObject.Villain;
 
+/**
+ * This class supplies instances of Villain class.
+ * @author Ismail
+ */
 public class VillainFactory {
 
+    /**
+     * Instantiates an object of Villain
+     * @param villainId ID of the Villain type that is to be instantiated.
+     * @return Object of Villain.
+     */
     public static Villain getVillain(int villainId) {
         switch (villainId) {
             case  VillainConst.ORK_ID:

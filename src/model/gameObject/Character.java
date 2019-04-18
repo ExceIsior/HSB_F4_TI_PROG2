@@ -6,6 +6,10 @@ import model.item.Item;
 
 import java.util.ArrayList;
 
+/**
+ * Super class of all game objects that can actively interact and move.
+ * @author Ismail
+ */
 public class Character extends Interactive {
 
     private String name = "";
@@ -14,6 +18,18 @@ public class Character extends Interactive {
     private ArrayList<Skill> skills = null;
     private int baseDamage = 0;
 
+    /**
+     * Initialises a character object
+     * @param graphicsPath  Path to the image file that is to be drawn on the screen for the instance.
+     * @param armor Armor value of the character.
+     * @param loot  Item that this character can hold which can be retrieved by a Hero upon its death.
+     * @param name  Name of the character.
+     * @param healthPoints  Current Health points of the character.
+     * @param maxHealthPoints   Maximum health points that the character can have.
+     * @param agility Maximum distance that the character can travel per phase.
+     * @param status List of statuses that are applied on the character.
+     * @param skills List of skills that the character can use.
+     */
     public Character(String graphicsPath,
             int armor,
             Item loot,
@@ -22,8 +38,9 @@ public class Character extends Interactive {
             int maxHealthPoints,
             int agility,
             ArrayList<Status> status,
-            ArrayList<Skill> skills) {
-        super(graphicsPath, armor, loot, healthPoints, maxHealthPoints, Const.HEIGHT_CHARACTER);
+            ArrayList<Skill> skills) 
+    {
+        super(graphicsPath, armor, loot, healthPoints, maxHealthPoints);
         this.name = name;
         this.agility = agility;
         this.status = status;
@@ -42,18 +59,34 @@ public class Character extends Interactive {
 //        enemy.setHealthPoints(enemy.getHealthPoints() - damage);
 //    }
 
+    /**
+     * Retrieves the character's Name
+     * @return Character' name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the character's name.
+     * @param name New name for the character.
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Retrieves the character's base damage value.
+     * @return Character's base damage value.
+     */
     public int getBaseDamage() {
         return baseDamage;
     }
 
+    /**
+     * Sets the character's base damage value
+     * @param baseDamage New base damage value.
+     */
     public void setBaseDamage(int baseDamage) {
         if(baseDamage >= 0){
         this.baseDamage = baseDamage;
@@ -62,10 +95,18 @@ public class Character extends Interactive {
         }
     }
 
+    /**
+     * Retrieves the character's agility.
+     * @return Character's agility value.
+     */
     public int getAgility() {
         return agility;
     }
 
+    /**
+     * Sets character's agility value.
+     * @param agility New agility value.
+     */
     public void setAgility(int agility) {
                 if(agility >= 0){
         this.agility = agility;
@@ -74,18 +115,34 @@ public class Character extends Interactive {
         }
     }
 
+    /**
+     * Retrieves a List of the statuses the character carries.
+     * @return List of character's statuses.
+     */
     public ArrayList<Status> getStatus() {
         return status;
     }
 
+    /**
+     * Sets the character's statuses.
+     * @param status New List of statuses.
+     */
     public void setStatus(ArrayList<Status> status) {
         this.status = status;
     }
 
+    /**
+     * Retrieves the List of character's skills.
+     * @return List of character's skills.
+     */
     public ArrayList<Skill> getSkills() {
         return skills;
     }
 
+    /**
+     * Sets the character's skills
+     * @param skills New List of skills.
+     */
     public void setSkills(ArrayList<Skill> skills) {
         this.skills = skills;
     }

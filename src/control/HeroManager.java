@@ -2,7 +2,6 @@ package control;
 
 import control.Constants.Const;
 import control.Constants.HeroConst;
-import model.Position;
 import model.gameObject.Hero;
 import model.item.Inventory;
 
@@ -26,7 +25,8 @@ public class HeroManager {
                 HeroConst.PALADIN_DEFAULT_AGILITY,
                 null,
                 null,
-                new Inventory(HeroConst.PALADIN_DEFAULT_INVENTORY_CAPACITY));
+                new Inventory(HeroConst.PALADIN_DEFAULT_INVENTORY_CAPACITY),
+                null);
 
         heroes[1] = new Hero(HeroConst.MAGE_RES_PATH,
                 HeroConst.MAGE_DEFAULT_ARMOR,
@@ -37,18 +37,20 @@ public class HeroManager {
                 HeroConst.MAGE_DEFAULT_AGILITY,
                 null,
                 null,
-                new Inventory(HeroConst.MAGE_DEFAULT_INVENTORY_CAPACITY));
+                new Inventory(HeroConst.MAGE_DEFAULT_INVENTORY_CAPACITY),
+                null);
 
-        heroes[2] = new Hero(HeroConst.ROGUE_RES_PATH,
-                HeroConst.ROGUE_DEFAULT_ARMOR,
+        heroes[2] = new Hero(HeroConst.ASSASSIN_RES_PATH,
+                HeroConst.ASSASSIN_DEFAULT_ARMOR,
                 null,
-                HeroConst.ROGUE_NAME,
-                HeroConst.ROGUE_DEFAULT_HEALTH_POINTS,
-                HeroConst.ROGUE_DEFAULT_MAX_HEALTH_POINTS,
-                HeroConst.ROGUE_DEFAULT_AGILITY,
+                HeroConst.ASSASSIN_NAME,
+                HeroConst.ASSASSIN_DEFAULT_HEALTH_POINTS,
+                HeroConst.ASSASSIN_DEFAULT_MAX_HEALTH_POINTS,
+                HeroConst.ASSASSIN_DEFAULT_AGILITY,
                 null,
                 null,
-                new Inventory(HeroConst.ROGUE_DEFAULT_INVENTORY_CAPACITY));
+                new Inventory(HeroConst.ASSASSIN_DEFAULT_INVENTORY_CAPACITY),
+                null);
 
         heroes[3] = new Hero(HeroConst.RANGER_RES_PATH,
                 HeroConst.RANGER_DEFAULT_ARMOR,
@@ -59,7 +61,8 @@ public class HeroManager {
                 HeroConst.RANGER_DEFAULT_AGILITY,
                 null,
                 null,
-                new Inventory(HeroConst.RANGER_DEFAULT_INVENTORY_CAPACITY));
+                new Inventory(HeroConst.RANGER_DEFAULT_INVENTORY_CAPACITY),
+                null);
 
         return heroes;
     }

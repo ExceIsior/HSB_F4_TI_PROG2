@@ -40,7 +40,7 @@ public class Converter {
     public static Position convertMapCoordinatesInFieldCoordinates(Position mapCoordinates) {
         if (mapCoordinates.getX() > Const.MAP_SIZE_X * Const.TILE_SIZE_X || 
                 mapCoordinates.getY() > Const.MAP_SIZE_Y * Const.TILE_SIZE_Y ) {
-            //System.out.println((Const.MAP_SIZE_X * Const.TILE_SIZE_X) + " + ausserhalb der map");
+            System.out.println((Const.MAP_SIZE_X * Const.TILE_SIZE_X) + " + ausserhalb der map");
             return null;
         }
         else {

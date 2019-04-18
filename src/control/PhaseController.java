@@ -5,7 +5,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import model.Position;
 import model.gameObject.Hero;
 import java.util.Arrays;
-import model.InteractiveContainer;
 import model.map.Dungeon;
 
 public class PhaseController {
@@ -14,47 +13,56 @@ public class PhaseController {
     private int phaseID = 1;
     private ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
     private Dungeon dungeon = null;
-    private InteractiveMap positions = null;
     private MovementController moveController = null;
-    private Hero hero1 = HeroManager.getInstance().getHeroes()[0];
+    private boolean gameOn = true;
+    private VisibilityController visibilityController = null;
     
-    public PhaseController(Dungeon dungeon, InteractiveMap positions) {
+    public PhaseController(Dungeon dungeon) {
         this.dungeon = dungeon;
-        this.positions = positions;
-        moveController = new MovementController(this.positions, this.dungeon);
+        moveController = new MovementController(this.dungeon);
+        visibilityController = new VisibilityController(this.dungeon);
     }
     
     public void startGame() {
+        int count = 0;
+        while(gameOn) {
         switch(this.phaseID)
         {
             case(1):
-                positions.putInteractive(hero1, new Position(10,10));
-                System.out.println("current position: " + positions.getPosition(hero1));
                 MapController.ausgeben(dungeon);
+                System.out.println("HEROPHASE");
+                System.out.println("erste Position");
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
-                //durch Collection durchgehen um kleinste Initiative rauszufinden
-                this.moveController.changePositionOfInteractive(new InteractiveContainer(hero1), new Position(x, y));
-                //MapController.ausgeben(dungeon);
-                System.out.println("new position: " + positions.getPosition(hero1));
+                heroQueue.add(heroQueue.peek());
+                this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
+                MapController.ausgeben(dungeon);
                 
+                count++;
+                if (count == 5) {
+                    gameOn = false;
+                }
                 this.phaseID = 2;
-                break;
+                //break;
                 
             case(2):
-                
+                System.out.println("EXPLORATIONPHASE");
+                visibilityController.explorateTile();
+                MapController.ausgeben(dungeon);
                 this.phaseID = 3;
-                break;
+                //break;
             case(3):
-                
+                System.out.println("ENCOUNTERPHASE");
                 this.phaseID = 4;
-                break;
+                //break;
             case(4):
-                
+                System.out.println("VILLAINPHASE");
                 this.phaseID = 1;
+                //break;
+            default:
                 break;
-            default: ;
         
+        }
     }
     }
 }

@@ -7,11 +7,12 @@ import model.item.Inventory;
 import model.item.Item;
 
 import java.util.ArrayList;
+import model.item.Equipment.EquipmentSet;
 
 public class Hero extends Character
 {
     private int surgeValue = 0;
-    private Item equipment = null;
+    private EquipmentSet equipmentSet = null;
     private Inventory inventory = null;
 
     public Hero(String graphicsPath,
@@ -23,7 +24,8 @@ public class Hero extends Character
                 int agility,
                 ArrayList<Status> status,
                 ArrayList<Skill> skills,
-                Inventory inventory)
+                Inventory inventory,
+                EquipmentSet equipmentSet)
     {
         super(graphicsPath,
                 armor, 
@@ -35,6 +37,7 @@ public class Hero extends Character
                 status, 
                 skills);
         this.inventory = inventory;
+        this.equipmentSet = equipmentSet;
     }
 
     public Inventory getInventory()
