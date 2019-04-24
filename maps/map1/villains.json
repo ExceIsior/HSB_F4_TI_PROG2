@@ -25,17 +25,4 @@
       "y": 11
     }
   },
-  {
-    "name": "Zombie",
-    "agility": 1,
-    "baseDamage": 0,
-    "armor": 2,
-    "healthPoints": 3,
-    "maxHealthPoints": 3,
-    "graphicspath": "./res/characters/zombie.",
-    "position": {
-      "x": 9,
-      "y": 18
-    }
-  }
 ]
