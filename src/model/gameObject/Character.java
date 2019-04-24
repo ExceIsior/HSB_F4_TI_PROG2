@@ -5,6 +5,7 @@ import model.Status;
 import model.item.Item;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Super class of all game objects that can actively interact and move.
@@ -14,8 +15,8 @@ public class Character extends Interactive {
 
     private String name = "";
     private int agility = 0;
-    private ArrayList<Status> status = null;
-    private ArrayList<Skill> skills = null;
+    private List<Status> status = null;
+    private List<Skill> skills = null;
     private int baseDamage = 0;
 
     /**
@@ -37,8 +38,8 @@ public class Character extends Interactive {
             int healthPoints,
             int maxHealthPoints,
             int agility,
-            ArrayList<Status> status,
-            ArrayList<Skill> skills) 
+            List<Status> status,
+            List<Skill> skills) 
     {
         super(graphicsPath, armor, loot, healthPoints, maxHealthPoints);
         this.name = name;
@@ -119,7 +120,7 @@ public class Character extends Interactive {
      * Retrieves a List of the statuses the character carries.
      * @return List of character's statuses.
      */
-    public ArrayList<Status> getStatus() {
+    public List<Status> getStatus() {
         return status;
     }
 
@@ -127,7 +128,7 @@ public class Character extends Interactive {
      * Sets the character's statuses.
      * @param status New List of statuses.
      */
-    public void setStatus(ArrayList<Status> status) {
+    public void setStatus(List<Status> status) {
         this.status = status;
     }
 
@@ -135,7 +136,7 @@ public class Character extends Interactive {
      * Retrieves the List of character's skills.
      * @return List of character's skills.
      */
-    public ArrayList<Skill> getSkills() {
+    public List<Skill> getSkills() {
         return skills;
     }
 
@@ -143,7 +144,7 @@ public class Character extends Interactive {
      * Sets the character's skills
      * @param skills New List of skills.
      */
-    public void setSkills(ArrayList<Skill> skills) {
+    public void setSkills(List<Skill> skills) {
         this.skills = skills;
     }
 

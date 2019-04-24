@@ -7,6 +7,7 @@ import model.item.Inventory;
 import model.item.Item;
 
 import java.util.ArrayList;
+import java.util.List;
 import model.item.Equipment.EquipmentSet;
 
 public class Hero extends Character
@@ -22,8 +23,8 @@ public class Hero extends Character
                 int healthPoints,
                 int maxHealthPoints,
                 int agility,
-                ArrayList<Status> status,
-                ArrayList<Skill> skills,
+                List<Status> status,
+                List<Skill> skills,
                 Inventory inventory,
                 EquipmentSet equipmentSet)
     {

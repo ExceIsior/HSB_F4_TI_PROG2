@@ -5,6 +5,7 @@ import model.Status;
 import model.item.Item;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Villain extends Character {
 
@@ -15,8 +16,8 @@ public class Villain extends Character {
             int healthPoints,
             int maxHealthPoints,
             int agility, 
-            ArrayList<Status> status, 
-            ArrayList<Skill> skills) {
+            List<Status> status, 
+            List<Skill> skills) {
         super(graphicsPath, 
                 armor, 
                 loot, 

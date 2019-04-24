@@ -2,7 +2,10 @@ package control;
 
 import control.Constants.Const;
 import control.Constants.HeroConst;
+import control.Enums.Skills;
+import java.util.Arrays;
 import model.gameObject.Hero;
+import model.gameObject.Skill;
 import model.item.Equipment.EquipmentSet;
 import model.item.HeroItem;
 import model.item.Inventory;
@@ -26,7 +29,7 @@ public class HeroManager {
                 HeroConst.PALADIN_DEFAULT_MAX_HEALTH_POINTS,
                 HeroConst.PALADIN_DEFAULT_AGILITY,
                 null,
-                null,
+                Arrays.asList(Skills.SWORD_THRUST.getSkill()),
                 new Inventory<HeroItem>(HeroConst.PALADIN_DEFAULT_INVENTORY_CAPACITY),
                 new EquipmentSet(null, null, null));
 
@@ -38,7 +41,7 @@ public class HeroManager {
                 HeroConst.MAGE_DEFAULT_MAX_HEALTH_POINTS,
                 HeroConst.MAGE_DEFAULT_AGILITY,
                 null,
-                null,
+                Arrays.asList(Skills.THUNDER_STRIKE.getSkill()),
                 new Inventory<HeroItem>(HeroConst.MAGE_DEFAULT_INVENTORY_CAPACITY),
                 new EquipmentSet(null, null, null));
 
@@ -50,7 +53,7 @@ public class HeroManager {
                 HeroConst.ASSASSIN_DEFAULT_MAX_HEALTH_POINTS,
                 HeroConst.ASSASSIN_DEFAULT_AGILITY,
                 null,
-                null,
+                Arrays.asList(Skills.DAGGER_STAB.getSkill()),
                 new Inventory<HeroItem>(HeroConst.ASSASSIN_DEFAULT_INVENTORY_CAPACITY),
                 new EquipmentSet(null, null, null));
 
@@ -62,7 +65,7 @@ public class HeroManager {
                 HeroConst.RANGER_DEFAULT_MAX_HEALTH_POINTS,
                 HeroConst.RANGER_DEFAULT_AGILITY,
                 null,
-                null,
+                Arrays.asList(Skills.BOW_SHOT.getSkill()),
                 new Inventory<HeroItem>(HeroConst.RANGER_DEFAULT_INVENTORY_CAPACITY),
                 new EquipmentSet(null, null, null));
 

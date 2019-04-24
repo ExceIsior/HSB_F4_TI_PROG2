@@ -2,6 +2,8 @@ package model.Factories;
 
 import control.Constants.BossConst;
 import control.Constants.VillainConst;
+import control.Enums.Skills;
+import java.util.Arrays;
 import model.gameObject.Boss;
 import model.gameObject.Villain;
 
@@ -38,7 +40,7 @@ public class VillainFactory {
                         VillainConst.GHUL_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.GHUL_DEFAULT_AGILITY,
                         null,
-                        null);
+                        Arrays.asList(Skills.DEVOUR.getSkill()));
 
             case VillainConst.WEREWOLF_ID:
                 return new Villain(VillainConst.WEREWOLF_RES_PATH,
@@ -82,7 +84,7 @@ public class VillainFactory {
                         VillainConst.ZOMBIE_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.ZOMBIE_DEFAULT_AGILITY,
                         null,
-                        null);
+                        Arrays.asList(Skills.CONTAGIOUS_BITE.getSkill()));
         }
         return null;
     }
