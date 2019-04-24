@@ -12,7 +12,7 @@ import model.gameObject.GameObject;
 
 public class MovementController
 {
-    private static Dungeon dungeon = null;
+    private static Dungeon dungeon = model.Factories.DungeonFactory.getDungeon(0);;
     
     public MovementController(Dungeon dungeon) {
         this.dungeon = dungeon;
@@ -59,7 +59,7 @@ public class MovementController
                 {
                     hP.setX(hP.getX()+x);
                     if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
                         rangeFelder.add(hP);  
                     }                   
@@ -68,7 +68,7 @@ public class MovementController
                 {
                     hP.setY(hP.getY()+y);
                     if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
                         rangeFelder.add(hP);  
                     }     
@@ -79,7 +79,7 @@ public class MovementController
                 {
                     hP.setX(hP.getX()-x);
                     if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
                         rangeFelder.add(hP);  
                     }                
@@ -88,7 +88,7 @@ public class MovementController
                 {
                     hP.setY(hP.getY()-y);
                     if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
                         rangeFelder.add(hP);  
                     }  
@@ -96,6 +96,57 @@ public class MovementController
             }
         }
         return rangeFelder;
+    }
+    
+    public static ArrayList<Position> getAttackFelder(int range, Position heroPosition)
+    {
+        ArrayList<Position> attackFelder = null;
+        Position hP = heroPosition;
+        for (int i=1; i<= range/2; i++)
+        {
+            if(i%2 != 0)
+            {
+                for (int x=1; x <=i; x++)
+                {
+                    hP.setX(hP.getX()+x);
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() != null)
+                    {
+                        attackFelder.add(hP);  
+                    }                   
+                }
+                for (int y=1; y <=i; y++)
+                {
+                    hP.setY(hP.getY()+y);
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() != null)
+                    {
+                        attackFelder.add(hP);  
+                    }     
+                }
+            }
+            else {
+                for (int x=1; x <=i; x++)
+                {
+                    hP.setX(hP.getX()-x);
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() != null)
+                    {
+                        attackFelder.add(hP);  
+                    }                
+                }
+                for (int y=1; y <=i; y++)
+                {
+                    hP.setY(hP.getY()-y);
+                    if (getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() != null)
+                    {
+                        attackFelder.add(hP);  
+                    }  
+                }
+            }
+        }
+        return attackFelder;
     }
 
     
@@ -139,7 +190,4 @@ public class MovementController
         int yCoordinate = (position.getY() / Const.TILE_SIZE_Y);
         return dungeon.getTile(new Position(xCoordinate, yCoordinate));
     }
-
-
 }
-

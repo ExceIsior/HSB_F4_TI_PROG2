@@ -5,9 +5,9 @@ import model.gameObject.GameObject;
 
 public class Field {
 
-    //private String texturePath = "";
+  //private String texturePath = "";
     private boolean visible = false;
-//    private int height = 0;
+  //private int height = 0;
     Terrain terrain = null;
     private GameObject gameObject = null;
     

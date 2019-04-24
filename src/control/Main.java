@@ -2,6 +2,8 @@ package control;
 
 import control.Constants.Const;
 import java.io.IOException;
+import model.Position;
+import model.map.Dungeon;
 
 
 public class Main {
@@ -17,7 +19,18 @@ public class Main {
 //        System.out.println(new Dungeon(null, map));
 
          
-         GameController game = new GameController(Const.LEVEL1);
-         game.start();
+        
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         System.out.print(MovementController.getRangeFelder(3, new Position(3,3)));
     }
 }
