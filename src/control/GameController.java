@@ -23,10 +23,11 @@ public class GameController {
     private PhaseController phaseController = null;
     private HeroManager heroManager = null;
     private int dungeonID = 0;
+    private Villain[] villains = null;
     
     public GameController(int dungeonID) {
         this.dungeon = DungeonFactory.getDungeon(dungeonID);
-        this.phaseController = new PhaseController(this.dungeon);
+        
         this.heroManager = HeroManager.getInstance();
         this.dungeonID = dungeonID;
     }
@@ -57,13 +58,13 @@ public class GameController {
         this.setVillains(dungeonID);
         this.setQuestItems(dungeonID);
         
+        this.phaseController = new PhaseController(this.dungeon, this.villains);
         phaseController.startGame();
     }
     
     private void setVillains(int dungeonID) {
-        Villain villains[];
-        
-        villains = (Villain[]) JsonParser.fromJsonFile(Villain[].class, MessageFormat.format(Const.VILLAIN_PATH, dungeonID));
+       
+        this.villains = (Villain[]) JsonParser.fromJsonFile(Villain[].class, MessageFormat.format(Const.VILLAIN_PATH, dungeonID));
         
         for (int i = 0; i < villains.length; i++) {
             Position tilePositionVillain = Converter.convertMapCoordinatesInTileCoordinates(villains[i].getPosition());
@@ -71,6 +72,7 @@ public class GameController {
             dungeon.getTile(tilePositionVillain).getField(fieldPositionVillain).setGameObject(villains[i]);
         }
     }
+    
     private void setQuestItems(int dungeonID) {
         QuestItem questItems[];
         
@@ -106,6 +108,12 @@ public class GameController {
         
         dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(HeroConst.PALADIN_STARTING_POSITION)).setVisible(true);
         //zum Testen alle Felder sichtbar machen
+        //alleFeldersichtbar();
+       
+    }
+    
+    private void alleFeldersichtbar()
+    {
         dungeon.getTile(new Position(0,0)).setVisible(true);
         dungeon.getTile(new Position(0,1)).setVisible(true);
         dungeon.getTile(new Position(0,2)).setVisible(true);
@@ -132,5 +140,4 @@ public class GameController {
         dungeon.getTile(new Position(4,3)).setVisible(true);
         dungeon.getTile(new Position(4,4)).setVisible(true);
     }
-    
 }
