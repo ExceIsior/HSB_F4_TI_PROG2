@@ -1,13 +1,11 @@
 package model.item.Equipment;
 
-import java.util.HashMap;
-import model.item.Material;
+import model.Effect;public class Weapon extends Equipment{
 
-public class Weapon extends Equipment {
-
-    public Weapon(int rarity, String name, CraftBluePrint craftBluePrint) {
-        super(rarity, name, craftBluePrint);
+    public Weapon(int rarity, String name, Effect effect, CraftBluePrint craftBluePrint, int compatibleHeroID) {
+        super(rarity, name, effect, craftBluePrint, compatibleHeroID);
     }
+
 
 
 }

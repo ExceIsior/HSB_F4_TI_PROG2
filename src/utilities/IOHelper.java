@@ -8,10 +8,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import model.Player;
 import model.gameObject.Hero;
+import model.map.Tile;
 
 /**
  * This class provides various static methods for eased utilaisation of in- and output streams.
@@ -40,6 +42,10 @@ public class IOHelper {
         PlayerManager.getInstance().setPlayer((Player)JsonParser.fromJsonFile(Player.class, Const.SAVE_GAME_PLAYER_PATH));
     }
 
+    public static Tile[][] loadMap(int mapID){
+        return (Tile[][])JsonParser.fromJsonFile(Tile[][].class, MessageFormat.format(Const.MAPS_PATH, mapID));
+    }
+    
     /**
      * Prompts user to enter a String after a specified message was shown and returns the input.
      * @param message Message to print on console.
@@ -70,7 +76,7 @@ public class IOHelper {
         int input = 0;
         boolean validInput = false;
         while (!validInput) {
-            System.out.println(message);
+            System.out.print(message);
             try {
                 input = scanner.nextInt();
                 validInput = true;
@@ -78,6 +84,19 @@ public class IOHelper {
                 System.err.println(UtilityConst.ERROR_INVALID_INPUT);
                 scanner.nextLine();
             }
+        }
+        return input;
+    }
+    
+        /**
+     * Prompts user to enter an Integer after a specified message was shown and returns the input.
+     * @param message Message to print on console.
+     * @return Users STDIN input as int.
+     */
+    public static int promptUserInt(String message, int max) {
+        int input = -1;
+        while( input < 0 || input >= max){
+            input = promptUserInt(message);
         }
         return input;
     }

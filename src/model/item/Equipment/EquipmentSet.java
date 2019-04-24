@@ -1,8 +1,5 @@
 package model.item.Equipment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class EquipmentSet {
 
     private Weapon weapon = null;
@@ -15,15 +12,19 @@ public class EquipmentSet {
         this.accessory = accessory;
     }
 
-    public void setEquipment(Weapon weapon){
+    public void setEquipment(Equipment equipment) {
+        this.setEquipment(equipment);
+    }
+
+    public void setEquipment(Weapon weapon) {
         this.weapon = weapon;
     }
 
-    public void setEquipment(Armor armor){
+    public void setEquipment(Armor armor) {
         this.armor = armor;
     }
 
-    public void setEquipment(Accessory accessory){
+    public void setEquipment(Accessory accessory) {
         this.accessory = accessory;
     }
 
@@ -38,10 +39,9 @@ public class EquipmentSet {
     public Accessory getAccessory() {
         return accessory;
     }
-    
-    public Equipment[] getEquipmentSet(){
+
+    public Equipment[] getEquipmentSet() {
         return new Equipment[]{this.weapon, this.armor, this.accessory};
     }
-    
-    
+
 }

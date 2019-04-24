@@ -15,4 +15,11 @@ public class EffectItem extends Item {
         return effect;
     }
 
+    @Override
+    public String toString() {
+        return "EffectItem{" + "effect=" + effect + '}';
+    }
+
+    
+    
 }

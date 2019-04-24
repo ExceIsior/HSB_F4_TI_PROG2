@@ -29,7 +29,7 @@ public class Effect {
      * @param armor Value by which the character's armor is to be modified.
      * @param baseDamage Value by which the character's base damage is to be
      * modified.
-     * @param  probability Probability of the effect to be applied to the target.
+     * @param probability Probability of the effect to be applied to the target.
      */
     public Effect(String name, String description, int healthPoints, int maxHealthPoints, int agility, int armor, int baseDamage, int probability) {
         this.name = name;
@@ -106,9 +106,16 @@ public class Effect {
 
     /**
      * Retrieves the probability of the effect to be applied to the target.
+     *
      * @return Effect's probability to be applied.
      */
     public int getProbability() {
         return probability;
     }
+
+    @Override
+    public String toString() {
+        return "Effect{" + "name=" + name + ", description=" + description + ", healthPoints=" + healthPoints + ", maxHealthPoints=" + maxHealthPoints + ", agility=" + agility + ", armor=" + armor + ", baseDamage=" + baseDamage + ", probability=" + probability + '}';
+    }
+
 }

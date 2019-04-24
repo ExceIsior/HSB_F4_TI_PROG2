@@ -40,6 +40,14 @@ public class Hero extends Character
         this.equipmentSet = equipmentSet;
     }
 
+    public int getSurgeValue() {
+        return surgeValue;
+    }
+
+    public EquipmentSet getEquipmentSet() {
+        return equipmentSet;
+    }
+    
     public Inventory getInventory()
     {
         return inventory;

@@ -8,4 +8,6 @@ public class Material extends Item {
     {
         super(rarity, name);
     }
+    
+    
 }

@@ -20,7 +20,7 @@ public interface Const {
     public static final String SAVE_GAME_HERO_PATH = SAVE_GAME_PATH + "hero.json";
     public static final String SAVE_GAME_PLAYER_PATH = SAVE_GAME_PATH + "player.json";
     
-    public static final String MAPS_PATH = "./maps/";
+    public static final String MAPS_PATH = "./maps/map{0,number,integer}/map.json";
     public static final String RESSOURCE_PATH = "./res/";
     public static final String CHARACTERS_PATH = RESSOURCE_PATH + "characters/";
     public static final String OBJECTS_PATH = RESSOURCE_PATH + "objects/";

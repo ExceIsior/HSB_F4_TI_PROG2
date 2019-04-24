@@ -6,6 +6,7 @@ import model.Player;
 import model.Position;
 import model.gameObject.Hero;
 import model.item.Inventory;
+import model.item.Material;
 
 public class PlayerManager {
     private Player player = null;
@@ -18,7 +19,7 @@ public class PlayerManager {
         Player player = new Player(Const.DEFAULT_PLAYER_NAME,
                 Const.DEFAULT_PLAYER_EXPERIENCE_POINTS,
                 Const.DEFAULT_PLAYER_GOLD,
-                new Inventory(Const.DEFAULT_PLAYER_INVENTORY_CAPACITY));
+                new Inventory<Material>(Const.DEFAULT_PLAYER_INVENTORY_CAPACITY));
 
         return player;
     }

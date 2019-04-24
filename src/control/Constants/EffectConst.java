@@ -2,6 +2,42 @@ package control.Constants;
 
 public interface EffectConst {
 
+    public static final String RUSTY_SWORD_NAME = "Rusty Sword Bonus";
+    public static final String RUSTY_SWORD_DESCRIPTION = "Rusty Sword Bonus";
+    public static final int RUSTY_SWORD_HEALTH_POINTS = 0;
+    public static final int RUSTY_SWORD_MAX_HEALTH_POINTS = 0;
+    public static final int RUSTY_SWORD_AGILITY = 0;
+    public static final int RUSTY_SWORD_ARMOR = 0;
+    public static final int RUSTY_SWORD_BASE_DAMAGE = +2;
+    public static final int RUSTY_SWORD_PROBABILITY = 100;
+
+    public static final String IRON_SWORD_NAME = "Iron Sword Bonus";
+    public static final String IRON_SWORD_DESCRIPTION = "Iron Sword Bonus";
+    public static final int IRON_SWORD_HEALTH_POINTS = 0;
+    public static final int IRON_SWORD_MAX_HEALTH_POINTS = 0;
+    public static final int IRON_SWORD_AGILITY = 0;
+    public static final int IRON_SWORD_ARMOR = 0;
+    public static final int IRON_SWORD_BASE_DAMAGE = +5;
+    public static final int IRON_SWORD_PROBABILITY = 100;
+    
+    public static final String RUSTY_PLATE_ARMOR_NAME = "Rusty Plate Armor Bonus";
+    public static final String RUSTY_PLATE_ARMOR_DESCRIPTION = "Rusty Plate Armor Bonus";
+    public static final int RUSTY_PLATE_ARMOR_HEALTH_POINTS = 0;
+    public static final int RUSTY_PLATE_ARMOR_MAX_HEALTH_POINTS = 0;
+    public static final int RUSTY_PLATE_ARMOR_AGILITY = 0;
+    public static final int RUSTY_PLATE_ARMOR_ARMOR = +2;
+    public static final int RUSTY_PLATE_ARMOR_BASE_DAMAGE = 0;
+    public static final int RUSTY_PLATE_ARMOR_PROBABILITY = 100;
+
+    public static final String IRON_PLATE_ARMOR_NAME = "Iron Plate Armor Bonus";
+    public static final String IRON_PLATE_ARMOR_DESCRIPTION = "Iron Plate Armor Bonus";
+    public static final int IRON_PLATE_ARMOR_HEALTH_POINTS = 0;
+    public static final int IRON_PLATE_ARMOR_MAX_HEALTH_POINTS = 0;
+    public static final int IRON_PLATE_ARMOR_AGILITY = 0;
+    public static final int IRON_PLATE_ARMOR_ARMOR = +3;
+    public static final int IRON_PLATE_ARMOR_BASE_DAMAGE = 0;
+    public static final int IRON_PLATE_ARMOR_PROBABILITY = 100;
+
     public static final String HEAL_NAME = "Heal";
     public static final String HEAL_DESCRIPTION = "Heal";
     public static final int HEAL_HEALTH_POINTS = +10;
@@ -28,7 +64,7 @@ public interface EffectConst {
     public static final int DAMAGE_BOOST_ARMOR = 0;
     public static final int DAMAGE_BOOST_BASE_DAMAGE = +2;
     public static final int DAMAGE_BOOST_PROBABILITY = 100;
-    
+
     public static final String ARMOR_BOOST_NAME = "Armor Boost";
     public static final String ARMOR_BOOST_DESCRIPTION = "Armor Boost";
     public static final int ARMOR_BOOST_HEALTH_POINTS = 0;

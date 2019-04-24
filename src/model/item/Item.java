@@ -43,6 +43,11 @@ public class Item {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" + "rarity=" + rarity + ", name=" + name + '}';
+    }
     
     
     

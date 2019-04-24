@@ -1,6 +1,7 @@
 package model;
 
 import model.item.Inventory;
+import model.item.Material;
 
 /**
  * Represents a player with its progression.
@@ -12,7 +13,7 @@ public class Player {
     private String name = "";
     private int experiencePoints = 0;
     private int gold = 0;
-    private Inventory inventory = null;
+    private Inventory<Material> inventory = null;
 
     /**
      * Initialises a new player object
@@ -29,6 +30,10 @@ public class Player {
         this.inventory = inventory;
     }
 
+    public void addGold(int gold){
+        this.gold += gold;
+    }
+    
     /**
      * Retrieves the player's name.
      *

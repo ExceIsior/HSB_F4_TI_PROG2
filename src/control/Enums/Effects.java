@@ -4,6 +4,46 @@ import model.Effect;
 import control.Constants.EffectConst;
 
 public enum Effects {
+    RUSTY_SWORD(new Effect(
+            EffectConst.RUSTY_SWORD_NAME,
+            EffectConst.RUSTY_SWORD_DESCRIPTION,
+            EffectConst.RUSTY_SWORD_HEALTH_POINTS,
+            EffectConst.RUSTY_SWORD_MAX_HEALTH_POINTS,
+            EffectConst.RUSTY_SWORD_AGILITY,
+            EffectConst.RUSTY_SWORD_ARMOR,
+            EffectConst.RUSTY_SWORD_BASE_DAMAGE,
+            EffectConst.RUSTY_SWORD_PROBABILITY
+    )),
+    IRON_SWORD(new Effect(
+            EffectConst.IRON_SWORD_NAME,
+            EffectConst.IRON_SWORD_DESCRIPTION,
+            EffectConst.IRON_SWORD_HEALTH_POINTS,
+            EffectConst.IRON_SWORD_MAX_HEALTH_POINTS,
+            EffectConst.IRON_SWORD_AGILITY,
+            EffectConst.IRON_SWORD_ARMOR,
+            EffectConst.IRON_SWORD_BASE_DAMAGE,
+            EffectConst.IRON_SWORD_PROBABILITY
+    )),
+    RUSTY_PLATE_ARMOR(new Effect(
+            EffectConst.RUSTY_PLATE_ARMOR_NAME,
+            EffectConst.RUSTY_PLATE_ARMOR_DESCRIPTION,
+            EffectConst.RUSTY_PLATE_ARMOR_HEALTH_POINTS,
+            EffectConst.RUSTY_PLATE_ARMOR_MAX_HEALTH_POINTS,
+            EffectConst.RUSTY_PLATE_ARMOR_AGILITY,
+            EffectConst.RUSTY_PLATE_ARMOR_ARMOR,
+            EffectConst.RUSTY_PLATE_ARMOR_BASE_DAMAGE,
+            EffectConst.RUSTY_PLATE_ARMOR_PROBABILITY
+    )),
+    IRON_PLATE_ARMOR(new Effect(
+            EffectConst.IRON_PLATE_ARMOR_NAME,
+            EffectConst.IRON_PLATE_ARMOR_DESCRIPTION,
+            EffectConst.IRON_PLATE_ARMOR_HEALTH_POINTS,
+            EffectConst.IRON_PLATE_ARMOR_MAX_HEALTH_POINTS,
+            EffectConst.IRON_PLATE_ARMOR_AGILITY,
+            EffectConst.IRON_PLATE_ARMOR_ARMOR,
+            EffectConst.IRON_PLATE_ARMOR_BASE_DAMAGE,
+            EffectConst.IRON_PLATE_ARMOR_PROBABILITY
+    )),
     HEAL(new Effect(
             EffectConst.HEAL_NAME,
             EffectConst.HEAL_DESCRIPTION,

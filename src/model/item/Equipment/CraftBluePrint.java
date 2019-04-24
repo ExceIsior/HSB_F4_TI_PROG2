@@ -13,4 +13,20 @@ public class CraftBluePrint {
         this.cost = cost;
     }
 
+    public HashMap<Material, Integer> getCraftMaterials() {
+        return craftMaterials;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    @Override
+    public String toString() {
+        return "CraftBluePrint{" + "craftMaterials=" + craftMaterials + ", cost=" + cost + '}';
+    }
+    
+    
+    
+
 }

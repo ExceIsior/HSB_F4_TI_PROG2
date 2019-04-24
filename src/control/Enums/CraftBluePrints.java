@@ -14,7 +14,47 @@ public enum CraftBluePrints {
             put(Materials.SILVER.getMaterial(), 2);
         }
     },
-            CraftBluePrintConst.COMMON_WEAPON_COST));
+            CraftBluePrintConst.COMMON_WEAPON_COST)),
+    RARE_WEAPON(new CraftBluePrint(
+            new HashMap<Material, Integer>() {
+        {
+            put(Materials.SILVER.getMaterial(), 10);
+            put(Materials.GOLD.getMaterial(), 2);
+        }
+    },
+            CraftBluePrintConst.RARE_WEAPON_COST)),
+    COMMON_ARMOR(new CraftBluePrint(
+            new HashMap<Material, Integer>() {
+        {
+            put(Materials.IRON.getMaterial(), 10);
+            put(Materials.SILVER.getMaterial(), 2);
+        }
+    },
+            CraftBluePrintConst.COMMON_WEAPON_COST)),
+    RARE_ARMOR(new CraftBluePrint(
+            new HashMap<Material, Integer>() {
+        {
+            put(Materials.SILVER.getMaterial(), 10);
+            put(Materials.GOLD.getMaterial(), 2);
+        }
+    },
+            CraftBluePrintConst.RARE_ACCESSORY_COST)),
+    COMMON_ACCESSORY(new CraftBluePrint(
+            new HashMap<Material, Integer>() {
+        {
+            put(Materials.IRON.getMaterial(), 10);
+            put(Materials.SILVER.getMaterial(), 2);
+        }
+    },
+            CraftBluePrintConst.COMMON_ACCESSORY_COST)),
+    RARE_ACCESSORY(new CraftBluePrint(
+            new HashMap<Material, Integer>() {
+        {
+            put(Materials.SILVER.getMaterial(), 10);
+            put(Materials.GOLD.getMaterial(), 2);
+        }
+    },
+            CraftBluePrintConst.RARE_ACCESSORY_COST));
 
     private CraftBluePrint craftBluePrint;
 
