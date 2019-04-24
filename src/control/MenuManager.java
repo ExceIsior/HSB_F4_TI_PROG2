@@ -1,5 +1,7 @@
 package control;
 
+import control.Constants.DungeonConst;
+import control.Constants.ErrorConst;
 import control.Constants.MenuConst;
 import model.Factories.DungeonFactory;
 import control.Enums.Weapons;
@@ -12,6 +14,8 @@ import model.item.Equipment.Weapon;
 import utilities.IOHelper;
 import control.Enums.Accessories;
 import control.Enums.Armors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MenuManager {
 
@@ -47,9 +51,14 @@ public class MenuManager {
     }
 
     private Menu initDungeonMenu() {
-        String[] dungeons = new String[DungeonFactory.values().length];
+        String[] dungeons = new String[DungeonConst.class.getDeclaredFields().length];
         for (int i = 0; i < dungeons.length; i++) {
-            dungeons[i] = DungeonFactory.values()[i].getDungeon().getTitle();
+            try {
+                dungeons[i] = (String) DungeonConst.class.getDeclaredFields()[i].get(null);
+            } catch (IllegalArgumentException | IllegalAccessException e) {
+                System.err.println(ErrorConst.DUNGEON_NAME_COULD_NOT_BE_ACCESSED);
+                dungeons[i] = "Dungeon " + i;
+            }
         }
         return new Menu(MenuConst.DUNGEON_MENU_TITLE, dungeons);
     }
@@ -100,7 +109,7 @@ public class MenuManager {
     }
 
     private void promptDungeonMenu() {
-        System.out.println(DungeonFactory.values()[this.dungeonMenu.promptMenu()].getDungeon().getTitle());
+        new GameController(this.dungeonMenu.promptMenu()).start();
     }
 
     private void promptCraftingMenuHeroSelection() {
