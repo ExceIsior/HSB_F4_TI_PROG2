@@ -6,6 +6,7 @@ import model.Position;
 import model.gameObject.Hero;
 import java.util.Arrays;
 import model.map.Dungeon;
+import model.map.Tile;
 
 public class PhaseController {
     

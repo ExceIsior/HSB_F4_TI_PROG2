@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Ghul",
+    "agility": 3,
+    "baseDamage": 0,
+    "armor": 5,
+    "healthPoints": 3,
+    "maxHealthPoints": 3,
+    "graphicspath": "./res/characters/ghul.",
+    "position": {
+      "x": 4,
+      "y": 8
+    }
+  },
+  {
+    "name": "Ghul",
+    "agility": 3,
+    "baseDamage": 0,
+    "armor": 5,
+    "healthPoints": 3,
+    "maxHealthPoints": 3,
+    "graphicspath": "./res/characters/ghul.",
+    "position": {
+      "x": 14,
+      "y": 14
+    }
+  },
+  {
+    "name": "Ghul",
+    "agility": 3,
+    "baseDamage": 0,
+    "armor": 5,
+    "healthPoints": 3,
+    "maxHealthPoints": 3,
+    "graphicspath": "./res/characters/ghul.",
+    "position": {
+      "x": 5,
+      "y": 13
+    }
+  },
+  {
+    "name": "Basilisk",
+    "agility": 3,
+    "baseDamage": 0,
+    "armor": 2,
+    "healthPoints": 15,
+    "maxHealthPoints": 15,
+    "graphicspath": "./res/characters/basilisk.",
+    "position": {
+      "x": 18,
+      "y": 18
+    }
+  }
+]

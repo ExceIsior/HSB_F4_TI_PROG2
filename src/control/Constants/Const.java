@@ -10,6 +10,10 @@ public interface Const {
     public static final int NUMBER_CUBE_FACES = 20;
 
     public static final int HERO_AMOUNT = 4;
+    
+    public static final int LEVEL1 = 0;
+    public static final int LEVEL2 = 1;
+    public static final int LEVEL3 = 2;
 
     public static final String DEFAULT_PLAYER_NAME = "Player1";
     public static final int DEFAULT_PLAYER_GOLD = 0;
@@ -21,6 +25,8 @@ public interface Const {
     public static final String SAVE_GAME_PLAYER_PATH = SAVE_GAME_PATH + "player.json";
     
     public static final String MAPS_PATH = "./maps/map{0,number,integer}/map.json";
+    public static final String VILLAIN_PATH = "./maps/map{0,number,integer}/villains.json";
+    public static final String JSON_QUESTITEM_PATH = "./maps/map{0,number,integer}/questitems.json";
     public static final String RESSOURCE_PATH = "./res/";
     public static final String CHARACTERS_PATH = RESSOURCE_PATH + "characters/";
     public static final String OBJECTS_PATH = RESSOURCE_PATH + "objects/";

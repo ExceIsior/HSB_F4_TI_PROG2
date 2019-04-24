@@ -35,6 +35,7 @@ public class VisibilityController
             if (this.checkBorder(heroManager.getHeroes()[i]) && this.checkOutsideOfMap(heroManager.getHeroes()[i]))
             {
                 this.getTile(heroManager.getHeroes()[i]).setVisible(true);
+                
             }
         }
     }

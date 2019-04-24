@@ -1,8 +1,15 @@
 package control;
 
+import control.Constants.Const;
 import control.Constants.HeroConst;
-import control.Enums.Quests;
+import java.text.MessageFormat;
+import model.Factories.DungeonFactory;
+import model.Factories.QuestFactory;
 import model.Position;
+import model.Quest;
+import model.gameObject.GameObject;
+import model.gameObject.QuestItem;
+import model.gameObject.Villain;
 import model.map.Dungeon;
 import model.map.Tile;
 import utilities.JsonParser;
@@ -15,12 +22,13 @@ public class GameController {
     private Dungeon dungeon = null;
     private PhaseController phaseController = null;
     private HeroManager heroManager = null;
+    private int dungeonID = 0;
     
-    public GameController() {
-        this.dungeon = new Dungeon(Quests.QUEST_1.getQuest(), (Tile[][])JsonParser.fromJsonFile(Tile[][].class, "./maps/map1/map.json"));
+    public GameController(int dungeonID) {
+        this.dungeon = DungeonFactory.getDungeon(dungeonID);
         this.phaseController = new PhaseController(this.dungeon);
         this.heroManager = HeroManager.getInstance();
-        setHeroes();
+        this.dungeonID = dungeonID;
     }
 
     //PHASEN
@@ -46,8 +54,33 @@ public class GameController {
         System.out.println("start");
         
         this.setHeroes();
+        this.setVillains(dungeonID);
+        this.setQuestItems(dungeonID);
         
         phaseController.startGame();
+    }
+    
+    private void setVillains(int dungeonID) {
+        Villain villains[];
+        
+        villains = (Villain[]) JsonParser.fromJsonFile(Villain[].class, MessageFormat.format(Const.VILLAIN_PATH, dungeonID));
+        
+        for (int i = 0; i < villains.length; i++) {
+            Position tilePositionVillain = Converter.convertMapCoordinatesInTileCoordinates(villains[i].getPosition());
+            Position fieldPositionVillain = Converter.convertMapCoordinatesInFieldCoordinates(villains[i].getPosition());
+            dungeon.getTile(tilePositionVillain).getField(fieldPositionVillain).setGameObject(villains[i]);
+        }
+    }
+    private void setQuestItems(int dungeonID) {
+        QuestItem questItems[];
+        
+        questItems = (QuestItem[]) JsonParser.fromJsonFile(QuestItem[].class, MessageFormat.format(Const.JSON_QUESTITEM_PATH, dungeonID));
+        
+        for (int i = 0; i < questItems.length; i++) {
+            Position tilePositionQuestItem = Converter.convertMapCoordinatesInTileCoordinates(questItems[i].getPosition());
+            Position fieldPositionQuestItem= Converter.convertMapCoordinatesInFieldCoordinates(questItems[i].getPosition());
+            dungeon.getTile(tilePositionQuestItem).getField(fieldPositionQuestItem).setGameObject(questItems[i]);
+        }
     }
     
     private void setHeroes () {

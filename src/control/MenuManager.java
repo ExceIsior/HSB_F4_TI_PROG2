@@ -1,7 +1,7 @@
 package control;
 
 import control.Constants.MenuConst;
-import control.Enums.Dungeons;
+import model.Factories.DungeonFactory;
 import control.Enums.Weapons;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,9 +47,9 @@ public class MenuManager {
     }
 
     private Menu initDungeonMenu() {
-        String[] dungeons = new String[Dungeons.values().length];
+        String[] dungeons = new String[DungeonFactory.values().length];
         for (int i = 0; i < dungeons.length; i++) {
-            dungeons[i] = Dungeons.values()[i].getDungeon().getTitle();
+            dungeons[i] = DungeonFactory.values()[i].getDungeon().getTitle();
         }
         return new Menu(MenuConst.DUNGEON_MENU_TITLE, dungeons);
     }
@@ -100,7 +100,7 @@ public class MenuManager {
     }
 
     private void promptDungeonMenu() {
-        System.out.println(Dungeons.values()[this.dungeonMenu.promptMenu()].getDungeon().getTitle());
+        System.out.println(DungeonFactory.values()[this.dungeonMenu.promptMenu()].getDungeon().getTitle());
     }
 
     private void promptCraftingMenuHeroSelection() {
