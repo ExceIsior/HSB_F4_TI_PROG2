@@ -1,6 +1,8 @@
 package model.Factories;
 
+import control.Constants.BossConst;
 import control.Constants.VillainConst;
+import model.gameObject.Boss;
 import model.gameObject.Villain;
 
 /**
@@ -81,7 +83,6 @@ public class VillainFactory {
                         VillainConst.ZOMBIE_DEFAULT_AGILITY,
                         null,
                         null);
-
         }
         return null;
     }

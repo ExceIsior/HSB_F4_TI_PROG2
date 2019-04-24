@@ -1,6 +1,7 @@
 package control.Constants;
 
 import static control.Constants.Const.CHARACTERS_PATH;
+import model.Position;
 
 public interface HeroConst {
 
@@ -47,4 +48,9 @@ public interface HeroConst {
     public static final int RANGER_DEFAULT_AGILITY = 5;
     public static final int RANGER_DEFAULT_INVENTORY_CAPACITY = 1;
     public static final int RANGER_DEFAULT_INITIATIVE = 4;
+    
+    public static final Position PALADIN_STARTING_POSITION = new Position(9, 9);
+    public static final Position MAGE_STARTING_POSITION = new Position(10, 9);
+    public static final Position ASSASSIN_STARTING_POSITION = new Position(9, 10);
+    public static final Position RANGER_STARTING_POSITION = new Position(10, 10);
 }

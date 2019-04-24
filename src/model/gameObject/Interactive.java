@@ -1,8 +1,5 @@
 package model.gameObject;
 
-import control.Constants.Const;
-import model.Position;
-import model.gameObject.GameObject;
 import model.item.Item;
 
 public class Interactive extends GameObject {

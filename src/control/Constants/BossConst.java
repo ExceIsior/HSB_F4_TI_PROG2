@@ -11,6 +11,7 @@ public interface BossConst {
     public static final int CYCLOPS_DEFAULT_HEALTH_POINTS = 20;
     public static final int CYCLOPS_DEFAULT_MAX_HEALTH_POINTS = 20;
     public static final int CYCLOPS_DEFAULT_AGILITY = 5;
+    public static final int CYCLOPS_ID = 0;
 
     public static final String BASILISK_NAME = "Basilisk";
     public static final String BASILISK_RES_PATH = CHARACTERS_PATH + "basilisk.";
@@ -19,4 +20,5 @@ public interface BossConst {
     public static final int BASILISK_DEFAULT_HEALTH_POINTS = 15;
     public static final int BASILISK_DEFAULT_MAX_HEALTH_POINTS = 15;
     public static final int BASILISK_DEFAULT_AGILITY = 3;
+    public static final int BASILISK_ID = 1;
 }
