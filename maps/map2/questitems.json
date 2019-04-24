@@ -3,7 +3,7 @@
     "armor": 0,
     "healthPoints": 0,
     "maxHealthPoints": 0,
-    "graphicspath": "./res/objects/Q",
+    "graphicspath": "Qu",
     "position": {
       "x": 4,
       "y": 2
@@ -13,7 +13,7 @@
     "armor": 0,
     "healthPoints": 0,
     "maxHealthPoints": 0,
-    "graphicspath": "./res/objects/Q",
+    "graphicspath": "Qu",
     "position": {
       "x": 18,
       "y": 5
@@ -23,7 +23,7 @@
     "armor": 0,
     "healthPoints": 0,
     "maxHealthPoints": 0,
-    "graphicspath": "./res/objects/Q",
+    "graphicspath": "Qu",
     "position": {
       "x": 15,
       "y": 18
@@ -33,7 +33,7 @@
     "armor": 0,
     "healthPoints": 0,
     "maxHealthPoints": 0,
-    "graphicspath": "./res/objects/Q",
+    "graphicspath": "Qu",
     "position": {
       "x": 1,
       "y": 13
