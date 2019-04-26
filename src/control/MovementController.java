@@ -8,8 +8,6 @@ import model.map.Tile;
 import java.util.ArrayList;
 import model.gameObject.GameObject;
 
-
-
 public class MovementController
 {
     private static Dungeon dungeon = model.Factories.DungeonFactory.getDungeon(0);;
@@ -17,8 +15,15 @@ public class MovementController
     public MovementController(Dungeon dungeon) {
         this.dungeon = dungeon;
     }
-
-    public static void changePositionOfGameObject(GameObject gameObject, Position newPosition) {
+    
+    /**
+     * Changes the position of the GameObject if the move is possible without 
+     * standing on another GameObject or an Obstacle and without leaving the visible map.
+     * @param gameObject which is going to move.
+     * @param newPosition where the gameobject is going to move.
+     */
+    public static void changePositionOfGameObject(GameObject gameObject, Position newPosition) 
+    {
         
         if ( (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition)) &&
                 movePossibleWithoutStandingOnObstacle(newPosition) &&
@@ -34,10 +39,9 @@ public class MovementController
             tilePositionGameObject = Converter.convertMapCoordinatesInTileCoordinates(gameObject.getPosition());
             fieldPositionGameObject = Converter.convertMapCoordinatesInFieldCoordinates(gameObject.getPosition());
             dungeon.getTile(tilePositionGameObject).getField(fieldPositionGameObject).setGameObject(gameObject);
-            //System.out.println("gameObject position" + gameObject.getPosition().getX() + " " + gameObject.getPosition().getX());
         }
         else {
-            System.out.println("move not possible!");
+            System.out.println("Move not possible!");
         }
     }
     
@@ -49,7 +53,7 @@ public class MovementController
      */
     public static ArrayList<Position> getRangeFelder(int range, Position heroPosition)
     {
-         ArrayList<Position> rangeFelder = new ArrayList<>();
+        ArrayList<Position> rangeFelder = new ArrayList<>();
         Position hP = heroPosition;
         for (int i=1; i<= (range*2)+1; i++)
         {
@@ -106,11 +110,9 @@ public class MovementController
         return rangeFelder;
     }
     
-    
-    
     /**
      * Iterates through all Fields in a radius "range", around a given Position.
-     * Saves those Positions in an ArrayList if they aren't outside the map.
+     * Saves those positions in an ArrayList if they aren't outside the map.
      */
     public static ArrayList<Position> getAttackFelder(int range, Position attackPosition)
     {

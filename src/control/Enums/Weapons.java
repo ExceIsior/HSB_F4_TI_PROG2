@@ -2,11 +2,11 @@ package control.Enums;
 
 import control.Constants.HeroConst;
 import control.Constants.ItemConst;
-import model.item.Equipment.Equipment;
 import model.item.Equipment.Weapon;
 import control.Constants.WeaponConst;
 
-public enum Weapons {
+public enum Weapons 
+{
     RUSTY_LONG_SWORD(new Weapon(
             ItemConst.COMMON,
             WeaponConst.RUSTY_SWORD_NAME,
@@ -22,11 +22,13 @@ public enum Weapons {
 
     private Weapon weapon;
 
-    private Weapons(Weapon weapon) {
+    private Weapons(Weapon weapon) 
+    {
         this.weapon = weapon;
     }
 
-    public Weapon getWeapon() {
+    public Weapon getWeapon() 
+    {
         return this.weapon;
     }
 }

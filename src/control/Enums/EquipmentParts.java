@@ -1,17 +1,20 @@
 package control.Enums;
 
-public enum EquipmentParts {
+public enum EquipmentParts 
+{
     WEAPON("Weapon"),
     ARMOR("Armor"),
     ACCESSORY("Accessory");
 
     private String partTitle;
 
-    private EquipmentParts(String partTitle) {
+    private EquipmentParts(String partTitle) 
+    {
         this.partTitle = partTitle;
     }
 
-    public String getpartTitle() {
+    public String getpartTitle() 
+    {
         return this.partTitle;
     }
 }

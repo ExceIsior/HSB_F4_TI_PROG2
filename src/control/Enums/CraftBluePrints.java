@@ -5,7 +5,8 @@ import java.util.HashMap;
 import model.item.Equipment.CraftBluePrint;
 import model.item.Material;
 
-public enum CraftBluePrints {
+public enum CraftBluePrints 
+{
 
     COMMON_WEAPON(new CraftBluePrint(
             new HashMap<Material, Integer>() {
@@ -58,11 +59,13 @@ public enum CraftBluePrints {
 
     private CraftBluePrint craftBluePrint;
 
-    private CraftBluePrints(CraftBluePrint craftBluePrint) {
+    private CraftBluePrints(CraftBluePrint craftBluePrint) 
+    {
         this.craftBluePrint = craftBluePrint;
     }
 
-    public CraftBluePrint getCraftBluePrint() {
+    public CraftBluePrint getCraftBluePrint() 
+    {
         return this.craftBluePrint;
     }
 }

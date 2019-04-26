@@ -3,7 +3,8 @@ package control.Enums;
 import model.gameObject.Skill;
 import control.Constants.SkillConst;
 
-public enum Skills {
+public enum Skills 
+{
     SWORD_THRUST(new Skill(
             SkillConst.SWORD_THRUST_NAME,
             SkillConst.SWORD_THRUST_DAMAGE,
@@ -56,11 +57,13 @@ public enum Skills {
 
     private final Skill skill;
 
-    private Skills(Skill skill) {
+    private Skills(Skill skill) 
+    {
         this.skill = skill;
     }
 
-    public Skill getSkill() {
+    public Skill getSkill() 
+    {
         return this.skill;
     }
 }
