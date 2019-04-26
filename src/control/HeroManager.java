@@ -5,20 +5,21 @@ import control.Constants.HeroConst;
 import control.Enums.Skills;
 import java.util.Arrays;
 import model.gameObject.Hero;
-import model.gameObject.Skill;
 import model.item.Equipment.EquipmentSet;
 import model.item.HeroItem;
 import model.item.Inventory;
 
-public class HeroManager {
-
+public class HeroManager 
+{
     private Hero[] heroes = null;
 
-    private HeroManager() {
+    private HeroManager() 
+    {
         this.heroes = initHeroes();
     }
 
-    private Hero[] initHeroes() {
+    private Hero[] initHeroes() 
+    {
         Hero[] heroes = new Hero[Const.HERO_AMOUNT];
 
         heroes[0] = new Hero(HeroConst.PALADIN_RES_PATH,
@@ -72,20 +73,23 @@ public class HeroManager {
         return heroes;
     }
 
-    public Hero[] getHeroes() {
+    public Hero[] getHeroes() 
+    {
         return heroes;
     }
 
-    public void setHeroes(Hero[] heroes) {
+    public void setHeroes(Hero[] heroes) 
+    {
         this.heroes = heroes;
     }
 
-    public static HeroManager getInstance() {
+    public static HeroManager getInstance() 
+    {
         return HeroManager_Holder.INSTANCE;
     }
 
-    private static class HeroManager_Holder {
-
+    private static class HeroManager_Holder 
+    {
         private static final HeroManager INSTANCE = new HeroManager();
     }
 }

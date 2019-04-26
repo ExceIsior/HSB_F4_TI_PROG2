@@ -4,7 +4,7 @@ import control.Constants.Const;
 import java.util.Random;
 
 /**
- * Gives a random Number back
+ * Gives a random number back
  */
 public class DiceController {
 

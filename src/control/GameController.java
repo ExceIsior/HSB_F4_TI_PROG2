@@ -122,39 +122,19 @@ public class GameController
         dungeon.getTile(tilePositionHero4).getField(fieldPositionHero4).setGameObject(heroManager.getHeroes()[3]);
         
         dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(HeroConst.PALADIN_STARTING_POSITION)).setVisible(true);
-        
-        //allFieldsVisible();
     }
     
     /**
-     * Makes all fields visible to try out the game
+     * Makes all tiles visible to try out the game
      */
-    private void allFieldsVisible()
+    private void allTilesVisible()
     {
-        dungeon.getTile(new Position(0,0)).setVisible(true);
-        dungeon.getTile(new Position(0,1)).setVisible(true);
-        dungeon.getTile(new Position(0,2)).setVisible(true);
-        dungeon.getTile(new Position(0,3)).setVisible(true);
-        dungeon.getTile(new Position(0,4)).setVisible(true);
-        dungeon.getTile(new Position(1,0)).setVisible(true);
-        dungeon.getTile(new Position(1,1)).setVisible(true);
-        dungeon.getTile(new Position(1,2)).setVisible(true);
-        dungeon.getTile(new Position(1,3)).setVisible(true);
-        dungeon.getTile(new Position(1,4)).setVisible(true);
-        dungeon.getTile(new Position(2,0)).setVisible(true);
-        dungeon.getTile(new Position(2,1)).setVisible(true);
-        dungeon.getTile(new Position(2,2)).setVisible(true);
-        dungeon.getTile(new Position(2,3)).setVisible(true);
-        dungeon.getTile(new Position(2,4)).setVisible(true);
-        dungeon.getTile(new Position(3,0)).setVisible(true);
-        dungeon.getTile(new Position(3,1)).setVisible(true);
-        dungeon.getTile(new Position(3,2)).setVisible(true);
-        dungeon.getTile(new Position(3,3)).setVisible(true);
-        dungeon.getTile(new Position(3,4)).setVisible(true);
-        dungeon.getTile(new Position(4,0)).setVisible(true);
-        dungeon.getTile(new Position(4,1)).setVisible(true);
-        dungeon.getTile(new Position(4,2)).setVisible(true);
-        dungeon.getTile(new Position(4,3)).setVisible(true);
-        dungeon.getTile(new Position(4,4)).setVisible(true);
+        for (int i = 0; i < Const.MAP_SIZE_X; i++) 
+        {
+            for (int j = 0; j < Const.MAP_SIZE_X; j++) 
+            {
+                dungeon.getTile(new Position(i, j)).setVisible(true);
+            }
+        }
     }
 }

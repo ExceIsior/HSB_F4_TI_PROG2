@@ -39,7 +39,7 @@ public class PhaseController {
 //                    gameOver = true;
 //                    break;
 //                }
-                MapController.ausgeben(dungeon);
+                MapController.printOutDungeon(dungeon);
                 System.out.println(PhaseConst.HERO_PHASE);
                 System.out.println("0) " + PhaseConst.HERO_PHASE_MOVE);
                 System.out.println("1) " + PhaseConst.HERO_PHASE_ATTACK);
@@ -56,7 +56,7 @@ public class PhaseController {
                 if (option == 1) {
                     
                 }
-                MapController.ausgeben(dungeon);
+                MapController.printOutDungeon(dungeon);
                 
                 this.phaseID = 2;
                 //break;
@@ -67,7 +67,7 @@ public class PhaseController {
                 
                 putVisibleVillainsInQueue();
                 
-                MapController.ausgeben(dungeon);
+                MapController.printOutDungeon(dungeon);
                 this.phaseID = 4;
                 //break;
                 
