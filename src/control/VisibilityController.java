@@ -4,7 +4,6 @@ import control.Constants.Const;
 import model.Position;
 import model.gameObject.Hero;
 import model.map.Dungeon;
-import model.map.Tile;
 
 /**
  * Controls the Visibility of all Tiles

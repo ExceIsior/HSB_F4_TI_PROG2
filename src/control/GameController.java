@@ -52,7 +52,7 @@ public class GameController {
     }
 
     public void start() {
-        System.out.println("start");
+        System.out.println("START Game");
         
         this.setHeroes();
         this.setVillains(dungeonID);

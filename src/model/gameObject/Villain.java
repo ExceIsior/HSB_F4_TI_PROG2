@@ -17,7 +17,8 @@ public class Villain extends Character {
             int maxHealthPoints,
             int agility, 
             List<Status> status, 
-            List<Skill> skills) {
+            List<Skill> skills) 
+    {
         super(graphicsPath, 
                 armor, 
                 loot, 

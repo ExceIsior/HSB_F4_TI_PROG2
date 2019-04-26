@@ -39,6 +39,7 @@ public class PhaseController {
             case(1):
                 MapController.ausgeben(dungeon);
                 System.out.println("HEROPHASE");
+                
                 System.out.println("erste Position");
                 int x = positionListener.nextInt();
                 int y = positionListener.nextInt();
@@ -47,7 +48,7 @@ public class PhaseController {
                 MapController.ausgeben(dungeon);
                 
                 count++;
-                if (count == 15) {
+                if (dungeon.getQuest().checkAllObjectives()) {
                     gameOn = false;
                 }
                 this.phaseID = 2;
