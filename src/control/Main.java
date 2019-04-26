@@ -5,7 +5,6 @@ import model.Position;
 public class Main {
 
     public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException    {
-        new GameController(0).start();
         MenuManager.getInstance().promptMainMenu();
 
          System.out.print("Range: " + MovementController.getRangeFelder(5, new Position(3,3)) + "\n");
