@@ -23,5 +23,7 @@ public class Main {
 
          System.out.print("Range: " + MovementController.getRangeFelder(5, new Position(3,3)) + "\n");
          System.out.print("Attack: " + MovementController.getAttackFelder(5, new Position(3,3)));
+         GameController game = new GameController(Const.LEVEL1);
+         game.start();
     }
 }

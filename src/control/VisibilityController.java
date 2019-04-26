@@ -12,9 +12,9 @@ import model.map.Tile;
  */
 public class VisibilityController 
 {
-    private Position position = null;
     private HeroManager heroManager = HeroManager.getInstance();
     private Dungeon dungeon = null;
+    private boolean explorate = true;
     
     /**
      * Uebergibt das dungeon
@@ -34,8 +34,7 @@ public class VisibilityController
         {
             if (this.checkBorder(heroManager.getHeroes()[i]) && this.checkOutsideOfMap(heroManager.getHeroes()[i]))
             {
-                this.getTile(heroManager.getHeroes()[i]).setVisible(true);
-                
+                    this.setTileVisible(heroManager.getHeroes()[i]); 
             }
         }
     }
@@ -79,37 +78,66 @@ public class VisibilityController
      * @param hero
      * @return 
      */
-    private Tile getTile(Hero hero) 
+    private void setTileVisible(Hero hero) 
     {
-        Tile tile = null;
         Position tilePosition = Converter.convertMapCoordinatesInTileCoordinates(hero.getPosition());
         Position fieldPosition = Converter.convertMapCoordinatesInFieldCoordinates(hero.getPosition());
+        int x = tilePosition.getX();
+        int y = tilePosition.getY();
         
         if (fieldPosition.getY() == 0) 
         {
-            int x = tilePosition.getX();
-            int y = tilePosition.getY() - 1;
-            tile = dungeon.getTile(new Position(x, y));
+            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x, y-1)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x, y-1)).setVisible(true);
+            }
+            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x-1, y)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x-1, y)).setVisible(true);
+            }
+            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x, y-1)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x, y-1)).setVisible(true);
+            }
+            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x+1, y)).setVisible(true);
+            }
+            else {
+                dungeon.getTile(new Position(x, y-1)).setVisible(true);
+            }
         }
-        if (fieldPosition.getY() == 3) 
+        
+        else if (fieldPosition.getY() == 3) 
         {
-            int x = tilePosition.getX();
-            int y = tilePosition.getY() + 1;
-            tile = dungeon.getTile(new Position(x, y));
+            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x, y+1)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x, y+1)).setVisible(true);
+            }
+            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x-1, y)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x-1, y)).setVisible(true);
+            }
+            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x, y+1)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x, y+1)).setVisible(true);
+            }
+            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
+            {  
+                dungeon.getTile(new Position(x+1, y)).setVisible(true);
+            }
+            else {
+                dungeon.getTile(new Position(x, y+1)).setVisible(true);
+            }
         }
-        if (fieldPosition.getX() == 0) 
+        else if (fieldPosition.getX() == 0) 
         {
-            int x = tilePosition.getX() - 1;
-            int y = tilePosition.getY();
-            tile = dungeon.getTile(new Position(x, y));
+            dungeon.getTile(new Position(x-1, y)).setVisible(true);
         }
-        if (fieldPosition.getX() == 3) 
+        else if (fieldPosition.getX() == 3) 
         {
-            int x = tilePosition.getX() + 1;
-            int y = tilePosition.getY();
-            tile = dungeon.getTile(new Position(x, y));
+            dungeon.getTile(new Position(x+1, y)).setVisible(true);
         }
-        return tile;
     }
 
 }

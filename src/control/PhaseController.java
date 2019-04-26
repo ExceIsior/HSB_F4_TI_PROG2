@@ -47,7 +47,7 @@ public class PhaseController {
                 MapController.ausgeben(dungeon);
                 
                 count++;
-                if (count == 5) {
+                if (count == 15) {
                     gameOn = false;
                 }
                 this.phaseID = 2;
