@@ -8,7 +8,12 @@ import model.item.Item;
 public class QuestItem extends Interactive 
 {
     /**
-     * Initialises a quest item object.
+     * Initializes a quest item object
+     * @param graphicsPath
+     * @param armor
+     * @param loot
+     * @param healthPoints
+     * @param maxHealthPoints 
      */
     public QuestItem(String graphicsPath, int armor, Item loot, int healthPoints, int maxHealthPoints) 
     {

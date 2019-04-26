@@ -8,11 +8,18 @@ import control.Constants.Const;
  */
 public class Trap extends Interactive 
 {
+    private int damage = 0;
+    
     /**
-     * Initialises a trap object.
+     * Initializes a trap object
+     * @param position
+     * @param damage 
      */
-    public Trap(Position position, int damage) {
+    public Trap(Position position, int damage) 
+    {
         super(Const.TRAP_PATH, 0, null, 0, 0);
+        this.setPosition(position);
+        this.damage = damage;
     }
     
 }

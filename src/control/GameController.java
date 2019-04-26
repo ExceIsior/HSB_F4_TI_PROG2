@@ -10,47 +10,31 @@ import model.gameObject.Villain;
 import model.map.Dungeon;
 import utilities.JsonParser;
 
+/**
+ * Controlls and starts the game.
+ * @author reenawichmann
+ */
 public class GameController 
 {
     private PhaseController phaseController = null;
-    private HeroManager heroManager = null;
+    private HeroManager heroManager = HeroManager.getInstance();
     private Villain[] villains = null;
     private Dungeon dungeon = null;
     public final boolean isRunning = true;
-    private int gamePhase = 1;
     private int dungeonID = 0;
     
+    /**
+     * Initilizes game controller.
+     * @param dungeonID Dungeon id determines which dungeon is played
+     */
     public GameController(int dungeonID) 
     {
         this.dungeon = DungeonFactory.getDungeon(dungeonID);
-        this.heroManager = HeroManager.getInstance();
         this.dungeonID = dungeonID;
-    }
-
-    //PHASEN
-    //0 = Menue
-    //1 = Hero Phase
-    //2 = Exploration Phase
-    //3 = Encounter Phase
-    //4 = Villain Phase    
-
-    public Dungeon getDungeon() 
-    {
-        return dungeon;
-    }
-
-    public int getGamePhase() 
-    {
-        return gamePhase;
-    }
-
-    public void setGamePhase(int gamePhase) 
-    {
-        this.gamePhase = gamePhase;
-    }
+    }  
     
     /**
-     * Starts the game by placing all GameObjects and starting the PhaseController
+     * Starts the game by placing all GameObjects and starting the PhaseController.
      */
     public void start() 
     {
@@ -63,10 +47,10 @@ public class GameController
         this.phaseController = new PhaseController(this.dungeon, this.villains);
         phaseController.startGame();
     }
+    
     /**
-     * Places all Villains on their position which is saved in the json file
-     * DungeonID determines which files is read
-     * @param dungeonID 
+     * Places all Villains on their position which is saved in the json file.
+     * @param dungeonID Dungeon id determines which file is read.
      */
     private void placeVillains(int dungeonID) 
     {
@@ -80,9 +64,8 @@ public class GameController
         }
     }
     /**
-     * Places all QuestItem on their position which is saved in the json file
-     * DungeonID determines which files is read
-     * @param dungeonID 
+     * Places all QuestItem on their position which is saved in the json file.
+     * @param dungeonID Dungeon id determines which file is read.
      */
     private void placeQuestItems(int dungeonID) 
     {
@@ -97,35 +80,39 @@ public class GameController
     }
     
     /**
-     * Places all heroes on their starting position
+     * Places all heroes on their starting position.
+     * Changes the position of the heroes and places the hero on the field of their starting position.
      */
     private void placeHeroes () 
     {
+        Position tilePosition = null;
+        Position fieldPosition = null;
+        
         heroManager.getHeroes()[0].setPosition(HeroConst.PALADIN_STARTING_POSITION);
-        Position tilePositionHero1 = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[0].getPosition());
-        Position fieldPositionHero1 = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[0].getPosition());
-        dungeon.getTile(tilePositionHero1).getField(fieldPositionHero1).setGameObject(heroManager.getHeroes()[0]);
+        tilePosition = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[0].getPosition());
+        fieldPosition = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[0].getPosition());
+        dungeon.getTile(tilePosition).getField(fieldPosition).setGameObject(heroManager.getHeroes()[0]);
         
         heroManager.getHeroes()[1].setPosition(HeroConst.MAGE_STARTING_POSITION);
-        Position tilePositionHero2 = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[1].getPosition());
-        Position fieldPositionHero2 = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[1].getPosition());
-        dungeon.getTile(tilePositionHero2).getField(fieldPositionHero2).setGameObject(heroManager.getHeroes()[1]);
+        tilePosition= Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[1].getPosition());
+        fieldPosition = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[1].getPosition());
+        dungeon.getTile(tilePosition).getField(fieldPosition).setGameObject(heroManager.getHeroes()[1]);
         
         heroManager.getHeroes()[2].setPosition(HeroConst.ASSASSIN_STARTING_POSITION);
-        Position tilePositionHero3 = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[2].getPosition());
-        Position fieldPositionHero3 = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[2].getPosition());
-        dungeon.getTile(tilePositionHero3).getField(fieldPositionHero3).setGameObject(heroManager.getHeroes()[2]);
+        tilePosition = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[2].getPosition());
+        fieldPosition = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[2].getPosition());
+        dungeon.getTile(tilePosition).getField(fieldPosition).setGameObject(heroManager.getHeroes()[2]);
           
         heroManager.getHeroes()[3].setPosition(HeroConst.RANGER_STARTING_POSITION);
-        Position tilePositionHero4 = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[3].getPosition());
-        Position fieldPositionHero4 = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[3].getPosition());
-        dungeon.getTile(tilePositionHero4).getField(fieldPositionHero4).setGameObject(heroManager.getHeroes()[3]);
+        tilePosition = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[3].getPosition());
+        fieldPosition = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[3].getPosition());
+        dungeon.getTile(tilePosition).getField(fieldPosition).setGameObject(heroManager.getHeroes()[3]);
         
         dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(HeroConst.PALADIN_STARTING_POSITION)).setVisible(true);
     }
     
     /**
-     * Makes all tiles visible to try out the game
+     * Makes all tiles visible to try out the game.
      */
     private void allTilesVisible()
     {

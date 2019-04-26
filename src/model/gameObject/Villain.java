@@ -11,7 +11,7 @@ import java.util.List;
 public class Villain extends Character 
 {
     /**
-     * Initialises a villain object.
+     * Initializes a villain object.
      */
     public Villain(String graphicsPath,
             int armor, 

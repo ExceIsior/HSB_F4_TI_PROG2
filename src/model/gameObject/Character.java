@@ -18,7 +18,7 @@ public abstract class Character extends Interactive
     private int baseDamage = 0;
 
     /**
-     * Initialises a character object
+     * Initializes a character object
      * @param graphicsPath  Path to the image file that is to be drawn on the screen for the instance.
      * @param armor Armor value of the character.
      * @param loot  Item that this character can hold which can be retrieved by a Hero upon its death.

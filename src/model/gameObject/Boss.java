@@ -12,7 +12,7 @@ import model.item.Item;
 public class Boss extends Villain 
 {
     /**
-     * Initialises a Boss object
+     * Initializes a Boss object
      * @param graphicsPath  Path to the image file that is to be drawn on the screen for the instance.
      * @param armor Armor value of the boss.
      * @param loot  Item that this boss can hold which can be retrieved by a Hero upon its death.

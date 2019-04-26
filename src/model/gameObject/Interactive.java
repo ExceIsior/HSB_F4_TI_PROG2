@@ -15,9 +15,13 @@ public class Interactive extends GameObject
     private int maxHealthPoints = 0;
 
     /**
-     * Initialises a interactive object.
+     * Initializes a interactive object.
+     * @param graphicsPath
+     * @param armor
+     * @param loot
+     * @param healthPoints
+     * @param maxHealthPoints 
      */
-    
     public Interactive(String graphicsPath, 
             int armor, 
             Item loot,

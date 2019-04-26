@@ -4,7 +4,8 @@ package model.map;
  * Represents a terrain.
  * @author Ismail
  */
-public class Terrain {
+public class Terrain 
+{
 
     private int height = 0;
     private String texturePath = "";
@@ -14,16 +15,19 @@ public class Terrain {
      * @param height Height of the terrain to determine traversibility 
      * @param graphicsPath 
      */
-    public Terrain(int height, String graphicsPath) {
+    public Terrain(int height, String graphicsPath) 
+    {
         this.height = height;
         this.texturePath = graphicsPath;
     }
 
-    public int getHeight() {
+    public int getHeight() 
+    {
         return height;
     }
 
-    public String getTexturePath() {
+    public String getTexturePath() 
+    {
         return texturePath;
     }
 

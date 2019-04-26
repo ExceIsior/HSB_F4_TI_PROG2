@@ -16,7 +16,7 @@ public class Hero extends Character
     private Inventory inventory = null;
     
     /**
-     * Initialises a Hero object.
+     * Initializes a Hero object.
      * @param graphicsPath
      * @param armor
      * @param loot

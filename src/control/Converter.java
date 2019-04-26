@@ -4,14 +4,14 @@ import control.Constants.Const;
 import model.Position;
 
 /**
- * Converts MapCoordinates into Field and TileCoordinates and the other way around
+ * Converts MapCoordinates into Field and TileCoordinates and the other way around.
  */
-public class Converter 
+public abstract class Converter 
 {
     /**
      * Converts Tile and FieldCoordinates into MapCoordinates
-     * @param tileCoordinates as a Position
-     * @param fieldCoordinates as a Position
+     * @param tileCoordinates Tile coordinates as a Position
+     * @param fieldCoordinates Field coordinates as a Position
      * @return Position with MapCoordinates
      */  
     public static Position convertTileFieldCoordinatesInMapCoordinates(Position tileCoordinates, Position fieldCoordinates) 
@@ -33,7 +33,7 @@ public class Converter
     
     /**
      * Converts MapCoordinates into TileCoordinates
-     * @param mapCoordinates as a Position
+     * @param mapCoordinates Map coordinates as a Position
      * @return Position with TileCoordinates
      */
     public static Position convertMapCoordinatesInTileCoordinates(Position mapCoordinates) 
@@ -55,7 +55,7 @@ public class Converter
     
     /**
      * Converts MapCoordinates in FieldCoordinates
-     * @param mapCoordinates as a Position
+     * @param mapCoordinates Map coordinates as a Position
      * @return Position with FieldCoordinates
      */
     public static Position convertMapCoordinatesInFieldCoordinates(Position mapCoordinates) 

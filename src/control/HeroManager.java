@@ -9,15 +9,21 @@ import model.item.Equipment.EquipmentSet;
 import model.item.HeroItem;
 import model.item.Inventory;
 
+/**
+ * 
+ */
 public class HeroManager 
 {
     private Hero[] heroes = null;
-
+    
     private HeroManager() 
     {
         this.heroes = initHeroes();
     }
-
+    /**
+     * Initializes all Heroes.
+     * @return Hero[] an Array with all Heroes.
+     */
     private Hero[] initHeroes() 
     {
         Hero[] heroes = new Hero[Const.HERO_AMOUNT];
@@ -73,21 +79,29 @@ public class HeroManager
         return heroes;
     }
 
+    /**
+     * Returns an array with all heroes.
+     * @return Hero[].
+     */
     public Hero[] getHeroes() 
     {
         return heroes;
     }
 
+    /**
+     * Sets all heros.
+     * @param heroes An array of heroes.
+     */
     public void setHeroes(Hero[] heroes) 
     {
         this.heroes = heroes;
     }
-
+    
     public static HeroManager getInstance() 
     {
         return HeroManager_Holder.INSTANCE;
     }
-
+    
     private static class HeroManager_Holder 
     {
         private static final HeroManager INSTANCE = new HeroManager();

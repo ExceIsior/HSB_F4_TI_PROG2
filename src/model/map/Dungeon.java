@@ -5,40 +5,69 @@ import model.Position;
 import model.Quest;
 import java.util.Arrays;
 
-public class Dungeon {
-
+/**
+ * Represents the dungeon consisting of a title, a map (tile array) and a quest.
+ */
+public class Dungeon 
+{
     private String title = "";
     private Tile[][] map = null;
     private Quest quest = null;
-
-    public Dungeon(String title, Quest quest, Tile[][] map) {
+    
+    /**
+     * Initilizes a dungeon.
+     * @param title Title of the dungeon.
+     * @param quest Quest of the dungeon.
+     * @param map Map of the dungeon.
+     */
+    public Dungeon(String title, Quest quest, Tile[][] map) 
+    {
         this.title = title;
         this.quest = quest;
         this.map = map;
     }
 
-    public Dungeon(Quest quest, Tile[][] map) {
+    public Dungeon(Quest quest, Tile[][] map) 
+    {
         this("", quest, map);
     }
-
-    public String getTitle() {
+    /**
+     * Returns the title of the dungeon.
+     * @return title
+     */
+    public String getTitle() 
+    {
         return title;
     }
-
-    public Quest getQuest() {
+    /**
+     * Returns the quest of the dungeon.
+     * @return quest 
+     */
+    public Quest getQuest() 
+    {
         return quest;
     }
-    
-    public Tile[][] getMap() {
+    /**
+     * Returns the map of the dungeon as a tile array.
+     * @return map
+     */
+    public Tile[][] getMap() 
+    {
         return this.map;
     }
-
-    public Tile getTile(Position position) {
+    /**
+     * Returns a specific tile on the given position.
+     * @param position
+     * @return tile
+     */
+    public Tile getTile(Position position) 
+    {
         return this.map[position.getY()][position.getX()];
     }
 
     @Override
-    public String toString() {
+    public String toString() 
+    {
         StringBuilder stringBuilder = new StringBuilder();
 
         for (Tile[] tiles : this.map) {
