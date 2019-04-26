@@ -3,8 +3,7 @@ package model.gameObject;
 import model.item.Item;
 
 /**
- * Quest item on a map that has to be collected for quest
- * completion.
+ * Quest item on a map that has to be collected for quest completion.
  *
  * @author Ismail
  */
@@ -22,5 +21,4 @@ public class QuestItem extends Interactive {
     public QuestItem(String graphicsPath, int armor, Item loot, int healthPoints, int maxHealthPoints) {
         super(graphicsPath, armor, loot, healthPoints, maxHealthPoints);
     }
-
 }

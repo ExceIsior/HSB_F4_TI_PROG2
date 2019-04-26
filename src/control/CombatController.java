@@ -4,7 +4,7 @@ import control.Constants.Const;
 import model.InteractiveContainer;
 import model.Position;
 import model.gameObject.Character;
-import model.gameObject.Skill;
+import model.Skill;
 
 import java.util.ArrayList;
 
@@ -37,8 +37,8 @@ public class CombatController
 
     private static int getDieBonusForCharacter(Character character)
     {
-        int bonus1 = DiceController.castDie();
-        int bonus2 = DiceController.castDie();
+        int bonus1 = DiceController.rollDie();
+        int bonus2 = DiceController.rollDie();
 
         if (character.getStatus().get(0).isPositive())
         {

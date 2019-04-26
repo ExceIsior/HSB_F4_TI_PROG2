@@ -3,9 +3,9 @@ package model.gameObject;
 import model.item.Item;
 
 /**
- * Interactable game object on the map.
+ * Abstract super class of all game objects that can interact
  *
- * @author Ismail
+ * @author reenawichmann
  */
 public abstract class Interactive extends GameObject {
 
@@ -37,6 +37,7 @@ public abstract class Interactive extends GameObject {
 
     /**
      * Returns the interactive's armor value
+     *
      * @return Interactive's armor value
      */
     public int getArmor() {
@@ -45,6 +46,7 @@ public abstract class Interactive extends GameObject {
 
     /**
      * Sets the interactive's armor value
+     *
      * @param armor New Armor value
      */
     public void setArmor(int armor) {
@@ -53,6 +55,7 @@ public abstract class Interactive extends GameObject {
 
     /**
      * Returns the interactive's loot
+     *
      * @return Interactive's loot
      */
     public Item getLoot() {
@@ -61,6 +64,7 @@ public abstract class Interactive extends GameObject {
 
     /**
      * Returns interactive's current healt points
+     *
      * @return Interactive's current health points
      */
     public int getHealthPoints() {
@@ -69,18 +73,18 @@ public abstract class Interactive extends GameObject {
 
     /**
      * Sets the interactive's current health points.
+     *
      * @param healthPoints New health points value
      */
     public void setHealthPoints(int healthPoints) {
         if (healthPoints < this.maxHealthPoints) {
             this.healthPoints = healthPoints;
-        } else {
-            this.healthPoints = this.maxHealthPoints;
         }
     }
 
     /**
-     * Returns the interactive's maximum health points value 
+     * Returns the interactive's maximum health points value
+     *
      * @return Interactive's maximum health points value
      */
     public int getMaxHealthPoints() {
@@ -89,6 +93,7 @@ public abstract class Interactive extends GameObject {
 
     /**
      * Sets the interactive's maximum health points value.
+     *
      * @param maxHealthPoints New maximum health points value
      */
     public void setMaxHealthPoints(int maxHealthPoints) {

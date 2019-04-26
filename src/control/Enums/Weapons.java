@@ -10,6 +10,7 @@ import control.Constants.WeaponConst;
  * @author Ismail
  */
 public enum Weapons {
+
     RUSTY_LONG_SWORD(new Weapon(
             ItemConst.COMMON,
             WeaponConst.RUSTY_SWORD_NAME,
@@ -25,7 +26,8 @@ public enum Weapons {
 
     private Weapon weapon;
 
-    private Weapons(Weapon weapon) {
+    private Weapons(Weapon weapon) 
+    {
         this.weapon = weapon;
     }
 
@@ -34,6 +36,7 @@ public enum Weapons {
      * @return Instance of selected weapon
      */
     public Weapon getWeapon() {
+
         return this.weapon;
     }
 }

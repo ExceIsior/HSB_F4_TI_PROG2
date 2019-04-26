@@ -24,10 +24,9 @@ public class QuestItemFactory {
                         0,
                         null,
                         0,
-                        0
-                );
-
+                        0);
+            default:
+                return null;
         }
-        return null;
     }
 }

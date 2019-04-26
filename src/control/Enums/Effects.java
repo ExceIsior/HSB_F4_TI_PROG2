@@ -3,7 +3,8 @@ package control.Enums;
 import model.Effect;
 import control.Constants.EffectConst;
 
-public enum Effects {
+public enum Effects 
+{
     RUSTY_SWORD(new Effect(
             EffectConst.RUSTY_SWORD_NAME,
             EffectConst.RUSTY_SWORD_DESCRIPTION,
@@ -128,11 +129,13 @@ public enum Effects {
 
     private final Effect effect;
 
-    private Effects(Effect effect) {
+    private Effects(Effect effect) 
+    {
         this.effect = effect;
     }
 
-    public Effect getEffect() {
+    public Effect getEffect() 
+    {
         return this.effect;
     }
 }

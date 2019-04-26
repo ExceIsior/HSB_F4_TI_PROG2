@@ -19,7 +19,8 @@ public class BossFactory {
     public static Boss getBoss(int bossId) {
         switch (bossId) {
             case BossConst.BASILISK_ID:
-                return new Boss(BossConst.BASILISK_RES_PATH,
+                return new Boss(
+                        BossConst.BASILISK_RES_PATH,
                         BossConst.BASILISK_DEFAULT_ARMOR,
                         null,
                         BossConst.BASILISK_NAME,
@@ -30,7 +31,8 @@ public class BossFactory {
                         null);
 
             case BossConst.CYCLOPS_ID:
-                return new Boss(BossConst.CYCLOPS_RES_PATH,
+                return new Boss(
+                        BossConst.CYCLOPS_RES_PATH,
                         BossConst.CYCLOPS_DEFAULT_ARMOR,
                         null,
                         BossConst.CYCLOPS_NAME,
@@ -39,8 +41,8 @@ public class BossFactory {
                         BossConst.CYCLOPS_DEFAULT_AGILITY,
                         null,
                         null);
-
+            default:
+                return null;
         }
-        return null;
     }
 }

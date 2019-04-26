@@ -4,13 +4,13 @@ import model.Position;
 import control.Constants.Const;
 
 /**
- * Trap on a field that may be disarmed or traversed in exchange
- * for damage.
+ * Trap on a field that may be disarmed or traversed in exchange for damage.
  *
  * @author Ismail
  */
 public class Trap extends Interactive {
 
+    private int damage = 0;
     /**
      * Initialises a trap
      *
@@ -19,6 +19,8 @@ public class Trap extends Interactive {
      */
     public Trap(Position position, int damage) {
         super(Const.TRAP_PATH, 0, null, 0, 0);
+        this.setPosition(position);
+        this.damage = damage;
     }
 
 }

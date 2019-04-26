@@ -1,7 +1,10 @@
 package model.gameObject;
 
 import model.Status;
+import model.Skill;
+import model.Status;
 import model.item.Inventory;
+import model.item.Item;
 import java.util.List;
 import model.item.Equipment.EquipmentSet;
 import model.item.HeroItem;
@@ -12,7 +15,6 @@ import model.item.HeroItem;
  * @author Ismail
  */
 public class Hero extends Character {
-
     private EquipmentSet equipmentSet = null;
     private Inventory<HeroItem> inventory = null;
 
@@ -58,10 +60,11 @@ public class Hero extends Character {
      * Returns the hero's equipment set.
      * @return Hero's equipment set
      */
-    public EquipmentSet getEquipmentSet() {
-        return this.equipmentSet;
+    public EquipmentSet getEquipmentSet() 
+    {
+        return equipmentSet;
     }
-
+    
     /**
      * Returns the hero's inventory
      * @return Hero's inventory
@@ -74,5 +77,4 @@ public class Hero extends Character {
     public String toString() {
         return this.getGraphicsPath();
     }
-
 }

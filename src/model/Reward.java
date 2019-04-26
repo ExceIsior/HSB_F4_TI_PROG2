@@ -3,8 +3,8 @@ package model;
 import model.item.Material;
 
 /**
- * Reward for the player after quest completion. Consists of gold,
- * Experience Points and an array of craft materials.
+ * Reward for the player after quest completion. Consists of gold, Experience
+ * Points and an array of craft materials.
  *
  * @author Ismail
  */

@@ -8,17 +8,22 @@ import model.map.Tile;
 import java.util.ArrayList;
 import model.gameObject.GameObject;
 
-
-
 public class MovementController
 {
-    private static Dungeon dungeon = null;
+    private static Dungeon dungeon = model.Factories.DungeonFactory.getDungeon(0);;
     
     public MovementController(Dungeon dungeon) {
         this.dungeon = dungeon;
     }
-
-    public static void changePositionOfGameObject(GameObject gameObject, Position newPosition) {
+    
+    /**
+     * Changes the position of the GameObject if the move is possible without 
+     * standing on another GameObject or an Obstacle and without leaving the visible map.
+     * @param gameObject which is going to move.
+     * @param newPosition where the gameobject is going to move.
+     */
+    public static void changePositionOfGameObject(GameObject gameObject, Position newPosition) 
+    {
         
         if ( (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition)) &&
                 movePossibleWithoutStandingOnObstacle(newPosition) &&
@@ -34,70 +39,114 @@ public class MovementController
             tilePositionGameObject = Converter.convertMapCoordinatesInTileCoordinates(gameObject.getPosition());
             fieldPositionGameObject = Converter.convertMapCoordinatesInFieldCoordinates(gameObject.getPosition());
             dungeon.getTile(tilePositionGameObject).getField(fieldPositionGameObject).setGameObject(gameObject);
-            //System.out.println("gameObject position" + gameObject.getPosition().getX() + " " + gameObject.getPosition().getX());
         }
         else {
-            System.out.println("move not possible!");
+            System.out.println("Move not possible!");
         }
     }
     
    
     /**
-     * Iteriert durch alle Felder um den Helden herum durch (Im Umkeis "range")
-     * und speichert deren Positionen in einer ArrayListe.
-     * Entfernt Positionen mit Hindernissen.
+     * Iteriert in einer Spirale durch alle Felder um den Helden herum durch 
+     * (Im Umkeis "range") und speichert deren Positionen in einer ArrayListe.
+     * Speichert nur Positionen ohne Hindernissen und innerhalb der map.
      */
     public static ArrayList<Position> getRangeFelder(int range, Position heroPosition)
     {
-        ArrayList<Position> rangeFelder = null;
+        ArrayList<Position> rangeFelder = new ArrayList<>();
         Position hP = heroPosition;
-        for (int i=1; i<= range/2; i++)
+        for (int i=1; i<= (range*2)+1; i++)
         {
             if(i%2 != 0)
             {
                 for (int x=1; x <=i; x++)
                 {
-                    hP.setX(hP.getX()+x);
-                    if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                    hP.setX(hP.getX()+1);
+                    if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
+                        && hP.getY() <= heroPosition.getY()
+                        && getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
-                        rangeFelder.add(hP);  
+                        rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }                   
                 }
                 for (int y=1; y <=i; y++)
                 {
-                    hP.setY(hP.getY()+y);
-                    if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                    hP.setY(hP.getY()+1);
+                    if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
+                        && hP.getY() <= heroPosition.getY()
+                        && getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
-                        rangeFelder.add(hP);  
+                        rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }     
                 }
             }
             else {
                 for (int x=1; x <=i; x++)
                 {
-                    hP.setX(hP.getX()-x);
-                    if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                    hP.setX(hP.getX()-1);
+                    if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
+                        && hP.getX() <= heroPosition.getX()
+                        && getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
-                        rangeFelder.add(hP);  
+                        rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }                
                 }
                 for (int y=1; y <=i; y++)
                 {
-                    hP.setY(hP.getY()-y);
-                    if (getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject().getHeight() < 20)
+                    hP.setY(hP.getY()-1);
+                    if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
+                        && hP.getY() <= heroPosition.getY()
+                        && getTileWhichContainsGivenCoordinates(hP).getField
+                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
                     {
-                        rangeFelder.add(hP);  
+                        rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }  
                 }
             }
         }
         return rangeFelder;
     }
-
+    
+    /**
+     * Iterates through all Fields in a radius "range", around a given Position.
+     * Saves those positions in an ArrayList if they aren't outside the map.
+     */
+    public static ArrayList<Position> getAttackFelder(int range, Position attackPosition)
+    {
+        ArrayList<Position> attackFelder = new ArrayList<>();
+        Position hP = new Position(attackPosition.getX(), attackPosition.getY());
+        hP.setY(hP.getY()-range);
+        
+        for (int i=0; i<=(2*range); i++) 
+        {
+            hP.setX(attackPosition.getX()-range);
+            for (int a=0; a<=(2*range); a++)
+            {
+                hP.setX(hP.getX()+1);
+                if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP))
+                {
+                    attackFelder.add(new Position(hP.getX(), hP.getY()));
+                }    
+            }
+            hP.setY(hP.getY()+1);
+        }           
+        return attackFelder;
+    }    
+    
+    
+    
+    public static ArrayList<Position> pathfinder(Position start, Position ziel)
+    {
+        ArrayList<Position> path = new ArrayList<>();
+        
+        
+        
+        return path;
+    }   
+    
     
     private static boolean movePossibleWithoutStandingOnObstacle(Position position) {
         boolean obstacle = true;
@@ -139,7 +188,4 @@ public class MovementController
         int yCoordinate = (position.getY() / Const.TILE_SIZE_Y);
         return dungeon.getTile(new Position(xCoordinate, yCoordinate));
     }
-
-
 }
-

@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import model.Skill;
 import model.Status;
 import model.item.Item;
 import java.util.List;
@@ -24,26 +25,10 @@ public class Villain extends Character {
      * @param maxHealthPoints Maximum health points that the villain can have.
      * @param agility Maximum distance that the villain can travel per phase.
      * @param status List of statuses that are applied on the villain.
-     * @param skills List of skills that the skills can use.
-     */
-    public Villain(String graphicsPath,
-            int armor,
-            Item loot,
-            String name,
-            int healthPoints,
-            int maxHealthPoints,
-            int agility,
-            List<Status> status,
-            List<Skill> skills) {
-        super(graphicsPath,
-                armor,
-                loot,
-                name,
-                healthPoints,
-                maxHealthPoints,
-                agility,
-                status,
-                skills);
+     * @param skills List of skills that the villain can use.
+*/
+ 
+    public Villain(String graphicsPath, int armor, Item loot, String name, int healthPoints, int maxHealthPoints, int agility, List<Status> status, List<Skill> skills) {
+        super(graphicsPath, armor, loot, name, healthPoints, maxHealthPoints, agility, status, skills);
     }
-
 }

@@ -8,7 +8,7 @@ import model.Effect;
  * @author Ismail
  */
 public class HeroItem extends EffectItem {
-
+    
     /**
      * Initialises a consumable hero item.
      *

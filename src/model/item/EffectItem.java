@@ -33,7 +33,4 @@ public abstract class EffectItem extends Item {
     public String toString() {
         return "EffectItem{" + "effect=" + effect + '}';
     }
-
-    
-    
 }

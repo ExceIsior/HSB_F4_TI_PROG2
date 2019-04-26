@@ -9,7 +9,8 @@ import model.gameObject.Villain;
  * This class supplies instances of Villain class.
  * @author Ismail
  */
-public class VillainFactory {
+public class VillainFactory 
+{
 
     /**
      * Instantiates an object of Villain

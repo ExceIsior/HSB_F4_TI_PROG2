@@ -55,7 +55,9 @@ public abstract class Item {
     }
 
     /**
-     *Compares if another given object matches the name and class of its own instance.
+     * Compares if another given object matches the name and class of its own
+     * instance.
+     *
      * @param obj
      * @return
      */
@@ -81,5 +83,5 @@ public abstract class Item {
     public String toString() {
         return "Item{" + "rarity=" + rarity + ", name=" + name + '}';
     }
-
+    
 }

@@ -4,7 +4,6 @@ import control.Constants.Const;
 import model.Player;
 import model.item.Inventory;
 import model.item.Material;
-
 /**
  * This singleton class holds the player instance.
  *
@@ -63,7 +62,6 @@ public class PlayerManager {
      * Inner class holding the singleton class object.
      */
     private static class PlayerManager_Holder {
-
         private static final PlayerManager INSTANCE = new PlayerManager();
     }
 }

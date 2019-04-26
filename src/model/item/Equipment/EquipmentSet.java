@@ -1,8 +1,7 @@
 package model.item.Equipment;
 
 /**
- * Heroes' equipment set. A set consist of a weapon, an armor
- * and an accessory.
+ * Heroes' equipment set. A set consist of a weapon, an armor and an accessory.
  *
  * @author Ismail
  */

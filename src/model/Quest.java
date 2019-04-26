@@ -39,5 +39,27 @@ public class Quest {
     public Objective[] getObjective() {
         return objective;
     }
-
+    
+    /**
+     * Checks if all Objectives are complete.
+     * @return true if all Objectives are complete.
+     */
+    public boolean checkAllObjectives() {
+        int count = 0;
+        for (Objective objective1 : objective) 
+        {
+            if (objective1.objectiveComplete()) 
+            {
+                count++;
+            }
+        }
+        if (count == objective.length) 
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+    }
 }

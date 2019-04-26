@@ -7,13 +7,13 @@ import java.util.Set;
  * Generic Inventory. Stores Instances inherited by Item.
  *
  * @author Ismail
- * @param <T>
+ * @param <T> Subclass of Item
  */
 public class Inventory<T extends Item> {
 
     private HashMap<T, Integer> inventory = null;
     private int maxCapacity = 0;
-
+    
     /**
      * Initialises an inventory.
      *

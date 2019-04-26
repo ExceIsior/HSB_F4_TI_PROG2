@@ -77,7 +77,8 @@ public class Dungeon {
     }
 
     @Override
-    public String toString() {
+    public String toString() 
+    {
         StringBuilder stringBuilder = new StringBuilder();
 
         for (Tile[] tiles : this.map) {
