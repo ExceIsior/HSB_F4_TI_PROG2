@@ -5,25 +5,35 @@ import control.Constants.HeroConst;
 import control.Enums.Skills;
 import java.util.Arrays;
 import model.gameObject.Hero;
-import model.gameObject.Skill;
 import model.item.Equipment.EquipmentSet;
 import model.item.HeroItem;
 import model.item.Inventory;
 
+/**
+ * Singleton class holding the hero instances
+ *
+ * @author Ismail
+ */
 public class HeroManager {
 
     private Hero[] heroes = null;
 
+    /**
+     * Instantiates the heroes.
+     */
     private HeroManager() {
         this.heroes = initHeroes();
     }
 
+    /**
+     * Initialises the heroes with their default values.
+     * @return Array of heroes with default values
+     */
     private Hero[] initHeroes() {
         Hero[] heroes = new Hero[Const.HERO_AMOUNT];
 
         heroes[0] = new Hero(HeroConst.PALADIN_RES_PATH,
                 HeroConst.PALADIN_DEFAULT_ARMOR,
-                null,
                 HeroConst.PALADIN_NAME,
                 HeroConst.PALADIN_DEFAULT_HEALTH_POINTS,
                 HeroConst.PALADIN_DEFAULT_MAX_HEALTH_POINTS,
@@ -35,7 +45,6 @@ public class HeroManager {
 
         heroes[1] = new Hero(HeroConst.MAGE_RES_PATH,
                 HeroConst.MAGE_DEFAULT_ARMOR,
-                null,
                 HeroConst.MAGE_NAME,
                 HeroConst.MAGE_DEFAULT_HEALTH_POINTS,
                 HeroConst.MAGE_DEFAULT_MAX_HEALTH_POINTS,
@@ -47,7 +56,6 @@ public class HeroManager {
 
         heroes[2] = new Hero(HeroConst.ASSASSIN_RES_PATH,
                 HeroConst.ASSASSIN_DEFAULT_ARMOR,
-                null,
                 HeroConst.ASSASSIN_NAME,
                 HeroConst.ASSASSIN_DEFAULT_HEALTH_POINTS,
                 HeroConst.ASSASSIN_DEFAULT_MAX_HEALTH_POINTS,
@@ -59,7 +67,6 @@ public class HeroManager {
 
         heroes[3] = new Hero(HeroConst.RANGER_RES_PATH,
                 HeroConst.RANGER_DEFAULT_ARMOR,
-                null,
                 HeroConst.RANGER_NAME,
                 HeroConst.RANGER_DEFAULT_HEALTH_POINTS,
                 HeroConst.RANGER_DEFAULT_MAX_HEALTH_POINTS,
@@ -70,6 +77,22 @@ public class HeroManager {
                 new EquipmentSet(null, null, null));
 
         return heroes;
+    }
+
+    public Hero getPaladin() {
+        return this.heroes[0];
+    }
+
+    public Hero getMage() {
+        return this.heroes[1];
+    }
+
+    public Hero getAssassin() {
+        return this.heroes[2];
+    }
+
+    public Hero getRanger() {
+        return this.heroes[3];
     }
 
     public Hero[] getHeroes() {

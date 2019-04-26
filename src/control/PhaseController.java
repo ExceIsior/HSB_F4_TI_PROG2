@@ -8,8 +8,6 @@ import model.gameObject.Hero;
 import java.util.Arrays;
 import model.gameObject.Villain;
 import model.map.Dungeon;
-import model.map.Field;
-import model.map.Tile;
 
 public class PhaseController {
     

@@ -1,16 +1,26 @@
 package model.item.Equipment;
 
-import java.util.HashMap;
 import model.Effect;
 import model.item.EffectItem;
-import model.item.Item;
-import model.item.Material;
 
+/**
+ * Abstract super class for all equipment parts.
+ *
+ * @author Ismail
+ */
 public abstract class Equipment extends EffectItem {
 
     private CraftBluePrint craftBluePrint = null;
     private int compatibleHeroID = 0;
     
+    /**
+     * Initialises an equipment.
+     * @param rarity Rarity of the equipment
+     * @param name Name of the equipment
+     * @param effect Effect that applies to the equipped hero
+     * @param craftBluePrint Crafting materials and costs needed to craft the equipment
+     * @param compatibleHeroID Hero's id who can equip the equipment.
+     */
     public Equipment(int rarity, String name, Effect effect, CraftBluePrint craftBluePrint, int compatibleHeroID) {
         super(rarity, name, effect);
         this.craftBluePrint = craftBluePrint;

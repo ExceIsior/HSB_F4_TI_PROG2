@@ -1,10 +1,8 @@
 package model.Factories;
 
-import control.Constants.BossConst;
 import control.Constants.VillainConst;
 import control.Enums.Skills;
 import java.util.Arrays;
-import model.gameObject.Boss;
 import model.gameObject.Villain;
 
 /**

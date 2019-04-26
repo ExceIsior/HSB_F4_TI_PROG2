@@ -1,16 +1,18 @@
-
 package model.Factories;
 
-import control.Constants.Const;
 import control.Constants.TerrainConst;
 import control.Enums.Terrains;
 import model.map.Field;
-import model.map.Terrain;
 
+/**
+ * This class supplies instances of the Field class.
+ *
+ * @author Ismail
+ */
 public class FieldFactory {
-    
+
     public static Field getField(int fieldID) {
-        switch(fieldID) {
+        switch (fieldID) {
             case TerrainConst.GRASS_ID:
                 return new Field(Terrains.GRASS.getTerrain());
             case TerrainConst.MOUNTAIN_ID:

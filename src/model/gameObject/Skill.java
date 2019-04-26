@@ -3,7 +3,7 @@ package model.gameObject;
 import model.Effect;
 
 /**
- * Represents skills that characters can use.
+ * Skill that characters can use.
  *
  * @author Ismail
  */

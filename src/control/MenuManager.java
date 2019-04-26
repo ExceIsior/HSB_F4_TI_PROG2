@@ -3,7 +3,6 @@ package control;
 import control.Constants.DungeonConst;
 import control.Constants.ErrorConst;
 import control.Constants.MenuConst;
-import model.Factories.DungeonFactory;
 import control.Enums.Weapons;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +13,12 @@ import model.item.Equipment.Weapon;
 import utilities.IOHelper;
 import control.Enums.Accessories;
 import control.Enums.Armors;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
+/**
+ * This singleton class holds and generates the game's menus.
+ *
+ * @author Ismail
+ */
 public class MenuManager {
 
     private Menu mainMenu = null;
@@ -25,6 +27,9 @@ public class MenuManager {
     private Menu craftingMenuHeroSelection = null;
     private Menu craftingMenuEquipmentTypeSelection = null;
 
+    /**
+     * Instantiates the constant Menus.
+     */
     public MenuManager() {
         this.mainMenu = this.initMainMenu();
         this.gameMenu = this.initGameMenu();
@@ -33,6 +38,11 @@ public class MenuManager {
         this.craftingMenuEquipmentTypeSelection = this.initCraftingMenuEquipmentTypeSelection();
     }
 
+    /**
+     * Initialises the main menu
+     *
+     * @return Main menu
+     */
     private Menu initMainMenu() {
         return new Menu(
                 MenuConst.MAIN_MENU_TITLE,
@@ -41,6 +51,11 @@ public class MenuManager {
                 MenuConst.MAIN_MENU_QUIT);
     }
 
+    /**
+     * Initialises the game menu
+     *
+     * @return Game menu
+     */
     private Menu initGameMenu() {
         return new Menu(
                 MenuConst.GAME_MENU_TITLE,
@@ -50,6 +65,11 @@ public class MenuManager {
                 MenuConst.RETURN_TO_MAIN_MENU);
     }
 
+    /**
+     * Initialises the dungeon selection menu
+     *
+     * @return Dungeon menu
+     */
     private Menu initDungeonMenu() {
         String[] dungeons = new String[DungeonConst.class.getDeclaredFields().length];
         for (int i = 0; i < dungeons.length; i++) {
@@ -63,6 +83,12 @@ public class MenuManager {
         return new Menu(MenuConst.DUNGEON_MENU_TITLE, dungeons);
     }
 
+    /**
+     * Initialises the first layer of the crafting menu where the hero has to be
+     * selected for which a new equipment part should be crafted.
+     *
+     * @return First layer of crafting menu (Hero Select)
+     */
     private Menu initCraftingMenuHeroSelect() {
         String[] heroes = new String[HeroManager.getInstance().getHeroes().length];
         for (int i = 0; i < heroes.length; i++) {
@@ -71,6 +97,12 @@ public class MenuManager {
         return new Menu(MenuConst.CRAFTING_MENU_TITLE, heroes);
     }
 
+    /**
+     * Initialises the second layer of the crafting menu where the equipment
+     * type has to be selected.
+     *
+     * @return Second layer of crafting menu (Equipment Type Select)
+     */
     private Menu initCraftingMenuEquipmentTypeSelection() {
         return new Menu(MenuConst.CRAFTING_MENU_TITLE,
                 MenuConst.CRAFTING_MENU_WEAPON,
@@ -78,6 +110,9 @@ public class MenuManager {
                 MenuConst.CRAFTING_MENU_ACCESSORY);
     }
 
+    /**
+     * Prints the main menu and prompts user to navigate through the menus.
+     */
     public void promptMainMenu() {
         switch (this.mainMenu.promptMenu()) {
             case 0:
@@ -93,6 +128,10 @@ public class MenuManager {
         }
     }
 
+    /**
+     * Prints the game menu and prompts user to further navigate through the
+     * menus.
+     */
     private void promptGameMenu() {
         switch (this.gameMenu.promptMenu()) {
             case 0:
@@ -108,14 +147,28 @@ public class MenuManager {
         }
     }
 
+    /**
+     * Prints all available dungeons and prompts user to select a dungeon to
+     * play.
+     */
     private void promptDungeonMenu() {
         new GameController(this.dungeonMenu.promptMenu()).start();
     }
 
+    /**
+     * Prints the first layer of the crafting menu and prompts user to select a
+     * hero.
+     */
     private void promptCraftingMenuHeroSelection() {
         this.promptCraftingMenuEquipmentSelection(this.craftingMenuHeroSelection.promptMenu());
     }
 
+    /**
+     * Prints the second layer of the crafting menu and prompts user to select a
+     * equipment type.
+     *
+     * @param hero Selected hero id to craft equipment for
+     */
     private void promptCraftingMenuEquipmentSelection(int hero) {
         switch (this.craftingMenuEquipmentTypeSelection.promptMenu()) {
             case 0:
@@ -130,6 +183,11 @@ public class MenuManager {
         }
     }
 
+    /**
+     * Prints crafting menu to craft weapons for specified hero.
+     *
+     * @param hero Selected hero id to craft a weapon
+     */
     private void promptCraftingMenuWeapon(int hero) {
         List<Weapon> compatibleWeapons = new ArrayList<>();
         List<String> menuEntries = new ArrayList<>();
@@ -144,6 +202,11 @@ public class MenuManager {
                 compatibleWeapons.get(new Menu(MenuConst.CRAFTING_MENU_TITLE, menuEntries.toArray(String[]::new)).promptMenu()));
     }
 
+    /**
+     * Prints crafting menu to craft armor for specified hero.
+     *
+     * @param hero Selected hero id to craft an armor
+     */
     private void promptCraftingMenuArmor(int hero) {
         List<Armor> compatibleArmors = new ArrayList<>();
         List<String> menuEntries = new ArrayList<>();
@@ -158,6 +221,11 @@ public class MenuManager {
                 compatibleArmors.get(new Menu(MenuConst.CRAFTING_MENU_TITLE, menuEntries.toArray(String[]::new)).promptMenu()));
     }
 
+    /**
+     * Prints crafting menu to craft accessory for specified hero.
+     *
+     * @param hero Selected hero id to craft an accessory
+     */
     private void promptCraftingMenuAccessory(int hero) {
         List<Accessory> compatibleAccessories = new ArrayList<>();
         List<String> menuEntries = new ArrayList<>();
@@ -172,10 +240,18 @@ public class MenuManager {
                 compatibleAccessories.get(new Menu(MenuConst.CRAFTING_MENU_TITLE, menuEntries.toArray(String[]::new)).promptMenu()));
     }
 
+    /**
+     * Returns the singleton instance.
+     *
+     * @return PlayerManager object.
+     */
     public static MenuManager getInstance() {
         return MenuManagerHolder.INSTANCE;
     }
 
+    /**
+     * Inner class holding the singleton object
+     */
     private static class MenuManagerHolder {
 
         private static final MenuManager INSTANCE = new MenuManager();

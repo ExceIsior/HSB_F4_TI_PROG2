@@ -15,6 +15,7 @@ public class Tile {
 
     /**
      * Initialises a tile.
+     *
      * @param tile Two-dimensional array of fields.
      */
     public Tile(Field[][] tile) {
@@ -23,6 +24,7 @@ public class Tile {
 
     /**
      * Returns the two-dimensional field array.
+     *
      * @return Two-dimensional field array.
      */
     public Field[][] getTile() {
@@ -31,6 +33,7 @@ public class Tile {
 
     /**
      * Returns a single field with given coordinates
+     *
      * @param position Coordinates of desired field
      * @return Desired field matching the position.
      */
@@ -40,6 +43,7 @@ public class Tile {
 
     /**
      * Retrieves the visibility status of the tile and its fields.
+     *
      * @return Visibility of the tile and its fields.
      */
     public boolean isVisible() {
@@ -48,6 +52,7 @@ public class Tile {
 
     /**
      * Sets the visibility of the tile and of its fields.
+     *
      * @param visible Desired visibility status of the tile and its fields.
      */
     public void setVisible(boolean visible) {

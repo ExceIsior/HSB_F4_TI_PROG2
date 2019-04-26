@@ -2,23 +2,51 @@ package model.item;
 
 import java.util.Objects;
 
-public class Item {
+/**
+ * Abstract super class of all items.
+ *
+ * @author Ismail
+ */
+public abstract class Item {
+
     private int rarity = 0;
     private String name = "";
 
+    /**
+     * Initialises an item.
+     *
+     * @param rarity Rarity of the item.
+     * @param name Name of the item.
+     */
     public Item(int rarity, String name) {
         this.name = name;
         this.rarity = rarity;
     }
 
+    /**
+     * Returns the rarity of the item.
+     *
+     * @return Rarity of the item.
+     */
     public int getRarity() {
         return rarity;
     }
 
+    /**
+     * Returns the item's name.
+     *
+     * @return Item's name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Hashes the instance dependant of its name attribute for logical equality
+     * checks.
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         int hash = 5;
@@ -26,6 +54,11 @@ public class Item {
         return hash;
     }
 
+    /**
+     *Compares if another given object matches the name and class of its own instance.
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -48,7 +81,5 @@ public class Item {
     public String toString() {
         return "Item{" + "rarity=" + rarity + ", name=" + name + '}';
     }
-    
-    
-    
+
 }
