@@ -4,7 +4,7 @@ import control.Constants.Const;
 import model.InteractiveContainer;
 import model.Position;
 import model.gameObject.Character;
-import model.gameObject.Skill;
+import model.Skill;
 
 import java.util.ArrayList;
 

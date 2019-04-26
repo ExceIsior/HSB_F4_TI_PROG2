@@ -1,13 +1,13 @@
-package model.gameObject;
+package model;
 
 import model.Effect;
 
 /**
  * Represents skills that characters can use.
- *
  * @author Ismail
  */
-public class Skill {
+public class Skill 
+{
 
     private String name = "";
     private int damageBonus = 0;
@@ -34,7 +34,8 @@ public class Skill {
             int range,
             int damageRadius,
             int availability,
-            Effect statusEffect) {
+            Effect statusEffect) 
+    {
         this.name = name;
         this.damageBonus = damageBonus;
         this.dieBonus = dieBonus;
@@ -48,7 +49,8 @@ public class Skill {
      *
      * @return Skill's name.
      */
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
 
@@ -57,7 +59,8 @@ public class Skill {
      *
      * @return skill's damage bonus.
      */
-    public int getDamageBonus() {
+    public int getDamageBonus() 
+    {
         return damageBonus;
     }
 
@@ -66,7 +69,8 @@ public class Skill {
      *
      * @return Skill's die bonus.
      */
-    public int getDieBonus() {
+    public int getDieBonus() 
+    {
         return dieBonus;
     }
 
@@ -75,7 +79,8 @@ public class Skill {
      *
      * @return Skill's maximum target range.
      */
-    public int getRange() {
+    public int getRange() 
+    {
         return range;
     }
 
@@ -84,7 +89,8 @@ public class Skill {
      *
      * @return Skill's radius.
      */
-    public int getRadius() {
+    public int getRadius() 
+    {
         return radius;
     }
 
@@ -93,7 +99,8 @@ public class Skill {
      *
      * @return Skill's availability
      */
-    public int getAvailability() {
+    public int getAvailability() 
+    {
         return availability;
     }
 
@@ -102,7 +109,8 @@ public class Skill {
      *
      * @param availability New value for skill's availability
      */
-    public void setAvailability(int availability) {
+    public void setAvailability(int availability) 
+    {
         this.availability = availability;
     }
 

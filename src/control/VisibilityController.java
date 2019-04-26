@@ -90,11 +90,11 @@ public class VisibilityController
             {  
                 dungeon.getTile(new Position(x-1, y)).setVisible(true);
             }
-            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x, y-1)).isVisible()) ) 
+            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x, y-1)).isVisible()) ) 
             {  
                 dungeon.getTile(new Position(x, y-1)).setVisible(true);
             }
-            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
+            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
             {  
                 dungeon.getTile(new Position(x+1, y)).setVisible(true);
             }
@@ -103,7 +103,7 @@ public class VisibilityController
             }
         }
         //Checks if the hero is on the bottom border
-        else if (fieldPosition.getY() == 3) 
+        else if (fieldPosition.getY() == Const.TILE_SIZE_Y-1) 
         {
             if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x, y+1)).isVisible()) ) 
             {  
@@ -113,11 +113,11 @@ public class VisibilityController
             {  
                 dungeon.getTile(new Position(x-1, y)).setVisible(true);
             }
-            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x, y+1)).isVisible()) ) 
+            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x, y+1)).isVisible()) ) 
             {  
                 dungeon.getTile(new Position(x, y+1)).setVisible(true);
             }
-            if ( fieldPosition.getX() == 3 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
+            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
             {  
                 dungeon.getTile(new Position(x+1, y)).setVisible(true);
             }
@@ -131,7 +131,7 @@ public class VisibilityController
             dungeon.getTile(new Position(x-1, y)).setVisible(true);
         }
         //Checks if the hero is on the right border
-        else if (fieldPosition.getX() == 3) 
+        else if (fieldPosition.getX() == Const.TILE_SIZE_X-1) 
         {
             dungeon.getTile(new Position(x+1, y)).setVisible(true);
         }

@@ -1,7 +1,6 @@
-
 package model.gameObject;
 
-import java.util.ArrayList;
+import model.Skill;
 import java.util.List;
 import model.Status;
 import model.item.Item;
@@ -10,8 +9,8 @@ import model.item.Item;
  * Game object that represents a boss.
  * @author Ismail
  */
-public class Boss extends Villain {
-
+public class Boss extends Villain 
+{
     /**
      * Initialises a Boss object
      * @param graphicsPath  Path to the image file that is to be drawn on the screen for the instance.
@@ -32,7 +31,8 @@ public class Boss extends Villain {
             int maxHealthPoints,
             int agility, 
             List<Status> status,
-            List<Skill> skills) {
+            List<Skill> skills) 
+    {
         super(graphicsPath, 
                 armor, 
                 loot, 

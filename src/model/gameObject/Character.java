@@ -1,18 +1,16 @@
 package model.gameObject;
 
-import control.Constants.Const;
+import model.Skill;
 import model.Status;
 import model.item.Item;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Super class of all game objects that can actively interact and move.
+ * Abstract super class of all game objects that can actively interact and move.
  * @author Ismail
  */
-public class Character extends Interactive {
-
+public abstract class Character extends Interactive 
+{
     private String name = "";
     private int agility = 0;
     private List<Status> status = null;
@@ -64,7 +62,8 @@ public class Character extends Interactive {
      * Retrieves the character's Name
      * @return Character' name
      */
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
 
@@ -72,7 +71,8 @@ public class Character extends Interactive {
      * Sets the character's name.
      * @param name New name for the character.
      */
-    public void setName(String name) {
+    public void setName(String name) 
+    {
         this.name = name;
     }
 
@@ -80,7 +80,8 @@ public class Character extends Interactive {
      * Retrieves the character's base damage value.
      * @return Character's base damage value.
      */
-    public int getBaseDamage() {
+    public int getBaseDamage() 
+    {
         return baseDamage;
     }
 
@@ -88,7 +89,8 @@ public class Character extends Interactive {
      * Sets the character's base damage value
      * @param baseDamage New base damage value.
      */
-    public void setBaseDamage(int baseDamage) {
+    public void setBaseDamage(int baseDamage) 
+    {
         if(baseDamage >= 0){
         this.baseDamage = baseDamage;
         }else{
@@ -100,7 +102,8 @@ public class Character extends Interactive {
      * Retrieves the character's agility.
      * @return Character's agility value.
      */
-    public int getAgility() {
+    public int getAgility() 
+    {
         return agility;
     }
 
@@ -108,7 +111,8 @@ public class Character extends Interactive {
      * Sets character's agility value.
      * @param agility New agility value.
      */
-    public void setAgility(int agility) {
+    public void setAgility(int agility) 
+    {
                 if(agility >= 0){
         this.agility = agility;
         }else{
@@ -120,7 +124,8 @@ public class Character extends Interactive {
      * Retrieves a List of the statuses the character carries.
      * @return List of character's statuses.
      */
-    public List<Status> getStatus() {
+    public List<Status> getStatus() 
+    {
         return status;
     }
 
@@ -128,7 +133,8 @@ public class Character extends Interactive {
      * Sets the character's statuses.
      * @param status New List of statuses.
      */
-    public void setStatus(List<Status> status) {
+    public void setStatus(List<Status> status) 
+    {
         this.status = status;
     }
 
@@ -136,7 +142,8 @@ public class Character extends Interactive {
      * Retrieves the List of character's skills.
      * @return List of character's skills.
      */
-    public List<Skill> getSkills() {
+    public List<Skill> getSkills() 
+    {
         return skills;
     }
 
@@ -144,7 +151,8 @@ public class Character extends Interactive {
      * Sets the character's skills
      * @param skills New List of skills.
      */
-    public void setSkills(List<Skill> skills) {
+    public void setSkills(List<Skill> skills) 
+    {
         this.skills = skills;
     }
 

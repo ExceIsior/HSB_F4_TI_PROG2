@@ -1,14 +1,18 @@
 package model.gameObject;
 
-import model.Position;
+import model.Skill;
 import model.Status;
 import model.item.Item;
-
-import java.util.ArrayList;
 import java.util.List;
 
-public class Villain extends Character {
-
+/**
+ * Game object that represents a villain.
+ */
+public class Villain extends Character 
+{
+    /**
+     * Initialises a villain object.
+     */
     public Villain(String graphicsPath,
             int armor, 
             Item loot,

@@ -1,21 +1,34 @@
 package model.gameObject;
-
-import control.Constants.Const;
-import model.Position;
+import model.Skill;
 import model.Status;
 import model.item.Inventory;
 import model.item.Item;
-
-import java.util.ArrayList;
 import java.util.List;
 import model.item.Equipment.EquipmentSet;
 
+/**
+ * Game object that represents a Hero.
+ */
 public class Hero extends Character
 {
     private int surgeValue = 0;
     private EquipmentSet equipmentSet = null;
     private Inventory inventory = null;
-
+    
+    /**
+     * Initialises a Hero object.
+     * @param graphicsPath
+     * @param armor
+     * @param loot
+     * @param name
+     * @param healthPoints
+     * @param maxHealthPoints
+     * @param agility
+     * @param status
+     * @param skills
+     * @param inventory
+     * @param equipmentSet 
+     */
     public Hero(String graphicsPath,
                 int armor,
                 Item loot,
@@ -41,11 +54,13 @@ public class Hero extends Character
         this.equipmentSet = equipmentSet;
     }
 
-    public int getSurgeValue() {
+    public int getSurgeValue() 
+    {
         return surgeValue;
     }
 
-    public EquipmentSet getEquipmentSet() {
+    public EquipmentSet getEquipmentSet() 
+    {
         return equipmentSet;
     }
     
@@ -59,12 +74,9 @@ public class Hero extends Character
         this.inventory = inventory;
     }
 
-
     @Override
     public String toString()
     {
         return this.getGraphicsPath();
     }
-
-
 }
