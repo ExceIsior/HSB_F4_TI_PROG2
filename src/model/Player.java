@@ -23,7 +23,7 @@ public class Player {
      * @param gold Player's amount of gold.
      * @param inventory Player's inventory.
      */
-    public Player(String name, int experiencePoints, int gold, Inventory inventory) {
+    public Player(String name, int experiencePoints, int gold, Inventory<Material> inventory) {
         this.name = name;
         this.experiencePoints = experiencePoints;
         this.gold = gold;
@@ -84,7 +84,7 @@ public class Player {
      *
      * @return Player's inventory.
      */
-    public Inventory getInventory() {
+    public Inventory<Material> getInventory() {
         return this.inventory;
     }
 
@@ -93,7 +93,7 @@ public class Player {
      *
      * @param inventory New inventory object.
      */
-    public void setInventory(Inventory inventory) {
+    public void setInventory(Inventory<Material> inventory) {
         this.inventory = inventory;
     }
 
