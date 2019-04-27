@@ -12,7 +12,7 @@ import model.map.Field;
 public class FieldFactory {
     /**
      * Instantiates an object of Field.
-     * @param fieldId ID of the field type that is to be instantiated.
+     * @param fieldID ID of the field type that is to be instantiated.
      * @return Object of Field.
      */
     public static Field getField(int fieldID) 

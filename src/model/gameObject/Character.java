@@ -1,6 +1,5 @@
 package model.gameObject;
 
-import model.Skill;
 import model.Status;
 import model.item.Item;
 import java.util.List;
@@ -147,4 +146,5 @@ public abstract class Character extends Interactive {
         this.skills = skills;
     }
 
+    
 }

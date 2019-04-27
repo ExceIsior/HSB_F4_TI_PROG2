@@ -13,11 +13,11 @@ public class BossFactory {
     /**
      * Instantiates an object of Boss
      *
-     * @param bossId ID of the Boss type that is to be instantiated.
+     * @param bossID ID of the Boss type that is to be instantiated.
      * @return Object of Boss.
      */
-    public static Boss getBoss(int bossId) {
-        switch (bossId) {
+    public static Boss getBoss(int bossID) {
+        switch (bossID) {
             case BossConst.BASILISK_ID:
                 return new Boss(
                         BossConst.BASILISK_RES_PATH,

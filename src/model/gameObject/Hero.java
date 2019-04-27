@@ -1,10 +1,8 @@
 package model.gameObject;
 
-import model.Status;
-import model.Skill;
+
 import model.Status;
 import model.item.Inventory;
-import model.item.Item;
 import java.util.List;
 import model.item.Equipment.EquipmentSet;
 import model.item.HeroItem;

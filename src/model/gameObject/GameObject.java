@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import java.util.Objects;
 import model.Position;
 
 /**
@@ -45,6 +46,31 @@ public abstract class GameObject
     public String getGraphicsPath()
     {
         return this.graphicspath;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 53 * hash + Objects.hashCode(this.graphicspath);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final GameObject other = (GameObject) obj;
+        if (!Objects.equals(this.graphicspath, other.graphicspath)) {
+            return false;
+        }
+        return true;
     }
     
     @Override

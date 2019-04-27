@@ -14,11 +14,11 @@ public class VillainFactory
 
     /**
      * Instantiates an object of Villain
-     * @param villainId ID of the Villain type that is to be instantiated.
+     * @param villainID ID of the Villain type that is to be instantiated.
      * @return Object of Villain.
      */
-    public static Villain getVillain(int villainId) {
-        switch (villainId) {
+    public static Villain getVillain(int villainID) {
+        switch (villainID) {
             case  VillainConst.ORK_ID:
                 return new Villain(VillainConst.ORK_RES_PATH,
                         VillainConst.ORK_DEFAULT_ARMOR,

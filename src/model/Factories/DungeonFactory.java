@@ -12,7 +12,7 @@ import utilities.IOHelper;
 public class DungeonFactory {
     /**
      * Instantiates an object of Dungeon.
-     * @param dungeonId ID of the dungeon type that is to be instantiated.
+     * @param dungeonID ID of the dungeon type that is to be instantiated.
      * @return Object of Dungeon.
      */
     public static Dungeon getDungeon(int dungeonID) 

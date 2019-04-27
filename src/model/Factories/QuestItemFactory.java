@@ -1,6 +1,7 @@
 package model.Factories;
 
 import control.Constants.Const;
+import control.Constants.QuestItemConst;
 import model.gameObject.QuestItem;
 
 /**
@@ -13,12 +14,12 @@ public class QuestItemFactory {
     /**
      * Instantiates an object of QuestItemVillain
      *
-     * @param questItemId ID of the QuestItem type that is to be instantiated.
+     * @param questItemID ID of the QuestItem type that is to be instantiated.
      * @return Object of QuestItem.
      */
-    public static QuestItem getQuestItem(int questItemId) {
-        switch (questItemId) {
-            case Const.MUSHROOM_ID:
+    public static QuestItem getQuestItem(int questItemID) {
+        switch (questItemID) {
+            case QuestItemConst.MUSHROOM_ID:
                 return new QuestItem(
                         Const.QUESTITEM_PATH,
                         0,

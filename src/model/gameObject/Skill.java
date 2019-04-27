@@ -1,4 +1,4 @@
-package model;
+package model.gameObject;
 
 import model.Effect;
 
