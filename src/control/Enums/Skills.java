@@ -1,6 +1,6 @@
 package control.Enums;
 
-import model.gameObject.Skill;
+import model.Skill;
 import control.Constants.SkillConst;
 
 public enum Skills 

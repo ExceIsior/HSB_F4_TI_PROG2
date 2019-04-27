@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import model.Skill;
 import model.Status;
 import model.item.Item;
 import java.util.List;
