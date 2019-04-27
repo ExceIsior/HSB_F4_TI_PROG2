@@ -34,6 +34,7 @@ public class VisibilityController
         }
     }
     
+    
     /**
      * Checks if the hero is in one of the outside tiles to verify if the 
      * discovering tile is inside of the map.
