@@ -1,6 +1,7 @@
 package control;
 
 import control.Constants.Const;
+import control.Constants.VillainConst;
 import control.Enums.Skills;
 import model.Factories.VillainFactory;
 import model.Position;
@@ -15,11 +16,13 @@ public class CombatController
     public static void attack(Character attacker, Position defenderPosition, Skill skill)
     {
         GameObject defender = MovementController.getField(defenderPosition).getGameObject();
-        if (defender.getClass() == Trap.class)
+        System.out.println("defender graphic: " + defender.getGraphicsPath());
+        if (defender.getGraphicsPath().equals(Const.TRAP_PATH))
         {
             attack(attacker, skill, (Trap) defender);
-        } else if (defender.getClass() == Character.class)
+        } else if (defender.getGraphicsPath().equals("ZO1"))
         {
+            System.out.println("defender");
             attack(attacker, (Character) defender, skill);
         } else
         {
@@ -30,10 +33,16 @@ public class CombatController
     public static void attack(Character attacker, Character defender, Skill skill)
     {
         int attackBonus = getDieBonusForCharacter(attacker);
+        System.out.println("würfelzahl: " + attackBonus);
+        System.out.println("skill: " + skill.getName());
+        System.out.println("defender armor points: " + defender.getArmor());
         int attackValue = calculateAttackValue(attacker, skill, attackBonus);
+        System.out.println("attack value: " + attackValue);
         if (defender.getArmor() < attackValue)
         {
+            System.out.println("old health points: " + defender.getHealthPoints());
             reduceHealthPointsOfInteractive(attacker, defender, attackBonus);
+            System.out.println("new health points: " + defender.getHealthPoints());
         }
     }
 
@@ -80,14 +89,14 @@ public class CombatController
     {
         int bonus1 = DiceController.castDie();
         int bonus2 = DiceController.castDie();
-        if (character.getStatus().isEmpty())
+        if (character.getStatus() == null)
         {
             return bonus1;
         }
-        if (character.getStatus().get(0).isPositive())
+        if (character.getStatus().isPositive())
         {
             return (bonus1 > bonus2 ? bonus1 : bonus2);
-        } else if (!character.getStatus().get(0).isPositive())
+        } else if (!character.getStatus().isPositive())
         {
             return (bonus1 < bonus2 ? bonus1 : bonus2);
         } else

@@ -14,7 +14,7 @@ public abstract class Character extends Interactive {
 
     private String name = "";
     private int agility = 0;
-    private List<Status> status = null;
+    private Status status = null;
     private List<Skill> skills = null;
     private int baseDamage = 0;
 
@@ -40,7 +40,7 @@ public abstract class Character extends Interactive {
             int healthPoints,
             int maxHealthPoints,
             int agility,
-            List<Status> status,
+            Status status,
             List<Skill> skills) {
         super(graphicsPath, armor, loot, healthPoints, maxHealthPoints);
         this.name = name;
@@ -116,7 +116,7 @@ public abstract class Character extends Interactive {
      *
      * @return List of character's statuses.
      */
-    public List<Status> getStatus() {
+    public Status getStatus() {
         return status;
     }
 
@@ -125,7 +125,7 @@ public abstract class Character extends Interactive {
      *
      * @param status New List of statuses.
      */
-    public void setStatus(List<Status> status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

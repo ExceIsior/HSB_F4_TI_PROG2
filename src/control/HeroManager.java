@@ -4,6 +4,7 @@ import control.Constants.Const;
 import control.Constants.HeroConst;
 import control.Enums.Skills;
 import java.util.Arrays;
+import model.Status;
 import model.gameObject.Hero;
 import model.item.Equipment.EquipmentSet;
 import model.item.HeroItem;
@@ -39,7 +40,7 @@ public class HeroManager {
                     HeroConst.PALADIN_DEFAULT_HEALTH_POINTS,
                     HeroConst.PALADIN_DEFAULT_MAX_HEALTH_POINTS,
                     HeroConst.PALADIN_DEFAULT_AGILITY,
-                    null,
+                    new Status(0, null, true),
                     Arrays.asList(Skills.SWORD_THRUST.getSkill()),
                     new Inventory<HeroItem>(HeroConst.PALADIN_DEFAULT_INVENTORY_CAPACITY),
                     new EquipmentSet(null, null, null));

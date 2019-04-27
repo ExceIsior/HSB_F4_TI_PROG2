@@ -6,7 +6,7 @@ import model.Objective;
 
 public enum Objectives 
 {
-    OBJECTIVE_1(new Objective(VillainFactory.getVillain(VillainConst.ZOMBIE_ID), 5)),
+    OBJECTIVE_1(new Objective(VillainFactory.getVillain(VillainConst.ZOMBIE_ID), 3)),
     OBJECTIVE_2(new Objective(VillainFactory.getVillain(VillainConst.SUCCUBUS_ID), 5)),
     OBJECTIVE_3(new Objective(VillainFactory.getVillain(VillainConst.ORK_ID), 5));
     

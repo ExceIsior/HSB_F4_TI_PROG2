@@ -3,7 +3,7 @@ package model.phasen;
 import control.CombatController;
 import model.Position;
 import model.gameObject.Character;
-import model.gameObject.Skill;
+import model.Skill;
 
 public class CharacterPhase extends Phase
 {
@@ -33,5 +33,13 @@ public class CharacterPhase extends Phase
     public int getActionPoints()
     {
         return this.actionPoints;
+    }
+    public void setActionPoints(int actionPoints) 
+    {
+        this.actionPoints = actionPoints;
+    }
+    public boolean actionPointsLeft() 
+    {
+        return (this.actionPoints != 0);
     }
 }

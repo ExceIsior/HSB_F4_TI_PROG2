@@ -109,6 +109,7 @@ public class GameController
         dungeon.getTile(tilePosition).getField(fieldPosition).setGameObject(heroManager.getHeroes()[3]);
         
         dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(HeroConst.PALADIN_STARTING_POSITION)).setVisible(true);
+        this.allTilesVisible();
     }
     
     /**

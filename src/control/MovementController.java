@@ -7,13 +7,14 @@ import model.map.Tile;
 
 import java.util.ArrayList;
 import model.gameObject.GameObject;
+import model.map.Field;
 
 public class MovementController
 {
-    private static Dungeon dungeon = model.Factories.DungeonFactory.getDungeon(0);;
+    private static Dungeon dungeon = null;
     
-    public MovementController(Dungeon dungeon) {
-        this.dungeon = dungeon;
+    public static void setDungeon(Dungeon dungeon) {
+        MovementController.dungeon = dungeon;
     }
     
     /**
@@ -187,5 +188,11 @@ public class MovementController
         int xCoordinate = (position.getX() / Const.TILE_SIZE_X);
         int yCoordinate = (position.getY() / Const.TILE_SIZE_Y);
         return dungeon.getTile(new Position(xCoordinate, yCoordinate));
+    }
+    
+    public static Field getField(Position position)
+    {
+        Tile tile = dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(position));
+        return tile.getField(Converter.convertMapCoordinatesInFieldCoordinates(position));
     }
 }

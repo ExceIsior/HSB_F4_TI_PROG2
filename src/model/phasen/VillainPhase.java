@@ -3,7 +3,7 @@ package model.phasen;
 import control.CombatController;
 import model.Position;
 import model.gameObject.Character;
-import model.gameObject.Skill;
+import model.Skill;
 
 public class VillainPhase extends CharacterPhase
 {
