@@ -1,45 +1,89 @@
 package control;
 
 import control.Constants.Const;
-import model.InteractiveContainer;
+import control.Enums.Skills;
+import model.Factories.VillainFactory;
 import model.Position;
-import model.gameObject.Character;
 import model.Skill;
+import model.gameObject.Character;
+import model.gameObject.*;
 
 import java.util.ArrayList;
 
 public class CombatController
 {
-    public static void attack(Character character, Position position, Skill skill)
+    public static void attack(Character attacker, Position defenderPosition, Skill skill)
     {
-        ArrayList<Position> arrayList = MovementController.getRangeFelder(skill.getRange(), position);
-        ArrayList<InteractiveContainer> interactivesInAttackRadius = getInteractives(arrayList);
-
-        int attackBonus = getDieBonusForCharacter(character);
-        int attackValue = skill.getDamageBonus() + skill.getDieBonus() + character.getBaseDamage() + attackBonus;
-
-        for (InteractiveContainer interactive : interactivesInAttackRadius)
+        GameObject defender = MovementController.getField(defenderPosition).getGameObject();
+        if (defender.getClass() == Trap.class)
         {
-            if (interactive.getContent().getArmor() < attackValue)
-            {
-                //TODO: wahrscheinlich wird ein falscher Wert für die Verringerung der HP verwendet
-                reduceHealthPointsOfCharacter(character, interactive, attackBonus);
-            }
+            attack(attacker, skill, (Trap) defender);
+        } else if (defender.getClass() == Character.class)
+        {
+            attack(attacker, (Character) defender, skill);
+        } else
+        {
+            //TODO: passende Exception einfügen
         }
     }
 
-    private static void reduceHealthPointsOfCharacter(Character character, InteractiveContainer interactive, int attackBonus)
+    public static void attack(Character attacker, Character defender, Skill skill)
     {
-        int hp = interactive.getContent().getHealthPoints();
-        interactive.getContent().setHealthPoints(hp -
-                (attackBonus == Const.NUMBER_CUBE_FACES ? character.getBaseDamage() + 1 : character.getBaseDamage()));
+        int attackBonus = getDieBonusForCharacter(attacker);
+        int attackValue = calculateAttackValue(attacker, skill, attackBonus);
+        if (defender.getArmor() < attackValue)
+        {
+            reduceHealthPointsOfInteractive(attacker, defender, attackBonus);
+        }
+    }
+
+    public static void attack(Trap trap, Character defender)
+    {
+        int attackBonus = DiceController.castDie();
+        if (defender.getArmor() < trap.getDamage() + attackBonus)
+        {
+            reduceHealthPointsOfInteractive(trap.getDamage(), defender, attackBonus);
+        }
+    }
+
+    public static void attack(Character attacker, Skill skill, Trap trap)
+    {
+        int attackBonus = DiceController.castDie();
+        int attackValue = calculateAttackValue(attacker, skill, attackBonus);
+        if (trap.getArmor() < attackBonus + attackValue)
+        {
+            reduceHealthPointsOfInteractive(attacker, trap, attackBonus);
+        } else
+        {
+            attack(trap, attacker);
+        }
+    }
+
+    private static int calculateAttackValue(Character attacker, Skill skill, int attackBonus)
+    {
+        return skill.getDamageBonus() + skill.getDieBonus() + attacker.getBaseDamage() + attackBonus;
+    }
+
+    private static void reduceHealthPointsOfInteractive(Character attacker, Interactive defender, int attackBonus)
+    {
+        reduceHealthPointsOfInteractive(attacker.getBaseDamage(), defender, attackBonus);
+    }
+
+    private static void reduceHealthPointsOfInteractive(int damage, Interactive defender, int attackBonus)
+    {
+        int hp = defender.getHealthPoints();
+        defender.setHealthPoints(hp -
+                (attackBonus == Const.NUMBER_CUBE_FACES ? damage + 1 : damage));
     }
 
     private static int getDieBonusForCharacter(Character character)
     {
-        int bonus1 = DiceController.rollDie();
-        int bonus2 = DiceController.rollDie();
-
+        int bonus1 = DiceController.castDie();
+        int bonus2 = DiceController.castDie();
+        if (character.getStatus().isEmpty())
+        {
+            return bonus1;
+        }
         if (character.getStatus().get(0).isPositive())
         {
             return (bonus1 > bonus2 ? bonus1 : bonus2);
@@ -52,23 +96,16 @@ public class CombatController
         }
     }
 
-    private static ArrayList<InteractiveContainer> getInteractives(ArrayList<Position> arrayList)
-    {
-        ArrayList<InteractiveContainer> listOfInteractivesInGivenRadius = new ArrayList<>();
-        InteractiveMap interactiveMap = MovementController.getPositions();
-
-        for (Position position : arrayList)
-        {
-            if (interactiveMap.getInteractive(position) != null)
-            {
-                listOfInteractivesInGivenRadius.add(interactiveMap.getInteractive(position));
-            }
-        }
-        return listOfInteractivesInGivenRadius;
-    }
-
     public static void main(String[] args)
     {
-
+        ArrayList<Skill> skills = new ArrayList<>();
+        skills.add(Skills.DAGGER_STAB.getSkill());
+        Hero hero = new Hero("", 5, "", 30, 4, 3,
+                null, null, null, null);
+        hero.setBaseDamage(1);
+        Villain villain = VillainFactory.getVillain(0);
+        System.out.println(villain.getHealthPoints());
+        attack(hero, villain, hero.getSkills().get(0));
+        System.out.println(villain.getHealthPoints());
     }
 }

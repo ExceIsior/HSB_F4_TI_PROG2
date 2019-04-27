@@ -1,21 +1,24 @@
+
+
 package control;
 
 import control.Constants.Const;
+import model.Die;
+
 import java.util.Random;
 
-/**
- * Represents a dice that gives a random number back.
- */
-public abstract class DiceController {
+public class DiceController {
 
-    /**
-     * Returns a random number from 0 to 20 "by rolling a die".
-     * @return random number in between 0 and 20.
-     */
-    public static int rollDie()
-    {
+    private static Die die;
+
+    public static int castDie(){
         Random random = new Random();
-        return (int) (random.nextFloat() * Const.NUMBER_CUBE_FACES);
+        Die die = new Die(Const.NUMBER_CUBE_FACES);
+
+        return (int) (random.nextFloat() * die.getNumberOfFaces());
     }
-    
+
+    public static void main(String[] args){
+        System.out.println(DiceController.castDie());
+    }
 }
