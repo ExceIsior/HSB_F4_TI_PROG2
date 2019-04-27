@@ -15,8 +15,8 @@ public class MovementVerifier
     }
 
     public static boolean moveResultsInGameObjectLeavingTile(Position currentPosition, Position newPosition){
-        return Converter.convertMapCoordinatesInTileCoordinates(currentPosition)
-                != Converter.convertMapCoordinatesInTileCoordinates(newPosition);
+        return MovementController.getTileWhichContainsGivenCoordinates(currentPosition)
+                != MovementController.getTileWhichContainsGivenCoordinates(newPosition);
     }
     
 }

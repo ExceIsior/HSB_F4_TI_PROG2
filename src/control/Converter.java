@@ -31,7 +31,8 @@ public class Converter {
         else {
             int tileX = (mapCoordinates.getX() / Const.TILE_SIZE_X);
             int tileY = (mapCoordinates.getY() / Const.TILE_SIZE_Y);
-           
+            
+            //System.out.println("tilex " + tileX + " tiley " + tileY);
             return new Position(tileX, tileY);
         }
     }
