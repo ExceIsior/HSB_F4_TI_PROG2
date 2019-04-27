@@ -99,7 +99,7 @@ public class PhaseController {
     }
     
     /**
-     * Iterates through all Villains and adds Villain to VillainQueue if Villain is on visible Tile
+     * Iterates through all Villains and adds Villain to VillainQueue if Villain is on visible Tile.
      */
     private void putVisibleVillainsInQueue() 
     {
