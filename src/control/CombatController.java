@@ -12,7 +12,7 @@ public class CombatController
 {
     public static void attack(Character character, Position position, Skill skill)
     {
-        ArrayList<Position> arrayList = MovementController.getRangeFelder(skill.getRange(), position);
+        ArrayList<Position> arrayList = MovementController.getMoveFelder(skill.getRange(), position);
         ArrayList<InteractiveContainer> interactivesInAttackRadius = getInteractives(arrayList);
 
         int attackBonus = getDieBonusForCharacter(character);

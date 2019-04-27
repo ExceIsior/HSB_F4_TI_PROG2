@@ -4,6 +4,7 @@ import control.Constants.Const;
 import model.Position;
 import model.map.Dungeon;
 import model.map.Tile;
+import model.gameObject.Character;
 
 import java.util.ArrayList;
 import model.gameObject.GameObject;
@@ -20,12 +21,14 @@ public class MovementController
 
     public static void changePositionOfGameObject(GameObject gameObject, Position newPosition) {
         
+        Position currentPosition = gameObject.getPosition();
+        
         if ( (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(newPosition)) &&
                 movePossibleWithoutStandingOnObstacle(newPosition) &&
                 movePossibleWithoutStandingOnGameObject(newPosition) &&
-                newPositionVisible(newPosition))
+                newPositionVisible(newPosition) &&
+                getMoveFelder(((Character)gameObject).getAgility(), currentPosition).contains(newPosition))
         {   
-            Position currentPosition = gameObject.getPosition();
             Position tilePositionGameObject = Converter.convertMapCoordinatesInTileCoordinates(currentPosition);
             Position fieldPositionGameObject = Converter.convertMapCoordinatesInFieldCoordinates(currentPosition);
             dungeon.getTile(tilePositionGameObject).getField(fieldPositionGameObject).setGameObject(null);
@@ -47,10 +50,10 @@ public class MovementController
      * (Im Umkeis "range") und speichert deren Positionen in einer ArrayListe.
      * Speichert nur Positionen ohne Hindernissen und innerhalb der map.
      */
-    public static ArrayList<Position> getRangeFelder(int range, Position heroPosition)
+    public static ArrayList<Position> getMoveFelder(int range, Position heroPosition)
     {
-         ArrayList<Position> rangeFelder = new ArrayList<>();
-        Position hP = heroPosition;
+        ArrayList<Position> rangeFelder = new ArrayList<>();
+        Position hP = new Position(heroPosition.getX(), heroPosition.getY());
         for (int i=1; i<= (range*2)+1; i++)
         {
             if(i%2 != 0)
@@ -59,9 +62,11 @@ public class MovementController
                 {
                     hP.setX(hP.getX()+1);
                     if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
-                        && hP.getY() <= heroPosition.getY()
-                        && getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
+                        && !newPositionVisible(hP)
+                        && hP.getX() <= heroPosition.getX()+range
+                        && hP.getY() <= heroPosition.getY()+range
+                        && movePossibleWithoutStandingOnObstacle(hP)
+                        && movePossibleWithoutStandingOnGameObject(hP))
                     {
                         rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }                   
@@ -70,9 +75,11 @@ public class MovementController
                 {
                     hP.setY(hP.getY()+1);
                     if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
-                        && hP.getY() <= heroPosition.getY()
-                        && getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
+                        && !newPositionVisible(hP)
+                        && hP.getX() <= heroPosition.getX()+range
+                        
+                        && movePossibleWithoutStandingOnObstacle(hP)
+                        && movePossibleWithoutStandingOnGameObject(hP))
                     {
                         rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }     
@@ -83,9 +90,9 @@ public class MovementController
                 {
                     hP.setX(hP.getX()-1);
                     if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
-                        && hP.getX() <= heroPosition.getX()
-                        && getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
+                        && !newPositionVisible(hP)
+                        && movePossibleWithoutStandingOnObstacle(hP)
+                        && movePossibleWithoutStandingOnGameObject(hP))
                     {
                         rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }                
@@ -94,9 +101,9 @@ public class MovementController
                 {
                     hP.setY(hP.getY()-1);
                     if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
-                        && hP.getY() <= heroPosition.getY()
-                        && getTileWhichContainsGivenCoordinates(hP).getField
-                       (calculateRelativePositionForTile(hP)).getGameObject() == null)
+                        && !newPositionVisible(hP)
+                        && movePossibleWithoutStandingOnObstacle(hP)
+                        && movePossibleWithoutStandingOnGameObject(hP))
                     {
                         rangeFelder.add(new Position(hP.getX(),hP.getY()));  
                     }  
@@ -116,20 +123,20 @@ public class MovementController
     {
         ArrayList<Position> attackFelder = new ArrayList<>();
         Position hP = new Position(attackPosition.getX(), attackPosition.getY());
-        hP.setY(hP.getY()-range);
+      
         
-        for (int i=0; i<=(2*range); i++) 
+        for (int y=0; y<=(2*range); y++) 
         {
-            hP.setX(attackPosition.getX()-range);
-            for (int a=0; a<=(2*range); a++)
+            hP.setY(attackPosition.getY()-range+y);
+            for (int x=0; x<=(2*range); x++)
             {
-                hP.setX(hP.getX()+1);
-                if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP))
+                hP.setX(attackPosition.getX()-range+x);
+                if (!MovementVerifier.moveDoesResultInGameObjectLeavingMap(hP)
+                    && !newPositionVisible(hP))
                 {
                     attackFelder.add(new Position(hP.getX(), hP.getY()));
                 }    
             }
-            hP.setY(hP.getY()+1);
         }           
         return attackFelder;
     }    
@@ -139,8 +146,12 @@ public class MovementController
     public static ArrayList<Position> pathfinder(Position start, Position ziel)
     {
         ArrayList<Position> path = new ArrayList<>();
+        ArrayList<Position> begangeneFelder = new ArrayList<>();
+        Position p1 = new Position(start.getX(), start.getY());
+        Position p2;
+        Position p3;
         
-        
+        //TODO
         
         return path;
     }   
@@ -154,8 +165,7 @@ public class MovementController
         }
         return obstacle;
     }
-    
-    
+        
     private static boolean movePossibleWithoutStandingOnGameObject(Position position) {
         boolean gameObject = true;
         if (dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(position)).
@@ -164,6 +174,7 @@ public class MovementController
         }
         return gameObject;
     }
+    
     private static boolean newPositionVisible(Position position) {
         boolean visible = false;
         Position tilePosition = Converter.convertMapCoordinatesInTileCoordinates(position);
@@ -171,19 +182,5 @@ public class MovementController
             visible = true;
         }
         return visible;
-    }
-
-    private static Position calculateRelativePositionForTile(Position position)
-    {
-        return new Position(position.getX() % Const.TILE_SIZE_X,
-                position.getY() % Const.TILE_SIZE_Y);
-    }
-
-
-    public static Tile getTileWhichContainsGivenCoordinates(Position position)
-    {
-        int xCoordinate = (position.getX() / Const.TILE_SIZE_X);
-        int yCoordinate = (position.getY() / Const.TILE_SIZE_Y);
-        return dungeon.getTile(new Position(xCoordinate, yCoordinate));
     }
 }
