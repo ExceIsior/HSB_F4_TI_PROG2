@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Effect that can modify characters' attributes.
+ * Represents effects that can modify characters' attributes.
  *
  * @author Ismail
  */

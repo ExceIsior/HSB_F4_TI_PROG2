@@ -3,7 +3,7 @@ package model;
 import utilities.IOHelper;
 
 /**
- * Console menu consisting of menu entries.
+ * Represents a menu consisting of menu entries.
  *
  * @author Ismail
  */

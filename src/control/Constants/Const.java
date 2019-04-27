@@ -38,5 +38,7 @@ public interface Const {
     public static final int HEIGHT_OBSTACLE = 20;
     public static final int HEIGHT_CHARACTER = 5;
     public static final int HEIGHT_TERRAIN= 0;
+    
+    public static final int MUSHROOM_ID = 0;
    
 }

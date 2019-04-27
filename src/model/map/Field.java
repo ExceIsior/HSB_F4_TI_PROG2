@@ -7,8 +7,7 @@ import model.gameObject.GameObject;
  *
  * @author Ismail
  */
-public class Field 
-{
+public class Field {
 
 
   //private String texturePath = "";
@@ -24,8 +23,7 @@ public class Field
      * @param visible Visibility status of the field.
      * @param gameObject Game object which is on the field
      */
-    public Field(Terrain terrain, boolean visible, GameObject gameObject) 
-    {
+    public Field(Terrain terrain, boolean visible, GameObject gameObject) {
         this.terrain = terrain;
         this.visible = visible;
     }
@@ -34,8 +32,7 @@ public class Field
      * Initialises an invisible field without any game object.
      * @param terrain Terrain of the field.
      */
-    public Field(Terrain terrain) 
-    {
+    public Field(Terrain terrain) {
         this(terrain, false, null);
     }
 
@@ -43,8 +40,7 @@ public class Field
      * Initialises an invisible field without a terrain.
      * @param gameObject Game object that should be "standing" on the field.
      */
-    public Field(GameObject gameObject) 
-    {
+    public Field(GameObject gameObject) {
         this(null, false, gameObject);
     }
 
@@ -52,8 +48,7 @@ public class Field
      * Returns the terrain type
      * @return Terrain
      */
-    public Terrain getTerrain() 
-    {
+    public Terrain getTerrain() {
         return terrain;
     }
 
@@ -61,8 +56,7 @@ public class Field
      * Returns the current visibility status of the field.
      * @return Visibility status
      */
-    public boolean isVisibile() 
-    {
+    public boolean isVisibile() {
         return visible;
     }
 
@@ -70,8 +64,7 @@ public class Field
      * Sets the visibility status of the field
      * @param visible Visibility
      */
-    public void setVisible(boolean visible) 
-    {
+    public void setVisible(boolean visible) {
         this.visible = visible;
     }
 
@@ -79,8 +72,7 @@ public class Field
      * Returns the game object on the field.
      * @return Game object of the field.
      */
-    public GameObject getGameObject() 
-    {
+    public GameObject getGameObject() {
         return gameObject;
     }
 
@@ -88,14 +80,12 @@ public class Field
      * Sets the game object which should be on the field.
      * @param gameObject Game object which should be on the field.
      */
-    public void setGameObject(GameObject gameObject) 
-    {
+    public void setGameObject(GameObject gameObject) {
         this.gameObject = gameObject;
     }
 
     @Override
-    public String toString() 
-    {
+    public String toString() {
         if (gameObject != null) {
             return gameObject.getGraphicsPath();
         } else {

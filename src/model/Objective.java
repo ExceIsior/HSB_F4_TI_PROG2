@@ -1,7 +1,6 @@
 package model;
 
 import model.gameObject.GameObject;
-import model.gameObject.Interactive;
 
 /**
  * Represents a quest objective that the player has to accomplish.
@@ -10,32 +9,18 @@ import model.gameObject.Interactive;
  */
 public class Objective {
 
-    private Interactive interactive = null;
-    private int targetCount = 0;
-    private int progressCount = 0;
+    private GameObject gameObject = null;
+    private int count = 0;
 
     /**
      * Initialises the objective.
      *
-     * @param interactive Game object that has to be collected or killed.
+     * @param gameObject Game object that has to be collected or killed.
      * @param count Amount of game objects that need to be collected or killed.
      */
-    public Objective(Interactive interactive, int count) {
-        this.interactive = interactive;
-        this.targetCount = count;
-    }
-
-    /**
-     * Checks if the killed/collected interactive was the target of this
-     * objective. If positive, increments the progress counter otherwise does
-     * nothing.
-     *
-     * @param interactive
-     */
-    public void addToProgress(Interactive interactive) {
-        if (this.interactive.equals(interactive)) {
-            this.progressCount++;
-        }
+    public Objective(GameObject gameObject, int count) {
+        this.gameObject = gameObject;
+        this.count = count;
     }
 
     /**
@@ -43,17 +28,17 @@ public class Objective {
      *
      * @return Target game object
      */
-    public Interactive getInteractive() {
-        return this.interactive;
+    public GameObject getGameObject() {
+        return gameObject;
     }
 
     /**
      * Sets the target game object.
      *
-     * @param interactive New target game object.
+     * @param gameObject New target game object.
      */
-    public void setInteractive(Interactive interactive) {
-        this.interactive = interactive;
+    public void setGameObject(GameObject gameObject) {
+        this.gameObject = gameObject;
     }
 
     /**
@@ -62,7 +47,7 @@ public class Objective {
      * @return Amount of the target game object to be killed or collected.
      */
     public int getCount() {
-        return this.targetCount;
+        return count;
     }
 
     /**
@@ -71,7 +56,7 @@ public class Objective {
      * @param count New target amount.
      */
     public void setCount(int count) {
-        this.targetCount = count;
+        this.count = count;
     }
 
     /**
@@ -80,6 +65,6 @@ public class Objective {
      * @return Result whether objective has been completed or not.
      */
     public boolean objectiveComplete() {
-        return this.progressCount >= this.targetCount;
+        return true;
     }
 }

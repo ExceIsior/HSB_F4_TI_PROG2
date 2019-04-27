@@ -1,24 +1,25 @@
 package model.Factories;
 
+import control.Constants.BossConst;
 import control.Constants.VillainConst;
 import control.Enums.Skills;
 import java.util.Arrays;
+import model.gameObject.Boss;
 import model.gameObject.Villain;
 
 /**
  * This class supplies instances of Villain class.
  * @author Ismail
  */
-public class VillainFactory 
-{
+public class VillainFactory {
 
     /**
      * Instantiates an object of Villain
-     * @param villainID ID of the Villain type that is to be instantiated.
+     * @param villainId ID of the Villain type that is to be instantiated.
      * @return Object of Villain.
      */
-    public static Villain getVillain(int villainID) {
-        switch (villainID) {
+    public static Villain getVillain(int villainId) {
+        switch (villainId) {
             case  VillainConst.ORK_ID:
                 return new Villain(VillainConst.ORK_RES_PATH,
                         VillainConst.ORK_DEFAULT_ARMOR,

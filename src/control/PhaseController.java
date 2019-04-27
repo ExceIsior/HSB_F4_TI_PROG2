@@ -1,6 +1,6 @@
 package control;
 
-import control.Constants.PhaseConst;
+import control.Constants.Const;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import model.Position;
@@ -8,99 +8,97 @@ import model.gameObject.Hero;
 import java.util.Arrays;
 import model.gameObject.Villain;
 import model.map.Dungeon;
-import model.phasen.HeroPhase;
+import model.map.Field;
+import model.map.Tile;
 
 public class PhaseController {
-    //todo
-    private ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
-    private ConcurrentLinkedQueue<Villain> villainQueue = new ConcurrentLinkedQueue<>();
-    private final Scanner Listener = new Scanner(System.in);
-    private VisibilityController visibilityController = null;
-    private Dungeon dungeon = null;
-    private Villain[] villains = null;
-    private boolean gameOver = false;
+    
+    private Scanner positionListener = new Scanner(System.in);
     private int phaseID = 1;
+    private ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
+    private Dungeon dungeon = null;
+    private MovementController moveController = null;
+    private boolean gameOn = true;
+    private VisibilityController visibilityController = null;
+    private Villain[] villains = null;
+    private ConcurrentLinkedQueue<Villain> villainQueue = new ConcurrentLinkedQueue<>();
     
     public PhaseController(Dungeon dungeon, Villain[] villains) {
         this.dungeon = dungeon;
         this.villains = villains;
-        MovementController.setDungeon(dungeon);
-        this.visibilityController = new VisibilityController(this.dungeon);
+  
+        moveController = new MovementController(this.dungeon);
+        visibilityController = new VisibilityController(this.dungeon);
     }
     
     public void startGame() {
         int count = 0;
-        while(!gameOver) 
-        {
+        while(gameOn) {
         switch(this.phaseID)
         {
             case(1):
-//                if (dungeon.getQuest().checkAllObjectives()) 
-//                {
-//                    gameOver = true;
-//                    break;
-//                }
-                
-                MapController.printOutDungeon(dungeon);
-                
+                MapController.ausgeben(dungeon);
+                System.out.println("HEROPHASE");
+                System.out.println("erste Position");
+                int x = positionListener.nextInt();
+                int y = positionListener.nextInt();
                 heroQueue.add(heroQueue.peek());
-                HeroPhase heroPhase = new HeroPhase(heroQueue.poll());
-                heroPhase.inform();
+                this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
+                MapController.ausgeben(dungeon);
                 
-                MapController.printOutDungeon(dungeon);
-                
+                count++;
+                if (count == 5) {
+                    gameOn = false;
+                }
                 this.phaseID = 2;
-                break;
+                //break;
                 
             case(2):
-                System.out.println(PhaseConst.EXPLORATION_PHASE);
+                System.out.println("EXPLORATIONPHASE");
                 visibilityController.explorateTile();
                 
-                putVisibleVillainsInQueue();
+                putVillainsInQueue();
                 
-                MapController.printOutDungeon(dungeon);
+                MapController.ausgeben(dungeon);
                 this.phaseID = 4;
-                break;
+                //break;
                 
             //Encounterphase wird uebersprungen
             case(3):
-                System.out.println(PhaseConst.ENCOUNTER_PHASE);
+                System.out.println("ENCOUNTERPHASE");
                 this.phaseID = 4;
-                break;
+                //break;
                 
             case(4):
-                System.out.println(PhaseConst.VILLAIN_PHASE);
+                System.out.println("VILLAINPHASE");
                 
-                //Ueberprueft ob die VillainQueue ein Villain enthaelt
+                //ueberprueft ob die VillainQueue ein Villain enthaelt
                 if (!villainQueue.isEmpty()) 
                 {
-                    System.out.println("Villain: " + villainQueue.poll().getGraphicsPath());
+                    System.out.println("aktuelles Villain" + villainQueue.poll().getGraphicsPath());
                 }
                 else {
-                    System.out.println("Kein Villain in Queue");
+                    System.out.println("kein Villain in Queue");
                 }
                 this.phaseID = 1;
-                break;
-                
+                //break;
             default:
                 break;
         
             }  
         }   
     }
-    
-    /**
-     * Iterates through all Villains and adds Villain to VillainQueue if Villain is on visible Tile.
-     */
-    private void putVisibleVillainsInQueue() 
+    private void putVillainsInQueue() 
     {
         for (int i = 0; i < villains.length; i++) 
-        {
-            Position villainPositionTile = Converter.convertMapCoordinatesInTileCoordinates(villains[i].getPosition());
-            if (dungeon.getMap()[villainPositionTile.getX()][villainPositionTile.getY()].isVisible()) 
-            {
-                villainQueue.add(villains[i]);
-            }
-        }
+                {
+                    Position villainPositionTile = Converter.convertMapCoordinatesInTileCoordinates(villains[i].getPosition());
+                    if (dungeon.getMap()[villainPositionTile.getX()][villainPositionTile.getY()].isVisible()) {
+                        villainQueue.add(villains[i]);
+                    }
+                    else {
+                        
+                    }
+                }
     }
 }

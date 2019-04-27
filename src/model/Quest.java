@@ -1,7 +1,5 @@
 package model;
 
-import model.gameObject.Interactive;
-
 /**
  * Represents a quest for a dungeon. Consists of a reward and objectives.
  *
@@ -25,19 +23,6 @@ public class Quest {
     }
 
     /**
-     * Iterates through all objectives and adds the killed/collected
-     * villain/quest item to the progress if the respective object was part of
-     * the objective.
-     *
-     * @param interactive Villain/QuestItem that has been killed/collected.
-     */
-    public void addToProgress(Interactive interactive) {
-        for (Objective objective : this.objective) {
-            objective.addToProgress(interactive);
-        }
-    }
-
-    /**
      * Retrieves the quest's reward.
      *
      * @return Reward.
@@ -52,20 +37,7 @@ public class Quest {
      * @return Array of objectives.
      */
     public Objective[] getObjective() {
-        return this.objective;
+        return objective;
     }
 
-    /**
-     * Checks if all Objectives are complete.
-     *
-     * @return true if all Objectives are complete.
-     */
-    public boolean checkAllObjectives() {
-        for (Objective objective : this.objective) {
-            if (!objective.objectiveComplete()) {
-                return false;
-            }
-        }
-        return true;
-    }
 }

@@ -4,24 +4,29 @@ import control.Constants.Const;
 import model.Position;
 import model.gameObject.Hero;
 import model.map.Dungeon;
+import model.map.Tile;
 
 /**
- * Controls and changes the visibility of all tiles.
+ * Controls the Visibility of all Tiles
+ * @author reenawichmann
  */
 public class VisibilityController 
 {
+    private Position position = null;
     private HeroManager heroManager = HeroManager.getInstance();
     private Dungeon dungeon = null;
-    private boolean explorate = true;
-  
-    public VisibilityController(Dungeon dungeon) 
-    {
+    
+    /**
+     * Uebergibt das dungeon
+     * @param dungeon 
+     */
+    public VisibilityController(Dungeon dungeon) {
         this.dungeon = dungeon;
     }
     
     /**
-     * Explorates a new tile if the hero is at a border and the discovering tile 
-     * is not outside of the map.
+     * Deckt ein weiteres Teil auf, wenn ein Hero am Rand eines Tiles steht und 
+     * sich das aufzudeckende Tile nicht ausserhalb der Map befindet
      */
     public void explorateTile()
     {
@@ -29,17 +34,16 @@ public class VisibilityController
         {
             if (this.checkBorder(heroManager.getHeroes()[i]) && this.checkOutsideOfMap(heroManager.getHeroes()[i]))
             {
-                    this.setTileVisible(heroManager.getHeroes()[i]); 
+                this.getTile(heroManager.getHeroes()[i]).setVisible(true);
+                
             }
         }
     }
     
-    
     /**
-     * Checks if the hero is in one of the outside tiles to verify if the 
-     * discovering tile is inside of the map.
-     * @param hero who is at a border
-     * @return inside: true if inside of map, false if outside of map
+     * Ueberprueft ob sich das aufzudeckende Tile ausserhalb der Map befindet
+     * @param hero
+     * @return inside: true wenn innerhalb, false wenn ausserhalb
      */
     private boolean checkOutsideOfMap(Hero hero) {
         boolean inside = true;
@@ -53,14 +57,15 @@ public class VisibilityController
     }
     
     /**
-     * Checks if the current position of the hero is at a border of the tile.
+     * Ueberprueft ob ein Hero am Rand eines Tiles steht
      * @param hero
-     * @return border: true if hero is at border, false if not
+     * @return border: true wenn am Rand, false wenn nicht
      */
     private boolean checkBorder(Hero hero) 
     {
         Position fieldPosition = Converter.convertMapCoordinatesInFieldCoordinates(hero.getPosition());
         boolean border = false;
+            //checkt ob die currentPosition vom Hero am Rand eines Tiles ist
             if ( fieldPosition.getX() == 0 || fieldPosition.getX() == 3 ||
                     fieldPosition.getY() == 0 || fieldPosition.getY() == 3)
             {
@@ -70,72 +75,41 @@ public class VisibilityController
     }
     
     /**
-     * Sets the tile or tiles visible which are close to the hero.
-     * @param hero who is on the border
+     * Gibt das Tile zurueck, welches aufgedeckt werden soll
+     * @param hero
+     * @return 
      */
-    private void setTileVisible(Hero hero) 
+    private Tile getTile(Hero hero) 
     {
+        Tile tile = null;
         Position tilePosition = Converter.convertMapCoordinatesInTileCoordinates(hero.getPosition());
         Position fieldPosition = Converter.convertMapCoordinatesInFieldCoordinates(hero.getPosition());
-        int x = tilePosition.getX();
-        int y = tilePosition.getY();
         
-        //Checks if the hero is on the upper border
         if (fieldPosition.getY() == 0) 
         {
-            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x, y-1)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x, y-1)).setVisible(true);
-            }
-            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x-1, y)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x-1, y)).setVisible(true);
-            }
-            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x, y-1)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x, y-1)).setVisible(true);
-            }
-            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x+1, y)).setVisible(true);
-            }
-            else {
-                dungeon.getTile(new Position(x, y-1)).setVisible(true);
-            }
+            int x = tilePosition.getX();
+            int y = tilePosition.getY() - 1;
+            tile = dungeon.getTile(new Position(x, y));
         }
-        //Checks if the hero is on the bottom border
-        else if (fieldPosition.getY() == Const.TILE_SIZE_Y-1) 
+        if (fieldPosition.getY() == 3) 
         {
-            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x, y+1)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x, y+1)).setVisible(true);
-            }
-            if ( fieldPosition.getX() == 0 && (!dungeon.getTile(new Position(x-1, y)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x-1, y)).setVisible(true);
-            }
-            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x, y+1)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x, y+1)).setVisible(true);
-            }
-            if ( fieldPosition.getX() == Const.TILE_SIZE_X-1 && (!dungeon.getTile(new Position(x+1, y)).isVisible()) ) 
-            {  
-                dungeon.getTile(new Position(x+1, y)).setVisible(true);
-            }
-            else {
-                dungeon.getTile(new Position(x, y+1)).setVisible(true);
-            }
+            int x = tilePosition.getX();
+            int y = tilePosition.getY() + 1;
+            tile = dungeon.getTile(new Position(x, y));
         }
-        //Checks if the hero is on the left border
-        else if (fieldPosition.getX() == 0) 
+        if (fieldPosition.getX() == 0) 
         {
-            dungeon.getTile(new Position(x-1, y)).setVisible(true);
+            int x = tilePosition.getX() - 1;
+            int y = tilePosition.getY();
+            tile = dungeon.getTile(new Position(x, y));
         }
-        //Checks if the hero is on the right border
-        else if (fieldPosition.getX() == Const.TILE_SIZE_X-1) 
+        if (fieldPosition.getX() == 3) 
         {
-            dungeon.getTile(new Position(x+1, y)).setVisible(true);
+            int x = tilePosition.getX() + 1;
+            int y = tilePosition.getY();
+            tile = dungeon.getTile(new Position(x, y));
         }
+        return tile;
     }
 
 }

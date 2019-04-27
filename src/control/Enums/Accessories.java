@@ -3,10 +3,11 @@ package control.Enums;
 import control.Constants.AccessoryConst;
 import control.Constants.HeroConst;
 import control.Constants.ItemConst;
+import model.item.Equipment.Weapon;
+import control.Constants.WeaponConst;
 import model.item.Equipment.Accessory;
 
-public enum Accessories 
-{
+public enum Accessories {
     RUSTY_TALISMAN(new Accessory(
             ItemConst.COMMON,
             AccessoryConst.RUSTY_TALISMAN_NAME,
@@ -22,13 +23,11 @@ public enum Accessories
 
     private Accessory accessory;
 
-    private Accessories(Accessory accessory) 
-    {
+    private Accessories(Accessory accessory) {
         this.accessory = accessory;
     }
 
-    public Accessory getAccessory() 
-    {
+    public Accessory getAccessory() {
         return this.accessory;
     }
 }

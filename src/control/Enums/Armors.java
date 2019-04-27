@@ -6,8 +6,7 @@ import control.Constants.ItemConst;
 import model.item.Equipment.Armor;
 import control.Constants.WeaponConst;
 
-public enum Armors 
-{
+public enum Armors {
     RUSTY_PLATE_ARMOR(new Armor(
             ItemConst.COMMON,
             ArmorConst.RUSTY_PLATE_ARMOR_NAME,
@@ -23,13 +22,11 @@ public enum Armors
 
     private Armor armor;
 
-    private Armors(Armor armor) 
-    {
+    private Armors(Armor armor) {
         this.armor = armor;
     }
 
-    public Armor getArmor() 
-    {
+    public Armor getArmor() {
         return this.armor;
     }
 }

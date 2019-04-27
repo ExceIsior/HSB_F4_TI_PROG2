@@ -1,29 +1,20 @@
+
 package control;
 
 import control.Constants.Const;
 import model.Position;
 
-/**
- * Converts MapCoordinates into Field and TileCoordinates and the other way around.
- */
-public abstract class Converter 
-{
-    /**
-     * Converts Tile and FieldCoordinates into MapCoordinates
-     * @param tileCoordinates Tile coordinates as a Position
-     * @param fieldCoordinates Field coordinates as a Position
-     * @return Position with MapCoordinates
-     */  
-    public static Position convertTileFieldCoordinatesInMapCoordinates(Position tileCoordinates, Position fieldCoordinates) 
-    {
+
+public class Converter {
+    
+    
+    public static Position convertTileFieldCoordinatesInMapCoordinates(Position tileCoordinates, Position fieldCoordinates) {
         //TODO Exception wenn ausserhalb eines fields
-        if (fieldCoordinates.getX() >= Const.TILE_SIZE_X || fieldCoordinates.getY() >= Const.TILE_SIZE_Y) 
-        {
+        if (fieldCoordinates.getX() >= Const.TILE_SIZE_X || fieldCoordinates.getY() >= Const.TILE_SIZE_Y) {
             System.out.println("falsches field");
             return null;
         }
-        else 
-        {
+        else {
             int mapX = (Const.TILE_SIZE_X * tileCoordinates.getX()) + fieldCoordinates.getX();
             int mapY = (Const.TILE_SIZE_Y * tileCoordinates.getY()) + fieldCoordinates.getY();
             System.out.println("map X " + mapX + " mapY " +  mapY);
@@ -31,43 +22,27 @@ public abstract class Converter
         }
     }
     
-    /**
-     * Converts MapCoordinates into TileCoordinates
-     * @param mapCoordinates Map coordinates as a Position
-     * @return Position with TileCoordinates
-     */
-    public static Position convertMapCoordinatesInTileCoordinates(Position mapCoordinates) 
-    {
+    public static Position convertMapCoordinatesInTileCoordinates(Position mapCoordinates) {
         if (mapCoordinates.getX() > Const.MAP_SIZE_X * Const.TILE_SIZE_X || 
-                mapCoordinates.getY() > Const.MAP_SIZE_Y * Const.TILE_SIZE_Y ) 
-        {
-            System.out.println((Const.MAP_SIZE_X * Const.TILE_SIZE_X) + " + outside of map");
+                mapCoordinates.getY() > Const.MAP_SIZE_Y * Const.TILE_SIZE_Y ) {
+            System.out.println((Const.MAP_SIZE_X * Const.TILE_SIZE_X) + " + ausserhalb der map");
             return null;
         }
         else {
             int tileX = (mapCoordinates.getX() / Const.TILE_SIZE_X);
             int tileY = (mapCoordinates.getY() / Const.TILE_SIZE_Y);
-            
-            //System.out.println("tilex " + tileX + " tiley " + tileY);
+           
             return new Position(tileX, tileY);
         }
     }
     
-    /**
-     * Converts MapCoordinates in FieldCoordinates
-     * @param mapCoordinates Map coordinates as a Position
-     * @return Position with FieldCoordinates
-     */
-    public static Position convertMapCoordinatesInFieldCoordinates(Position mapCoordinates) 
-    {
+    public static Position convertMapCoordinatesInFieldCoordinates(Position mapCoordinates) {
         if (mapCoordinates.getX() > Const.MAP_SIZE_X * Const.TILE_SIZE_X || 
-                mapCoordinates.getY() > Const.MAP_SIZE_Y * Const.TILE_SIZE_Y ) 
-        {
-            System.out.println((Const.MAP_SIZE_X * Const.TILE_SIZE_X) + " + outside of map");
+                mapCoordinates.getY() > Const.MAP_SIZE_Y * Const.TILE_SIZE_Y ) {
+            System.out.println((Const.MAP_SIZE_X * Const.TILE_SIZE_X) + " + ausserhalb der map");
             return null;
         }
-        else 
-        {
+        else {
             int fieldX = (mapCoordinates.getX() % Const.TILE_SIZE_X);
             int fieldY = (mapCoordinates.getY() % Const.TILE_SIZE_Y);
             

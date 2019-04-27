@@ -2,15 +2,11 @@ package control.Enums;
 
 import control.Constants.HeroConst;
 import control.Constants.ItemConst;
+import model.item.Equipment.Equipment;
 import model.item.Equipment.Weapon;
 import control.Constants.WeaponConst;
 
-/**
- * This enumeration holds weapons for all heroes.
- * @author Ismail
- */
 public enum Weapons {
-
     RUSTY_LONG_SWORD(new Weapon(
             ItemConst.COMMON,
             WeaponConst.RUSTY_SWORD_NAME,
@@ -26,17 +22,11 @@ public enum Weapons {
 
     private Weapon weapon;
 
-    private Weapons(Weapon weapon) 
-    {
+    private Weapons(Weapon weapon) {
         this.weapon = weapon;
     }
 
-    /**
-     * Returns the weapon instance
-     * @return Instance of selected weapon
-     */
     public Weapon getWeapon() {
-
         return this.weapon;
     }
 }

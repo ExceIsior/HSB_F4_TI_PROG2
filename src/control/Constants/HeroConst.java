@@ -53,6 +53,4 @@ public interface HeroConst {
     public static final Position MAGE_STARTING_POSITION = new Position(10, 9);
     public static final Position ASSASSIN_STARTING_POSITION = new Position(9, 10);
     public static final Position RANGER_STARTING_POSITION = new Position(10, 10);
-    
-    public static final int HERO_ACTION_POINTS = 2;
 }
