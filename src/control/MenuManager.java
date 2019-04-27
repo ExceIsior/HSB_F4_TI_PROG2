@@ -13,6 +13,10 @@ import model.item.Equipment.Weapon;
 import utilities.IOHelper;
 import control.Enums.Accessories;
 import control.Enums.Armors;
+import view.ConsoleMenu.CraftingMenu;
+import view.ConsoleMenu.DungeonMenu;
+import view.ConsoleMenu.GameMenu;
+import view.ConsoleMenu.MainMenu;
 
 /**
  * This singleton class holds and generates the game's menus.
@@ -21,100 +25,33 @@ import control.Enums.Armors;
  */
 public class MenuManager {
 
-    private Menu mainMenu = null;
-    private Menu gameMenu = null;
-    private Menu dungeonMenu = null;
-    private Menu craftingMenuHeroSelection = null;
-    private Menu craftingMenuEquipmentTypeSelection = null;
+    private MainMenu mainMenu = null;
+    private GameMenu gameMenu = null;
+    private DungeonMenu dungeonMenu = null;
+    private CraftingMenu craftMenu = null;
+//    private Menu craftingMenuHeroSelection = null;
+//    private Menu craftingMenuEquipmentTypeSelection = null;
 
     /**
      * Instantiates the constant Menus.
      */
     public MenuManager() {
-        this.mainMenu = this.initMainMenu();
-        this.gameMenu = this.initGameMenu();
-        this.dungeonMenu = this.initDungeonMenu();
-        this.craftingMenuHeroSelection = this.initCraftingMenuHeroSelect();
-        this.craftingMenuEquipmentTypeSelection = this.initCraftingMenuEquipmentTypeSelection();
-    }
-
-    /**
-     * Initialises the main menu
-     *
-     * @return Main menu
-     */
-    private Menu initMainMenu() {
-        return new Menu(
-                MenuConst.MAIN_MENU_TITLE,
-                MenuConst.MAIN_MENU_NEW_GAME,
-                MenuConst.MAIN_MENU_LOAD_GAME,
-                MenuConst.MAIN_MENU_QUIT);
-    }
-
-    /**
-     * Initialises the game menu
-     *
-     * @return Game menu
-     */
-    private Menu initGameMenu() {
-        return new Menu(
-                MenuConst.GAME_MENU_TITLE,
-                MenuConst.GAME_MENU_SELECT_DUNGEON,
-                MenuConst.GAME_MENU_CRAFTING,
-                MenuConst.GAME_MENU_SAVE_GAME,
-                MenuConst.RETURN_TO_MAIN_MENU);
-    }
-
-    /**
-     * Initialises the dungeon selection menu
-     *
-     * @return Dungeon menu
-     */
-    private Menu initDungeonMenu() {
-        String[] dungeons = new String[DungeonConst.class.getDeclaredFields().length];
-        for (int i = 0; i < dungeons.length; i++) {
-            try {
-                dungeons[i] = (String) DungeonConst.class.getDeclaredFields()[i].get(null);
-            } catch (IllegalArgumentException | IllegalAccessException e) {
-                System.err.println(ErrorConst.DUNGEON_NAME_COULD_NOT_BE_ACCESSED);
-                dungeons[i] = "Dungeon " + i;
-            }
-        }
-        return new Menu(MenuConst.DUNGEON_MENU_TITLE, dungeons);
-    }
-
-    /**
-     * Initialises the first layer of the crafting menu where the hero has to be
-     * selected for which a new equipment part should be crafted.
-     *
-     * @return First layer of crafting menu (Hero Select)
-     */
-    private Menu initCraftingMenuHeroSelect() {
-        String[] heroes = new String[HeroManager.getInstance().getHeroes().length];
-        for (int i = 0; i < heroes.length; i++) {
-            heroes[i] = HeroManager.getInstance().getHeroes()[i].getName();
-        }
-        return new Menu(MenuConst.CRAFTING_MENU_TITLE, heroes);
-    }
-
-    /**
-     * Initialises the second layer of the crafting menu where the equipment
-     * type has to be selected.
-     *
-     * @return Second layer of crafting menu (Equipment Type Select)
-     */
-    private Menu initCraftingMenuEquipmentTypeSelection() {
-        return new Menu(MenuConst.CRAFTING_MENU_TITLE,
-                MenuConst.CRAFTING_MENU_WEAPON,
-                MenuConst.CRAFTING_MENU_ARMOR,
-                MenuConst.CRAFTING_MENU_ACCESSORY);
+        this.mainMenu = new MainMenu();
+        this.gameMenu = new GameMenu();
+        this.dungeonMenu = new DungeonMenu();
+        this.craftMenu = new CraftingMenu();
+//        this.mainMenu = this.initMainMenu();
+//        this.gameMenu = this.initGameMenu();
+//        this.dungeonMenu = this.initDungeonMenu();
+//        this.craftingMenuHeroSelection = this.initCraftingMenuHeroSelect();
+//        this.craftingMenuEquipmentTypeSelection = this.initCraftingMenuEquipmentTypeSelection();
     }
 
     /**
      * Prints the main menu and prompts user to navigate through the menus.
      */
     public void promptMainMenu() {
-        switch (this.mainMenu.promptMenu()) {
+        switch (this.mainMenu.getMainMenu().promptMenu()) {
             case 0:
                 this.promptGameMenu();
                 break;
@@ -133,7 +70,7 @@ public class MenuManager {
      * menus.
      */
     private void promptGameMenu() {
-        switch (this.gameMenu.promptMenu()) {
+        switch (this.gameMenu.getGameMenu().promptMenu()) {
             case 0:
                 this.promptDungeonMenu();
                 break;
@@ -152,7 +89,7 @@ public class MenuManager {
      * play.
      */
     private void promptDungeonMenu() {
-        new GameController(this.dungeonMenu.promptMenu()).start();
+        new GameController(this.dungeonMenu.getMainMenu().promptMenu()).start();
     }
 
     /**
@@ -160,29 +97,29 @@ public class MenuManager {
      * hero.
      */
     private void promptCraftingMenuHeroSelection() {
-        this.promptCraftingMenuEquipmentSelection(this.craftingMenuHeroSelection.promptMenu());
+        this.promptCraftingMenuEquipmentSelection(this.craftMenu.getHeroSelect().promptMenu());
     }
 
     /**
      * Prints the second layer of the crafting menu and prompts user to select a
      * equipment type.
      *
-     * @param hero Selected hero id to craft equipment for
+     * @param heroID Selected hero id to craft equipment for
      */
-    private void promptCraftingMenuEquipmentSelection(int hero) {
-        switch (this.craftingMenuEquipmentTypeSelection.promptMenu()) {
+    private void promptCraftingMenuEquipmentSelection(int heroID) {
+        switch (this.craftMenu.getEquipmentTypeSelect().promptMenu()) {
             case 0:
-                this.promptCraftingMenuWeapon(hero);
+                this.promptCraftingMenuWeapon(heroID);
                 break;
             case 1:
-                this.promptCraftingMenuArmor(hero);
+                this.promptCraftingMenuArmor(heroID);
                 break;
             case 2:
-                this.promptCraftingMenuAccessory(hero);
+                this.promptCraftingMenuAccessory(heroID);
                 break;
         }
     }
-
+    
     /**
      * Prints crafting menu to craft weapons for specified hero.
      *
@@ -257,3 +194,117 @@ public class MenuManager {
         private static final MenuManager INSTANCE = new MenuManager();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//    /**
+//     * Initialises the main menu
+//     *
+//     * @return Main menu
+//     */
+//    private Menu initMainMenu() {
+//        return new Menu(
+//                MenuConst.MAIN_MENU_TITLE,
+//                MenuConst.MAIN_MENU_NEW_GAME,
+//                MenuConst.MAIN_MENU_LOAD_GAME,
+//                MenuConst.MAIN_MENU_QUIT);
+//    }
+//
+//    /**
+//     * Initialises the game menu
+//     *
+//     * @return Game menu
+//     */
+//    private Menu initGameMenu() {
+//        return new Menu(
+//                MenuConst.GAME_MENU_TITLE,
+//                MenuConst.GAME_MENU_SELECT_DUNGEON,
+//                MenuConst.GAME_MENU_CRAFTING,
+//                MenuConst.GAME_MENU_SAVE_GAME,
+//                MenuConst.RETURN_TO_MAIN_MENU);
+//    }
+//
+//    /**
+//     * Initialises the dungeon selection menu
+//     *
+//     * @return Dungeon menu
+//     */
+//    private Menu initDungeonMenu() {
+//        String[] dungeons = new String[DungeonConst.class.getDeclaredFields().length];
+//        for (int i = 0; i < dungeons.length; i++) {
+//            try {
+//                dungeons[i] = (String) DungeonConst.class.getDeclaredFields()[i].get(null);
+//            } catch (IllegalArgumentException | IllegalAccessException e) {
+//                System.err.println(ErrorConst.DUNGEON_NAME_COULD_NOT_BE_ACCESSED);
+//                dungeons[i] = "Dungeon " + i;
+//            }
+//        }
+//        return new Menu(MenuConst.DUNGEON_MENU_TITLE, dungeons);
+//    }
+//
+//    /**
+//     * Initialises the first layer of the crafting menu where the hero has to be
+//     * selected for which a new equipment part should be crafted.
+//     *
+//     * @return First layer of crafting menu (Hero Select)
+//     */
+//    private Menu initCraftingMenuHeroSelect() {
+//        String[] heroes = new String[HeroManager.getInstance().getHeroes().length];
+//        for (int i = 0; i < heroes.length; i++) {
+//            heroes[i] = HeroManager.getInstance().getHeroes()[i].getName();
+//        }
+//        return new Menu(MenuConst.CRAFTING_MENU_TITLE, heroes);
+//    }
+//
+//    /**
+//     * Initialises the second layer of the crafting menu where the equipment
+//     * type has to be selected.
+//     *
+//     * @return Second layer of crafting menu (Equipment Type Select)
+//     */
+//    private Menu initCraftingMenuEquipmentTypeSelection() {
+//        return new Menu(MenuConst.CRAFTING_MENU_TITLE,
+//                MenuConst.CRAFTING_MENU_WEAPON,
+//                MenuConst.CRAFTING_MENU_ARMOR,
+//                MenuConst.CRAFTING_MENU_ACCESSORY);
+//    }
+
+
+
+
+
+
+
+
+
+
+

@@ -20,7 +20,9 @@ public interface MenuConst {
     public static final String DUNGEON_MENU_DUNGEON_3 = "Dungeon 3";
     
     
-    public static final String CRAFTING_MENU_TITLE = "Crafting";
+    public static final String CRAFTING_MENU_TITLE = "Crafting: %s - %s";
+    public static final String CRAFTING_MENU_HERO_SELECT = "Hero Select";
+    public static final String CRAFTING_MENU_EQUIPMENT_TYPE_SELECT = "Equipment Type Select";
     public static final String CRAFTING_MENU_WEAPON = "Weapon";
     public static final String CRAFTING_MENU_ARMOR = "Armor";
     public static final String CRAFTING_MENU_ACCESSORY = "Accessory";
