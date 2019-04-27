@@ -20,7 +20,7 @@ public class CombatController
         if (defender.getGraphicsPath().equals(Const.TRAP_PATH))
         {
             attack(attacker, skill, (Trap) defender);
-        } else if (defender.getGraphicsPath().equals("ZO1"))
+        } else if (defender.getGraphicsPath().contains(Const.CHARACTERS_PATH))
         {
             System.out.println("defender");
             attack(attacker, (Character) defender, skill);

@@ -16,7 +16,7 @@ public abstract class Character extends Interactive {
     private int agility = 0;
     private Status status = null;
     private List<Skill> skills = null;
-    private int baseDamage = 0;
+    private int baseDamage = 1;
 
     /**
      * Initialises a character object
