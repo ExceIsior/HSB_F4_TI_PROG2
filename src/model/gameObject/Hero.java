@@ -37,7 +37,7 @@ public class Hero extends Character {
             int healthPoints,
             int maxHealthPoints,
             int agility,
-            List<Status> status,
+            Status status,
             List<Skill> skills,
             Inventory<HeroItem> inventory,
             EquipmentSet equipmentSet) {

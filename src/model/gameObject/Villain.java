@@ -28,7 +28,7 @@ public class Villain extends Character {
      * @param skills List of skills that the villain can use.
 */
  
-    public Villain(String graphicsPath, int armor, Item loot, String name, int healthPoints, int maxHealthPoints, int agility, List<Status> status, List<Skill> skills) {
+    public Villain(String graphicsPath, int armor, Item loot, String name, int healthPoints, int maxHealthPoints, int agility, Status status, List<Skill> skills) {
         super(graphicsPath, armor, loot, name, healthPoints, maxHealthPoints, agility, status, skills);
     }
 

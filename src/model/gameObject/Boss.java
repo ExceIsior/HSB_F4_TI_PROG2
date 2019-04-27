@@ -30,7 +30,7 @@ public class Boss extends Villain
             int healthPoints, 
             int maxHealthPoints,
             int agility, 
-            List<Status> status,
+            Status status,
             List<Skill> skills) 
     {
         super(graphicsPath, 

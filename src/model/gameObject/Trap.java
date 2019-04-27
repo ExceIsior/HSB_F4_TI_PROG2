@@ -1,26 +1,20 @@
 package model.gameObject;
 
-import model.Position;
 import control.Constants.Const;
+import model.Position;
 
-/**
- * Trap on a field that may be disarmed or traversed in exchange for damage.
- *
- * @author Ismail
- */
-public class Trap extends Interactive {
-
+public class Trap extends Interactive
+{
     private int damage = 0;
-    /**
-     * Initialises a trap
-     *
-     * @param position Position of the trap on the map
-     * @param damage Damage that may be applied to a hero
-     */
-    public Trap(Position position, int damage) {
+
+    public Trap(Position position, int damage)
+    {
         super(Const.TRAP_PATH, 0, null, 0, 0);
-        this.setPosition(position);
         this.damage = damage;
     }
 
+    public int getDamage()
+    {
+        return this.damage;
+    }
 }
