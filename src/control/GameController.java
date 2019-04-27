@@ -4,16 +4,16 @@ import control.Constants.Const;
 import control.Constants.HeroConst;
 import java.text.MessageFormat;
 import model.Factories.DungeonFactory;
-import model.Factories.QuestFactory;
 import model.Position;
-import model.Quest;
-import model.gameObject.GameObject;
 import model.gameObject.QuestItem;
 import model.gameObject.Villain;
 import model.map.Dungeon;
-import model.map.Tile;
 import utilities.JsonParser;
 
+/**
+ * Controls and starts the game.
+ * @author reenawichmann
+ */
 public class GameController {
 
     public final boolean isRunning = true;
@@ -25,9 +25,13 @@ public class GameController {
     private int dungeonID = 0;
     private Villain[] villains = null;
     
-    public GameController(int dungeonID) {
+    /**
+     * Initialises game controller.
+     * @param dungeonID Dungeon ID determines which dungeon is played.
+     */
+    public GameController(int dungeonID) 
+    {
         this.dungeon = DungeonFactory.getDungeon(dungeonID);
-        
         this.heroManager = HeroManager.getInstance();
         this.dungeonID = dungeonID;
     }
@@ -50,19 +54,25 @@ public class GameController {
     public void setGamePhase(int gamePhase) {
         this.gamePhase = gamePhase;
     }
-
-    public void start() {
+    /**
+     * Starts the game by placing all game objects and starting the phase controller.
+     */
+    public void start() 
+    {
         System.out.println("start");
         
-        this.setHeroes();
-        this.setVillains(dungeonID);
-        this.setQuestItems(dungeonID);
+        this.placeHeroes();
+        this.placeVillains(dungeonID);
+        this.placeQuestItems(dungeonID);
         
         this.phaseController = new PhaseController(this.dungeon, this.villains);
         phaseController.startGame();
     }
-    
-    private void setVillains(int dungeonID) {
+    /**
+     * Places all villains on their positions which is saved in the json file.
+     * @param dungeonID Dungeon ID determines which dungeon is played.
+     */
+    private void placeVillains(int dungeonID) {
        
         this.villains = (Villain[]) JsonParser.fromJsonFile(Villain[].class, MessageFormat.format(Const.VILLAIN_PATH, dungeonID));
         
@@ -73,7 +83,11 @@ public class GameController {
         }
     }
     
-    private void setQuestItems(int dungeonID) {
+    /**
+     * Places all quest items on their position which is saved in the json file.
+     * @param dungeonID 
+     */
+    private void placeQuestItems(int dungeonID) {
         QuestItem questItems[];
         
         questItems = (QuestItem[]) JsonParser.fromJsonFile(QuestItem[].class, MessageFormat.format(Const.JSON_QUESTITEM_PATH, dungeonID));
@@ -84,8 +98,11 @@ public class GameController {
             dungeon.getTile(tilePositionQuestItem).getField(fieldPositionQuestItem).setGameObject(questItems[i]);
         }
     }
-    
-    private void setHeroes () {
+    /**
+     * Place all heroes on their starting position.
+     * Sets the position of the heroes and places the hero on the field on their starting position.
+     */
+    private void placeHeroes () {
         heroManager.getHeroes()[0].setPosition(HeroConst.PALADIN_STARTING_POSITION);
         Position tilePositionHero1 = Converter.convertMapCoordinatesInTileCoordinates(heroManager.getHeroes()[0].getPosition());
         Position fieldPositionHero1 = Converter.convertMapCoordinatesInFieldCoordinates(heroManager.getHeroes()[0].getPosition());
@@ -108,36 +125,20 @@ public class GameController {
         
         dungeon.getTile(Converter.convertMapCoordinatesInTileCoordinates(HeroConst.PALADIN_STARTING_POSITION)).setVisible(true);
         //zum Testen alle Felder sichtbar machen
-        //alleFeldersichtbar();
-       
+        //allTilesVisible();
     }
     
-    private void alleFeldersichtbar()
+    /**
+     * Makes all tiles visible to try out the game.
+     */
+    private void allTilesVisible()
     {
-        dungeon.getTile(new Position(0,0)).setVisible(true);
-        dungeon.getTile(new Position(0,1)).setVisible(true);
-        dungeon.getTile(new Position(0,2)).setVisible(true);
-        dungeon.getTile(new Position(0,3)).setVisible(true);
-        dungeon.getTile(new Position(0,4)).setVisible(true);
-        dungeon.getTile(new Position(1,0)).setVisible(true);
-        dungeon.getTile(new Position(1,1)).setVisible(true);
-        dungeon.getTile(new Position(1,2)).setVisible(true);
-        dungeon.getTile(new Position(1,3)).setVisible(true);
-        dungeon.getTile(new Position(1,4)).setVisible(true);
-        dungeon.getTile(new Position(2,0)).setVisible(true);
-        dungeon.getTile(new Position(2,1)).setVisible(true);
-        dungeon.getTile(new Position(2,2)).setVisible(true);
-        dungeon.getTile(new Position(2,3)).setVisible(true);
-        dungeon.getTile(new Position(2,4)).setVisible(true);
-        dungeon.getTile(new Position(3,0)).setVisible(true);
-        dungeon.getTile(new Position(3,1)).setVisible(true);
-        dungeon.getTile(new Position(3,2)).setVisible(true);
-        dungeon.getTile(new Position(3,3)).setVisible(true);
-        dungeon.getTile(new Position(3,4)).setVisible(true);
-        dungeon.getTile(new Position(4,0)).setVisible(true);
-        dungeon.getTile(new Position(4,1)).setVisible(true);
-        dungeon.getTile(new Position(4,2)).setVisible(true);
-        dungeon.getTile(new Position(4,3)).setVisible(true);
-        dungeon.getTile(new Position(4,4)).setVisible(true);
+        for (int i = 0; i < Const.TILE_SIZE_X; i++) 
+        {
+            for (int j = 0; j < Const.TILE_SIZE_Y; j++) 
+            {
+                dungeon.getTile(new Position(i,j)).setVisible(true);
+            }
+        }
     }
 }

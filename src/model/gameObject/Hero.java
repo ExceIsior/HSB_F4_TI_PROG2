@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import model.Skill;
 import control.Constants.Const;
 import model.Position;
 import model.Status;
@@ -23,7 +24,7 @@ public class Hero extends Character
                 int healthPoints,
                 int maxHealthPoints,
                 int agility,
-                List<Status> status,
+                Status status,
                 List<Skill> skills,
                 Inventory inventory,
                 EquipmentSet equipmentSet)

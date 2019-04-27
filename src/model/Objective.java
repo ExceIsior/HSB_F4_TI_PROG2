@@ -1,6 +1,7 @@
 package model;
 
 import model.gameObject.GameObject;
+import model.gameObject.Interactive;
 
 /**
  * Represents a quest objective that the player has to accomplish.
@@ -11,6 +12,9 @@ public class Objective {
 
     private GameObject gameObject = null;
     private int count = 0;
+    private Interactive interactive = null;
+    private int targetCount = 0;
+    private int progressCount = 0;
 
     /**
      * Initialises the objective.
@@ -66,5 +70,18 @@ public class Objective {
      */
     public boolean objectiveComplete() {
         return true;
+    }
+    
+    /**
+     * Checks if the killed/collected interactive was the target of this
+     * objective. If positive, increments the progress counter otherwise does
+     * nothing.
+     *
+     * @param interactive
+     */
+    public void addToProgress(Interactive interactive) {
+        if (this.interactive.equals(interactive)) {
+            this.progressCount++;
+        }
     }
 }

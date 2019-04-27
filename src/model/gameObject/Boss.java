@@ -1,6 +1,7 @@
 
 package model.gameObject;
 
+import model.Skill;
 import java.util.ArrayList;
 import java.util.List;
 import model.Status;
@@ -31,7 +32,7 @@ public class Boss extends Villain {
             int healthPoints, 
             int maxHealthPoints,
             int agility, 
-            List<Status> status,
+            Status status,
             List<Skill> skills) {
         super(graphicsPath, 
                 armor, 

@@ -1,6 +1,7 @@
 package control;
 
-import control.Constants.Const;
+import control.Constants.PhaseConst;
+import control.phase.HeroPhase;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import model.Position;
@@ -8,86 +9,78 @@ import model.gameObject.Hero;
 import java.util.Arrays;
 import model.gameObject.Villain;
 import model.map.Dungeon;
-import model.map.Field;
-import model.map.Tile;
+import control.phase.VillainPhase;
 
 public class PhaseController {
     
-    private Scanner positionListener = new Scanner(System.in);
-    private int phaseID = 1;
+    private Scanner listener = new Scanner(System.in);
     private ConcurrentLinkedQueue<Hero> heroQueue = new ConcurrentLinkedQueue<>(Arrays.asList(HeroManager.getInstance().getHeroes()));
-    private Dungeon dungeon = null;
-    private MovementController moveController = null;
-    private boolean gameOn = true;
-    private VisibilityController visibilityController = null;
-    private Villain[] villains = null;
     private ConcurrentLinkedQueue<Villain> villainQueue = new ConcurrentLinkedQueue<>();
+    private VisibilityController visibilityController = null;
+    private Dungeon dungeon = null;
+    private boolean gameOver = false;
+    private Villain[] villains = null;    
+    private int phaseID = 1;
+  
     
     public PhaseController(Dungeon dungeon, Villain[] villains) {
         this.dungeon = dungeon;
         this.villains = villains;
-  
-        moveController = new MovementController(this.dungeon);
+        MovementController.setDungeon(dungeon);
         visibilityController = new VisibilityController(this.dungeon);
     }
     
-    public void startGame() {
-        int count = 0;
-        while(gameOn) {
+    public void startGame() 
+    {
+        while(!gameOver) {
         switch(this.phaseID)
         {
             case(1):
-                MapController.ausgeben(dungeon);
-                System.out.println("HEROPHASE");
-                System.out.println("erste Position");
-                int x = positionListener.nextInt();
-                int y = positionListener.nextInt();
-                heroQueue.add(heroQueue.peek());
-                this.moveController.changePositionOfGameObject(heroQueue.poll(), new Position(x, y));
-                MapController.ausgeben(dungeon);
+                //if (dungeon.getQuest().checkAllObjectives()) 
                 
-                count++;
-                if (count == 5) {
-                    gameOn = false;
-                }
+                
+                MapController.ausgeben(dungeon);
+                HeroPhase heroPhase = new HeroPhase(heroQueue.poll());
+                heroPhase.inform();
+                MapController.ausgeben(dungeon);
+
                 this.phaseID = 2;
-                //break;
+                break;
                 
             case(2):
-                System.out.println("EXPLORATIONPHASE");
+                System.out.println(PhaseConst.EXPLORATION_PHASE);
                 visibilityController.explorateTile();
                 
                 putVillainsInQueue();
                 
                 MapController.ausgeben(dungeon);
                 this.phaseID = 4;
-                //break;
+                break;
                 
             //Encounterphase wird uebersprungen
             case(3):
-                System.out.println("ENCOUNTERPHASE");
+                System.out.println(PhaseConst.ENCOUNTER_PHASE);
                 this.phaseID = 4;
                 //break;
                 
             case(4):
-                System.out.println("VILLAINPHASE");
+                System.out.println(PhaseConst.VILLAIN_PHASE);
                 
-                //ueberprueft ob die VillainQueue ein Villain enthaelt
-                if (!villainQueue.isEmpty()) 
-                {
-                    System.out.println("aktuelles Villain" + villainQueue.poll().getGraphicsPath());
+                while( !villainQueue.isEmpty() )
+                { 
+                    VillainPhase villainPhase = new VillainPhase(villainQueue.peek());
+                    VillainAI.makeMoveForVillain(villainPhase);
                 }
-                else {
-                    System.out.println("kein Villain in Queue");
-                }
+                
                 this.phaseID = 1;
-                //break;
+                break;
             default:
                 break;
         
             }  
         }   
     }
+    
     private void putVillainsInQueue() 
     {
         for (int i = 0; i < villains.length; i++) 

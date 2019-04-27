@@ -1,7 +1,7 @@
 package control.Constants;
 
-public interface Const {
-
+public interface Const 
+{
     public static final int MAP_SIZE_X = 5;
     public static final int MAP_SIZE_Y = 5;
     public static final int TILE_SIZE_X = 4;
@@ -29,6 +29,7 @@ public interface Const {
     public static final String JSON_QUESTITEM_PATH = "./maps/map{0,number,integer}/questitems.json";
     public static final String RESSOURCE_PATH = "./res/";
     public static final String CHARACTERS_PATH = RESSOURCE_PATH + "characters/";
+    public static final String HERO_PATH = CHARACTERS_PATH + "hero/";
     public static final String OBJECTS_PATH = RESSOURCE_PATH + "objects/";
     public static final String ITEMS_PATH = RESSOURCE_PATH + "items/";
     public static final String TRAP_PATH = OBJECTS_PATH + "t";
@@ -36,7 +37,6 @@ public interface Const {
     public static final String QUESTITEM_PATH = OBJECTS_PATH + "Q";
 
     public static final int HEIGHT_OBSTACLE = 20;
-    public static final int HEIGHT_CHARACTER = 5;
     public static final int HEIGHT_TERRAIN= 0;
     
     public static final int MUSHROOM_ID = 0;

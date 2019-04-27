@@ -6,7 +6,7 @@ public interface VillainConst {
     
     public static final int ZOMBIE_ID = 0;
     public static final String ZOMBIE_NAME = "Zombie";
-    public static final String ZOMBIE_RES_PATH = "ZO"; //CHARACTERS_PATH + "zombie.";
+    public static final String ZOMBIE_RES_PATH = CHARACTERS_PATH + "zombie.";
     public static final int ZOMBIE_DEFAULT_DAMAGE = 1;
     public static final int ZOMBIE_DEFAULT_ARMOR = 2;
     public static final int ZOMBIE_DEFAULT_HEALTH_POINTS = 3;

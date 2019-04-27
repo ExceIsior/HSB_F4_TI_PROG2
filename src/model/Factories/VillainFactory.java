@@ -4,6 +4,7 @@ import control.Constants.BossConst;
 import control.Constants.VillainConst;
 import control.Enums.Skills;
 import java.util.Arrays;
+import model.Status;
 import model.gameObject.Boss;
 import model.gameObject.Villain;
 
@@ -28,7 +29,7 @@ public class VillainFactory {
                         VillainConst.ORK_DEFAULT_HEALTH_POINTS,
                         VillainConst.ORK_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.ORK_DEFAULT_AGILITY,
-                        null,
+                        new Status(0, null, true),
                         null);
 
             case VillainConst.GHUL_ID:
@@ -39,7 +40,7 @@ public class VillainFactory {
                         VillainConst.GHUL_DEFAULT_HEALTH_POINTS,
                         VillainConst.GHUL_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.GHUL_DEFAULT_AGILITY,
-                        null,
+                        new Status(0, null, true),
                         Arrays.asList(Skills.DEVOUR.getSkill()));
 
             case VillainConst.WEREWOLF_ID:
@@ -50,7 +51,7 @@ public class VillainFactory {
                         VillainConst.WEREWOLF_DEFAULT_HEALTH_POINTS,
                         VillainConst.WEREWOLF_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.WEREWOLF_DEFAULT_AGILITY,
-                        null,
+                        new Status(0, null, true),
                         null);
 
             case VillainConst.VAMPIRE_ID:
@@ -61,7 +62,7 @@ public class VillainFactory {
                         VillainConst.VAMPIRE_DEFAULT_HEALTH_POINTS,
                         VillainConst.VAMPIRE_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.VAMPIRE_DEFAULT_AGILITY,
-                        null,
+                        new Status(0, null, true),
                         null);
 
             case VillainConst.SUCCUBUS_ID:
@@ -72,7 +73,7 @@ public class VillainFactory {
                         VillainConst.SUCCUBUS_DEFAULT_HEALTH_POINTS,
                         VillainConst.SUCCUBUS_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.SUCCUBUS_DEFAULT_AGILITY,
-                        null,
+                        new Status(0, null, true),
                         null);
 
             case VillainConst.ZOMBIE_ID:
@@ -83,7 +84,7 @@ public class VillainFactory {
                         VillainConst.ZOMBIE_DEFAULT_HEALTH_POINTS,
                         VillainConst.ZOMBIE_DEFAULT_MAX_HEALTH_POINTS,
                         VillainConst.ZOMBIE_DEFAULT_AGILITY,
-                        null,
+                        new Status(0, null, true),
                         Arrays.asList(Skills.CONTAGIOUS_BITE.getSkill()));
         }
         return null;

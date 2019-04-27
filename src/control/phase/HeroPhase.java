@@ -1,4 +1,4 @@
-package model.phasen;
+package control.phase;
 
 import control.CombatController;
 import control.Constants.HeroConst;
@@ -11,9 +11,9 @@ import java.util.Scanner;
 public class HeroPhase extends CharacterPhase
 {
     Scanner listener = new Scanner(System.in);
+    
     public HeroPhase(Character character)
     {
-        //TODO: in Konstante auslagern (keine nackten Zahlen)
         super(character, HeroConst.HERO_ACTION_POINTS);
     }
 

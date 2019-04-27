@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import model.Skill;
 import control.Constants.Const;
 import model.Status;
 import model.item.Item;
@@ -15,7 +16,7 @@ public class Character extends Interactive {
 
     private String name = "";
     private int agility = 0;
-    private List<Status> status = null;
+    private Status status = null;
     private List<Skill> skills = null;
     private int baseDamage = 0;
 
@@ -38,7 +39,7 @@ public class Character extends Interactive {
             int healthPoints,
             int maxHealthPoints,
             int agility,
-            List<Status> status,
+            Status status,
             List<Skill> skills) 
     {
         super(graphicsPath, armor, loot, healthPoints, maxHealthPoints);
@@ -120,7 +121,7 @@ public class Character extends Interactive {
      * Retrieves a List of the statuses the character carries.
      * @return List of character's statuses.
      */
-    public List<Status> getStatus() {
+    public Status getStatus() {
         return status;
     }
 
@@ -128,7 +129,7 @@ public class Character extends Interactive {
      * Sets the character's statuses.
      * @param status New List of statuses.
      */
-    public void setStatus(List<Status> status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

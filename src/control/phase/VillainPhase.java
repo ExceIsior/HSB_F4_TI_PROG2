@@ -1,4 +1,4 @@
-package model.phasen;
+package control.phase;
 
 import control.CombatController;
 import control.MovementController;

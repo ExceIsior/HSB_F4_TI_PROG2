@@ -1,5 +1,6 @@
 package model.gameObject;
 
+import model.Skill;
 import model.Position;
 import model.Status;
 import model.item.Item;
@@ -16,7 +17,7 @@ public class Villain extends Character {
             int healthPoints,
             int maxHealthPoints,
             int agility, 
-            List<Status> status, 
+            Status status, 
             List<Skill> skills) {
         super(graphicsPath, 
                 armor, 

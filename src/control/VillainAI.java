@@ -6,7 +6,7 @@ import model.Position;
 import model.gameObject.GameObject;
 import model.gameObject.Hero;
 import model.gameObject.Villain;
-import model.phasen.VillainPhase;
+import control.phase.VillainPhase;
 
 public class VillainAI
 {
